@@ -1,0 +1,9 @@
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\test\SmartInstall\BazaDanych\bin\Debug\BazaDanych.dacpac
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\test\SmartInstall\BazaDanych\bin\Debug\BazaDanych.dll
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\test\SmartInstall\BazaDanych\bin\Debug\BazaDanych.pdb
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\test\SmartInstall\BazaDanych\obj\Debug\Model.xml
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\test\SmartInstall\BazaDanych\obj\Debug\refactor.xml
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\test\SmartInstall\BazaDanych\obj\Debug\postdeploy.sql
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\test\SmartInstall\BazaDanych\obj\Debug\predeploy.sql
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\test\SmartInstall\BazaDanych\obj\Debug\BazaDanych.dll
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\test\SmartInstall\BazaDanych\obj\Debug\BazaDanych.pdb
