@@ -404,10 +404,22 @@ private: System::Void zPlikuToolStripMenuItem_Click(System::Object^  sender, Sys
 					// Insert code to read the stream here.
 					myStream->Close();
 					}
-      }
+			}
 
 		 }
-private: System::Void stwórzArchiwumToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void stwórzArchiwumToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) 
+		 {
+			 Stream^ myStream;
+			 OpenFileDialog^ openFileDialog1 = gcnew OpenFileDialog;
+			 if ( openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK )
+			{
+				if ( (myStream = openFileDialog1->OpenFile()) != nullptr )
+					{
+					// Insert code to read the stream here.
+					myStream->Close();
+					}
+			}
+
 		 }
 };
 }
