@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="8e097bcf-4779-4911-9bcb-6424addc55e7" ChangeDateTime="03/16/2014 12:36:04">
+    <Property Name="ElementName" Value="[dbo].[Archives].[Nazwa]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Archives]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9b52c532-d115-483e-915b-d672a257fbef" ChangeDateTime="03/16/2014 12:36:13">
+    <Property Name="ElementName" Value="[dbo].[Archives].[Sciezka]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Archives]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Path" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e8322af1-fb2c-405c-b557-3cb6165c8791" ChangeDateTime="03/16/2014 12:36:23">
+    <Property Name="ElementName" Value="[dbo].[Archives].[DataUtworzenia]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Archives]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreateDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c23ff771-02c9-40c3-8b31-e4a5c6fbacbc" ChangeDateTime="03/16/2014 12:36:50">
+    <Property Name="ElementName" Value="[dbo].[Archives].[DataModyfikacji]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Archives]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Modyfi" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="366318ed-7d3e-484d-99c4-7b3cea234157" ChangeDateTime="03/16/2014 12:37:03">
+    <Property Name="ElementName" Value="[dbo].[Archives].[Modyfi]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Archives]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ModifiedDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5d867cf7-adde-45ea-8f5e-7dcf906a9984" ChangeDateTime="03/16/2014 12:37:10">
+    <Property Name="ElementName" Value="[dbo].[Archives].[Opis]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Archives]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Description" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b332ad66-a572-4487-8d9c-c7b24c12cb51" ChangeDateTime="03/16/2014 12:37:21">
+    <Property Name="ElementName" Value="[dbo].[Archives].[IdJezyka]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Archives]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LanguageID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8378d423-4c94-413f-9041-7a1883b07cc6" ChangeDateTime="03/16/2014 12:37:28">
+    <Property Name="ElementName" Value="[dbo].[Archives].[IdSystemu]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Archives]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SystemID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b546a131-7058-4989-9e3c-6c4b316bfb92" ChangeDateTime="03/16/2014 12:40:33">
+    <Property Name="ElementName" Value="[dbo].[Tag].[Nazwa]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Tag]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TagName" />
+  </Operation>
+</Operations>

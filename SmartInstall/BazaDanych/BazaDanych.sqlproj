@@ -54,4 +54,15 @@
   <ItemGroup>
     <Folder Include="Properties" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="Archives.sql" />
+    <Build Include="Language.sql" />
+    <Build Include="Tag.sql" />
+    <Build Include="Prorgam.sql" />
+    <Build Include="ProgramInArchives.sql" />
+    <Build Include="systemType.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="BazaDanych.refactorlog" />
+  </ItemGroup>
 </Project>
