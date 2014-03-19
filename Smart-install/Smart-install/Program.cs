@@ -17,8 +17,8 @@ namespace Smart_install
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserMenu());
-
+            Application.Run(new userMenuInstall());
+   
         }
     }
 }

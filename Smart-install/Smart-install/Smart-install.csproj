@@ -44,16 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserMenu.cs">
+    <Compile Include="NewArch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserMenu.Designer.cs">
-      <DependentUpon>UserMenu.cs</DependentUpon>
+    <Compile Include="NewArch.Designer.cs">
+      <DependentUpon>NewArch.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="UserMenu.resx">
-      <DependentUpon>UserMenu.cs</DependentUpon>
+    <Compile Include="userMenuInstall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userMenuInstall.Designer.cs">
+      <DependentUpon>userMenuInstall.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="NewArch.resx">
+      <DependentUpon>NewArch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -64,6 +70,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="userMenuInstall.resx">
+      <DependentUpon>userMenuInstall.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
