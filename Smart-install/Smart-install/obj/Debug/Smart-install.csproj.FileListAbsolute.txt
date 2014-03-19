@@ -1,0 +1,9 @@
+c:\users\natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\bin\Debug\Smart-install.exe.config
+C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\obj\Debug\Smart-install.csprojResolveAssemblyReference.cache
+C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\obj\Debug\Smart_install.UserMenu.resources
+C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\obj\Debug\Smart_install.Properties.Resources.resources
+C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\obj\Debug\Smart-install.csproj.GenerateResource.Cache
+C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\bin\Debug\Smart-install.exe
+C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\bin\Debug\Smart-install.pdb
+C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\obj\Debug\Smart-install.exe
+C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\obj\Debug\Smart-install.pdb
