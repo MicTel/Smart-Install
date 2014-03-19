@@ -8,3 +8,6 @@ C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-insta
 C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\obj\Debug\Smart-install.pdb
 C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\obj\Debug\Smart_install.userMenuInstall.resources
 C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\obj\Debug\Smart_install.NewArch.resources
+C:\Studia\SmartInstallC#\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.exe.config
+C:\Studia\SmartInstallC#\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.exe
+C:\Studia\SmartInstallC#\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.pdb

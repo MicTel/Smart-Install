@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SearchProgram.cs" />
     <Compile Include="NewArch.cs">
       <SubType>Form</SubType>
     </Compile>
