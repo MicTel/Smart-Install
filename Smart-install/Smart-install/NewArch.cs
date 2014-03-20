@@ -16,6 +16,10 @@ namespace Smart_install
         public NewArch()
         {
             InitializeComponent();
+            foreach (string tag in control.getTags())
+            {
+                ctr_Tag.Items.Add((Object)tag); 
+            }
         }
 
         private void ustawieniaToolStripMenuItem_Click(object sender, EventArgs e)

@@ -48,7 +48,7 @@
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stronaProgramuOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.Sterowniki = new System.Windows.Forms.CheckedListBox();
+            this.ctr_Tag = new System.Windows.Forms.CheckedListBox();
             this.Programy = new System.Windows.Forms.CheckedListBox();
             this.clickButton_addProgram = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
@@ -216,24 +216,24 @@
             this.pomocToolStripMenuItem1.Text = "Pomoc";
             this.pomocToolStripMenuItem1.Click += new System.EventHandler(this.pomocToolStripMenuItem1_Click);
             // 
-            // Sterowniki
+            // ctr_Tag
             // 
-            this.Sterowniki.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Sterowniki.FormattingEnabled = true;
-            this.Sterowniki.Items.AddRange(new object[] {
-            "Edukacja",
-            "Grafika",
-            "Muzyka",
-            "Narzędzia programistyczne",
-            "Sterowniki",
-            "System",
-            "Zarządzanie dyskiem"});
-            this.Sterowniki.Location = new System.Drawing.Point(12, 52);
-            this.Sterowniki.Name = "Sterowniki";
-            this.Sterowniki.Size = new System.Drawing.Size(189, 208);
-            this.Sterowniki.Sorted = true;
-            this.Sterowniki.TabIndex = 1;
-            this.Sterowniki.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            this.ctr_Tag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ctr_Tag.FormattingEnabled = true;
+            //this.ctr_Tag.Items.AddRange(new object[] {
+            //"Edukacja",
+            //"Grafika",
+            //"Muzyka",
+            //"Narzędzia programistyczne",
+            //"Sterowniki",
+            //"System",
+            //"Zarządzanie dyskiem"});
+            this.ctr_Tag.Location = new System.Drawing.Point(12, 52);
+            this.ctr_Tag.Name = "ctr_Tag";
+            this.ctr_Tag.Size = new System.Drawing.Size(189, 208);
+            this.ctr_Tag.Sorted = true;
+            this.ctr_Tag.TabIndex = 1;
+            this.ctr_Tag.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // Programy
             // 
@@ -339,7 +339,7 @@
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.clickButton_addProgram);
             this.Controls.Add(this.Programy);
-            this.Controls.Add(this.Sterowniki);
+            this.Controls.Add(this.ctr_Tag);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "NewArch";
@@ -374,7 +374,7 @@
         private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stronaProgramuOnlineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem1;
-        private System.Windows.Forms.CheckedListBox Sterowniki;
+        private System.Windows.Forms.CheckedListBox ctr_Tag;
         private System.Windows.Forms.CheckedListBox Programy;
         private System.Windows.Forms.Button clickButton_addProgram;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
