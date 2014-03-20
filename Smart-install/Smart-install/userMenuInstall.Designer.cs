@@ -36,18 +36,15 @@
             this.usuńToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zamknijArchiwumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ostatnioUżywaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zamknijProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.edycjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filtrujWgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ustawieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kategorieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ustawieniaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.językToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ustawieniaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.skórkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.czcionkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.oAutorachToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stronaProgramuOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.clikButton_install = new System.Windows.Forms.Button();
@@ -79,8 +76,7 @@
             this.dodajToolStripMenuItem,
             this.usuńToolStripMenuItem,
             this.zamknijArchiwumToolStripMenuItem,
-            this.ostatnioUżywaneToolStripMenuItem,
-            this.zamknijProgramToolStripMenuItem});
+            this.ostatnioUżywaneToolStripMenuItem});
             this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
             this.plikToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.plikToolStripMenuItem.Text = "Plik";
@@ -104,7 +100,7 @@
             // zPlikuToolStripMenuItem
             // 
             this.zPlikuToolStripMenuItem.Name = "zPlikuToolStripMenuItem";
-            this.zPlikuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.zPlikuToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.zPlikuToolStripMenuItem.Text = "z pliku...";
             this.zPlikuToolStripMenuItem.Click += new System.EventHandler(this.zPlikuToolStripMenuItem_Click);
             // 
@@ -125,12 +121,6 @@
             this.ostatnioUżywaneToolStripMenuItem.Name = "ostatnioUżywaneToolStripMenuItem";
             this.ostatnioUżywaneToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.ostatnioUżywaneToolStripMenuItem.Text = "Ostatnio używane";
-            // 
-            // zamknijProgramToolStripMenuItem
-            // 
-            this.zamknijProgramToolStripMenuItem.Name = "zamknijProgramToolStripMenuItem";
-            this.zamknijProgramToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.zamknijProgramToolStripMenuItem.Text = "Zamknij program";
             // 
             // edycjaToolStripMenuItem
             // 
@@ -163,10 +153,9 @@
             // ustawieniaToolStripMenuItem1
             // 
             this.ustawieniaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.językToolStripMenuItem,
-            this.ustawieniaToolStripMenuItem2,
             this.skórkiToolStripMenuItem,
-            this.czcionkaToolStripMenuItem});
+            this.czcionkaToolStripMenuItem,
+            this.językToolStripMenuItem});
             this.ustawieniaToolStripMenuItem1.Name = "ustawieniaToolStripMenuItem1";
             this.ustawieniaToolStripMenuItem1.Size = new System.Drawing.Size(76, 20);
             this.ustawieniaToolStripMenuItem1.Text = "Ustawienia";
@@ -174,19 +163,13 @@
             // językToolStripMenuItem
             // 
             this.językToolStripMenuItem.Name = "językToolStripMenuItem";
-            this.językToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.językToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.językToolStripMenuItem.Text = "Język";
-            // 
-            // ustawieniaToolStripMenuItem2
-            // 
-            this.ustawieniaToolStripMenuItem2.Name = "ustawieniaToolStripMenuItem2";
-            this.ustawieniaToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
-            this.ustawieniaToolStripMenuItem2.Text = "Ustawienia";
             // 
             // skórkiToolStripMenuItem
             // 
             this.skórkiToolStripMenuItem.Name = "skórkiToolStripMenuItem";
-            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.skórkiToolStripMenuItem.Text = "Kolor tła";
             this.skórkiToolStripMenuItem.Click += new System.EventHandler(this.skórkiToolStripMenuItem_Click);
             // 
@@ -199,18 +182,11 @@
             // pomocToolStripMenuItem
             // 
             this.pomocToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.oAutorachToolStripMenuItem,
             this.stronaProgramuOnlineToolStripMenuItem,
             this.pomocToolStripMenuItem1});
             this.pomocToolStripMenuItem.Name = "pomocToolStripMenuItem";
             this.pomocToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.pomocToolStripMenuItem.Text = "Pomoc";
-            // 
-            // oAutorachToolStripMenuItem
-            // 
-            this.oAutorachToolStripMenuItem.Name = "oAutorachToolStripMenuItem";
-            this.oAutorachToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.oAutorachToolStripMenuItem.Text = "O autorach";
             // 
             // stronaProgramuOnlineToolStripMenuItem
             // 
@@ -223,6 +199,7 @@
             this.pomocToolStripMenuItem1.Name = "pomocToolStripMenuItem1";
             this.pomocToolStripMenuItem1.Size = new System.Drawing.Size(200, 22);
             this.pomocToolStripMenuItem1.Text = "Pomoc";
+            this.pomocToolStripMenuItem1.Click += new System.EventHandler(this.pomocToolStripMenuItem1_Click);
             // 
             // clikButton_install
             // 
@@ -286,7 +263,6 @@
             this.Controls.Add(this.programs_for_install);
             this.Controls.Add(this.clikButton_install);
             this.Controls.Add(this.menuStrip1);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "userMenuInstall";
             this.Text = "userMenuInstall";
             this.menuStrip1.ResumeLayout(false);
@@ -306,18 +282,15 @@
         private System.Windows.Forms.ToolStripMenuItem usuńToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zamknijArchiwumToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ostatnioUżywaneToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zamknijProgramToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem edycjaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filtrujWgToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kategorieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem językToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem skórkiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem czcionkaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem oAutorachToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stronaProgramuOnlineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem1;
         private System.Windows.Forms.Button clikButton_install;

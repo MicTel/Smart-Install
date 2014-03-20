@@ -81,7 +81,7 @@ namespace Smart_install
 
         private void zPlikuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Stream myStream = null;
+            //Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
             openFileDialog1.InitialDirectory = "c:\\";
@@ -94,5 +94,23 @@ namespace Smart_install
                 MessageBox.Show("wybrano plik: " + openFileDialog1.FileName);
             }
         }
+
+        private void pomocToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Help aboutHelp = new Help();
+            aboutHelp.Show();
+        }
+
+        /*private void czcionkaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog okienkoCzcionki = new FontDialog();
+            if (okienkoCzcionki.ShowDialog() == DialogResult.OK)
+            {
+                button1.Font = okienkoCzcionki.Font;
+                button2.Font = okienkoCzcionki.Font;
+                button3.Font = okienkoCzcionki.Font;
+            }
+            
+        }*/
     }
 }

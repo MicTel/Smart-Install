@@ -36,7 +36,6 @@
             this.usuńToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zamknijArchiwumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ostatnioUżywaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zamknijProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.edycjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filtrujWgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ustawieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +46,6 @@
             this.skórkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.czcionkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.oAutorachToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stronaProgramuOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Sterowniki = new System.Windows.Forms.CheckedListBox();
@@ -84,8 +82,7 @@
             this.dodajToolStripMenuItem,
             this.usuńToolStripMenuItem,
             this.zamknijArchiwumToolStripMenuItem,
-            this.ostatnioUżywaneToolStripMenuItem,
-            this.zamknijProgramToolStripMenuItem});
+            this.ostatnioUżywaneToolStripMenuItem});
             this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
             this.plikToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.plikToolStripMenuItem.Text = "Plik";
@@ -130,13 +127,6 @@
             this.ostatnioUżywaneToolStripMenuItem.Name = "ostatnioUżywaneToolStripMenuItem";
             this.ostatnioUżywaneToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.ostatnioUżywaneToolStripMenuItem.Text = "Ostatnio używane";
-            // 
-            // zamknijProgramToolStripMenuItem
-            // 
-            this.zamknijProgramToolStripMenuItem.Name = "zamknijProgramToolStripMenuItem";
-            this.zamknijProgramToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.zamknijProgramToolStripMenuItem.Text = "Zamknij program";
-            this.zamknijProgramToolStripMenuItem.Click += new System.EventHandler(this.zamknijProgramToolStripMenuItem_Click);
             // 
             // edycjaToolStripMenuItem
             // 
@@ -207,18 +197,11 @@
             // pomocToolStripMenuItem
             // 
             this.pomocToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.oAutorachToolStripMenuItem,
             this.stronaProgramuOnlineToolStripMenuItem,
             this.pomocToolStripMenuItem1});
             this.pomocToolStripMenuItem.Name = "pomocToolStripMenuItem";
             this.pomocToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.pomocToolStripMenuItem.Text = "Pomoc";
-            // 
-            // oAutorachToolStripMenuItem
-            // 
-            this.oAutorachToolStripMenuItem.Name = "oAutorachToolStripMenuItem";
-            this.oAutorachToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.oAutorachToolStripMenuItem.Text = "O autorach";
             // 
             // stronaProgramuOnlineToolStripMenuItem
             // 
@@ -231,6 +214,7 @@
             this.pomocToolStripMenuItem1.Name = "pomocToolStripMenuItem1";
             this.pomocToolStripMenuItem1.Size = new System.Drawing.Size(200, 22);
             this.pomocToolStripMenuItem1.Text = "Pomoc";
+            this.pomocToolStripMenuItem1.Click += new System.EventHandler(this.pomocToolStripMenuItem1_Click);
             // 
             // Sterowniki
             // 
@@ -277,7 +261,7 @@
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(12, 289);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(383, 154);
+            this.checkedListBox1.Size = new System.Drawing.Size(383, 140);
             this.checkedListBox1.TabIndex = 4;
             // 
             // clickButton_createArch
@@ -380,7 +364,6 @@
         private System.Windows.Forms.ToolStripMenuItem usuńToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zamknijArchiwumToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ostatnioUżywaneToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zamknijProgramToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filtrujWgToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kategorieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem1;
@@ -389,7 +372,6 @@
         private System.Windows.Forms.ToolStripMenuItem skórkiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem czcionkaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem oAutorachToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stronaProgramuOnlineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem1;
         private System.Windows.Forms.CheckedListBox Sterowniki;

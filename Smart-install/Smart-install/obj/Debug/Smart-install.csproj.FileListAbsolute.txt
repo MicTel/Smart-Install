@@ -25,3 +25,17 @@ X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-insta
 X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.pdb
 X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\bin\Debug\EntityFramework.dll
 X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\bin\Debug\EntityFramework.xml
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.exe.config
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.exe
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.pdb
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\bin\Debug\ArchiveBase.mdf
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\bin\Debug\ArchiveBase_log.ldf
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.exe
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.pdb
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\bin\Debug\EntityFramework.dll
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\bin\Debug\EntityFramework.xml
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.csprojResolveAssemblyReference.cache
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.NewArch.resources
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.Properties.Resources.resources
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.userMenuInstall.resources
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.csproj.GenerateResource.Cache

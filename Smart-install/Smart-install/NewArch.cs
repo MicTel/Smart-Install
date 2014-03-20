@@ -16,7 +16,6 @@ namespace Smart_install
         public NewArch()
         {
             InitializeComponent();
-            
         }
 
         private void ustawieniaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,7 +35,7 @@ namespace Smart_install
 
         private void zPlikuToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Stream myStream = null;
+            //Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
             openFileDialog1.InitialDirectory = "c:\\";
@@ -125,9 +124,11 @@ namespace Smart_install
             
         }
 
-        private void zamknijProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pomocToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-           
+            Help aboutHelp = new Help();
+            aboutHelp.Show();
         }
+
     }
 }

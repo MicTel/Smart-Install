@@ -70,6 +70,12 @@
     </Compile>
     <Compile Include="control.cs" />
     <Compile Include="Exec.cs" />
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="Language.cs">
       <DependentUpon>ModelArchive.tt</DependentUpon>
     </Compile>
