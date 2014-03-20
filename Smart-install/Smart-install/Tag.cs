@@ -7,15 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace Smart_install
 {
+    using System;
+    using System.Collections.Generic;
     
     public partial class Tag
     {
+        public Tag()
+        {
+            this.Progs = new HashSet<Prog>();
+        }
+    
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string TagName { get; set; }
+    
+        public virtual ICollection<Prog> Progs { get; set; }
     }
 }

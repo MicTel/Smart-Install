@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ArchiveBaseModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ArchiveBaseEntities2" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Archives" EntityType="ArchiveBaseModel.Archive" />
+    <EntitySet Name="Languages" EntityType="ArchiveBaseModel.Language" />
+    <EntitySet Name="Progs" EntityType="ArchiveBaseModel.Prog" />
+    <EntitySet Name="systemTypes" EntityType="ArchiveBaseModel.systemType" />
+    <EntitySet Name="Tags" EntityType="ArchiveBaseModel.Tag" />
+    <AssociationSet Name="ProgLanguageID" Association="ArchiveBaseModel.ProgLanguageID">
+      <End Role="Language" EntitySet="Languages" />
+      <End Role="Prog" EntitySet="Progs" />
+    </AssociationSet>
+    <AssociationSet Name="ProgSystemID" Association="ArchiveBaseModel.ProgSystemID">
+      <End Role="systemType" EntitySet="systemTypes" />
+      <End Role="Prog" EntitySet="Progs" />
+    </AssociationSet>
+    <AssociationSet Name="ProgramInArchive" Association="ArchiveBaseModel.ProgramInArchive">
+      <End Role="Archive" EntitySet="Archives" />
+      <End Role="Prog" EntitySet="Progs" />
+    </AssociationSet>
+    <AssociationSet Name="ProgramTag" Association="ArchiveBaseModel.ProgramTag">
+      <End Role="Tag" EntitySet="Tags" />
+      <End Role="Prog" EntitySet="Progs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Archive">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Path" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Progs" Relationship="ArchiveBaseModel.ProgramInArchive" FromRole="Archive" ToRole="Prog" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Language1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Progs" Relationship="ArchiveBaseModel.ProgLanguageID" FromRole="Language" ToRole="Prog" />
+  </EntityType>
+  <EntityType Name="Prog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Version" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="HelpLink" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="URLUpdate" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Publisher" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Icon" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LanguageID" Type="Int32" />
+    <Property Name="SystemID" Type="Int32" />
+    <NavigationProperty Name="Language" Relationship="ArchiveBaseModel.ProgLanguageID" FromRole="Prog" ToRole="Language" />
+    <NavigationProperty Name="systemType" Relationship="ArchiveBaseModel.ProgSystemID" FromRole="Prog" ToRole="systemType" />
+    <NavigationProperty Name="Archives" Relationship="ArchiveBaseModel.ProgramInArchive" FromRole="Prog" ToRole="Archive" />
+    <NavigationProperty Name="Tags" Relationship="ArchiveBaseModel.ProgramTag" FromRole="Prog" ToRole="Tag" />
+  </EntityType>
+  <EntityType Name="systemType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="systemType1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Progs" Relationship="ArchiveBaseModel.ProgSystemID" FromRole="systemType" ToRole="Prog" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="TagName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Progs" Relationship="ArchiveBaseModel.ProgramTag" FromRole="Tag" ToRole="Prog" />
+  </EntityType>
+  <Association Name="ProgLanguageID">
+    <End Role="Language" Type="ArchiveBaseModel.Language" Multiplicity="0..1" />
+    <End Role="Prog" Type="ArchiveBaseModel.Prog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Language">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Prog">
+        <PropertyRef Name="LanguageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProgSystemID">
+    <End Role="systemType" Type="ArchiveBaseModel.systemType" Multiplicity="0..1" />
+    <End Role="Prog" Type="ArchiveBaseModel.Prog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="systemType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Prog">
+        <PropertyRef Name="SystemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProgramInArchive">
+    <End Role="Archive" Type="ArchiveBaseModel.Archive" Multiplicity="*" />
+    <End Role="Prog" Type="ArchiveBaseModel.Prog" Multiplicity="*" />
+  </Association>
+  <Association Name="ProgramTag">
+    <End Role="Tag" Type="ArchiveBaseModel.Tag" Multiplicity="*" />
+    <End Role="Prog" Type="ArchiveBaseModel.Prog" Multiplicity="*" />
+  </Association>
+</Schema>

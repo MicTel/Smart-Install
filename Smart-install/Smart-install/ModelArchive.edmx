@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ArchiveBaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ArchiveBaseModelStoreContainer">
+          <EntitySet Name="Archive" EntityType="ArchiveBaseModel.Store.Archive" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Language" EntityType="ArchiveBaseModel.Store.Language" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Prog" EntityType="ArchiveBaseModel.Store.Prog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProgramInArchive" EntityType="ArchiveBaseModel.Store.ProgramInArchive" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProgramTag" EntityType="ArchiveBaseModel.Store.ProgramTag" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="systemType" EntityType="ArchiveBaseModel.Store.systemType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tag" EntityType="ArchiveBaseModel.Store.Tag" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="ArchiveProgramID" Association="ArchiveBaseModel.Store.ArchiveProgramID">
+            <End Role="Archive" EntitySet="Archive" />
+            <End Role="ProgramInArchive" EntitySet="ProgramInArchive" />
+          </AssociationSet>
+          <AssociationSet Name="ProgLanguageID" Association="ArchiveBaseModel.Store.ProgLanguageID">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="Prog" EntitySet="Prog" />
+          </AssociationSet>
+          <AssociationSet Name="ProgramArchiveID" Association="ArchiveBaseModel.Store.ProgramArchiveID">
+            <End Role="Prog" EntitySet="Prog" />
+            <End Role="ProgramInArchive" EntitySet="ProgramInArchive" />
+          </AssociationSet>
+          <AssociationSet Name="ProgramTagID" Association="ArchiveBaseModel.Store.ProgramTagID">
+            <End Role="Tag" EntitySet="Tag" />
+            <End Role="ProgramTag" EntitySet="ProgramTag" />
+          </AssociationSet>
+          <AssociationSet Name="ProgSystemID" Association="ArchiveBaseModel.Store.ProgSystemID">
+            <End Role="systemType" EntitySet="systemType" />
+            <End Role="Prog" EntitySet="Prog" />
+          </AssociationSet>
+          <AssociationSet Name="TagProgramID" Association="ArchiveBaseModel.Store.TagProgramID">
+            <End Role="Prog" EntitySet="Prog" />
+            <End Role="ProgramTag" EntitySet="ProgramTag" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Archive">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Path" Type="varchar(max)" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Description" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Language" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Prog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Version" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="HelpLink" Type="varchar(max)" />
+          <Property Name="URLUpdate" Type="varchar(max)" />
+          <Property Name="Publisher" Type="varchar" MaxLength="50" />
+          <Property Name="Icon" Type="varchar" MaxLength="50" />
+          <Property Name="LanguageID" Type="int" />
+          <Property Name="SystemID" Type="int" />
+        </EntityType>
+        <EntityType Name="ProgramInArchive">
+          <Key>
+            <PropertyRef Name="ProgramID" />
+            <PropertyRef Name="ArchivesID" />
+          </Key>
+          <Property Name="ProgramID" Type="int" Nullable="false" />
+          <Property Name="ArchivesID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProgramTag">
+          <Key>
+            <PropertyRef Name="ProgramID" />
+            <PropertyRef Name="TagID" />
+          </Key>
+          <Property Name="ProgramID" Type="int" Nullable="false" />
+          <Property Name="TagID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="systemType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="systemType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tag">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="TagName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="ArchiveProgramID">
+          <End Role="Archive" Type="ArchiveBaseModel.Store.Archive" Multiplicity="1" />
+          <End Role="ProgramInArchive" Type="ArchiveBaseModel.Store.ProgramInArchive" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Archive">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProgramInArchive">
+              <PropertyRef Name="ArchivesID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProgLanguageID">
+          <End Role="Language" Type="ArchiveBaseModel.Store.Language" Multiplicity="0..1" />
+          <End Role="Prog" Type="ArchiveBaseModel.Store.Prog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Prog">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProgramArchiveID">
+          <End Role="Prog" Type="ArchiveBaseModel.Store.Prog" Multiplicity="1" />
+          <End Role="ProgramInArchive" Type="ArchiveBaseModel.Store.ProgramInArchive" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Prog">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProgramInArchive">
+              <PropertyRef Name="ProgramID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProgramTagID">
+          <End Role="Tag" Type="ArchiveBaseModel.Store.Tag" Multiplicity="1" />
+          <End Role="ProgramTag" Type="ArchiveBaseModel.Store.ProgramTag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tag">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProgramTag">
+              <PropertyRef Name="TagID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProgSystemID">
+          <End Role="systemType" Type="ArchiveBaseModel.Store.systemType" Multiplicity="0..1" />
+          <End Role="Prog" Type="ArchiveBaseModel.Store.Prog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="systemType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Prog">
+              <PropertyRef Name="SystemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TagProgramID">
+          <End Role="Prog" Type="ArchiveBaseModel.Store.Prog" Multiplicity="1" />
+          <End Role="ProgramTag" Type="ArchiveBaseModel.Store.ProgramTag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Prog">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProgramTag">
+              <PropertyRef Name="ProgramID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ArchiveBaseModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ArchiveBaseEntities2" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Archives" EntityType="ArchiveBaseModel.Archive" />
+          <EntitySet Name="Languages" EntityType="ArchiveBaseModel.Language" />
+          <EntitySet Name="Progs" EntityType="ArchiveBaseModel.Prog" />
+          <EntitySet Name="systemTypes" EntityType="ArchiveBaseModel.systemType" />
+          <EntitySet Name="Tags" EntityType="ArchiveBaseModel.Tag" />
+          <AssociationSet Name="ProgLanguageID" Association="ArchiveBaseModel.ProgLanguageID">
+            <End Role="Language" EntitySet="Languages" />
+            <End Role="Prog" EntitySet="Progs" />
+          </AssociationSet>
+          <AssociationSet Name="ProgSystemID" Association="ArchiveBaseModel.ProgSystemID">
+            <End Role="systemType" EntitySet="systemTypes" />
+            <End Role="Prog" EntitySet="Progs" />
+          </AssociationSet>
+          <AssociationSet Name="ProgramInArchive" Association="ArchiveBaseModel.ProgramInArchive">
+            <End Role="Archive" EntitySet="Archives" />
+            <End Role="Prog" EntitySet="Progs" />
+          </AssociationSet>
+          <AssociationSet Name="ProgramTag" Association="ArchiveBaseModel.ProgramTag">
+            <End Role="Tag" EntitySet="Tags" />
+            <End Role="Prog" EntitySet="Progs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Archive">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Path" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Progs" Relationship="ArchiveBaseModel.ProgramInArchive" FromRole="Archive" ToRole="Prog" />
+        </EntityType>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Language1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Progs" Relationship="ArchiveBaseModel.ProgLanguageID" FromRole="Language" ToRole="Prog" />
+        </EntityType>
+        <EntityType Name="Prog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Version" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="HelpLink" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="URLUpdate" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Publisher" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Icon" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LanguageID" Type="Int32" />
+          <Property Name="SystemID" Type="Int32" />
+          <NavigationProperty Name="Language" Relationship="ArchiveBaseModel.ProgLanguageID" FromRole="Prog" ToRole="Language" />
+          <NavigationProperty Name="systemType" Relationship="ArchiveBaseModel.ProgSystemID" FromRole="Prog" ToRole="systemType" />
+          <NavigationProperty Name="Archives" Relationship="ArchiveBaseModel.ProgramInArchive" FromRole="Prog" ToRole="Archive" />
+          <NavigationProperty Name="Tags" Relationship="ArchiveBaseModel.ProgramTag" FromRole="Prog" ToRole="Tag" />
+        </EntityType>
+        <EntityType Name="systemType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="systemType1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Progs" Relationship="ArchiveBaseModel.ProgSystemID" FromRole="systemType" ToRole="Prog" />
+        </EntityType>
+        <EntityType Name="Tag">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="TagName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Progs" Relationship="ArchiveBaseModel.ProgramTag" FromRole="Tag" ToRole="Prog" />
+        </EntityType>
+        <Association Name="ProgLanguageID">
+          <End Role="Language" Type="ArchiveBaseModel.Language" Multiplicity="0..1" />
+          <End Role="Prog" Type="ArchiveBaseModel.Prog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Prog">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProgSystemID">
+          <End Role="systemType" Type="ArchiveBaseModel.systemType" Multiplicity="0..1" />
+          <End Role="Prog" Type="ArchiveBaseModel.Prog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="systemType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Prog">
+              <PropertyRef Name="SystemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProgramInArchive">
+          <End Role="Archive" Type="ArchiveBaseModel.Archive" Multiplicity="*" />
+          <End Role="Prog" Type="ArchiveBaseModel.Prog" Multiplicity="*" />
+        </Association>
+        <Association Name="ProgramTag">
+          <End Role="Tag" Type="ArchiveBaseModel.Tag" Multiplicity="*" />
+          <End Role="Prog" Type="ArchiveBaseModel.Prog" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ArchiveBaseModelStoreContainer" CdmEntityContainer="ArchiveBaseEntities2">
+          <EntitySetMapping Name="Archives">
+            <EntityTypeMapping TypeName="ArchiveBaseModel.Archive">
+              <MappingFragment StoreEntitySet="Archive">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Languages">
+            <EntityTypeMapping TypeName="ArchiveBaseModel.Language">
+              <MappingFragment StoreEntitySet="Language">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Language1" ColumnName="Language" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Progs">
+            <EntityTypeMapping TypeName="ArchiveBaseModel.Prog">
+              <MappingFragment StoreEntitySet="Prog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="HelpLink" ColumnName="HelpLink" />
+                <ScalarProperty Name="URLUpdate" ColumnName="URLUpdate" />
+                <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+                <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="systemTypes">
+            <EntityTypeMapping TypeName="ArchiveBaseModel.systemType">
+              <MappingFragment StoreEntitySet="systemType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="systemType1" ColumnName="systemType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tags">
+            <EntityTypeMapping TypeName="ArchiveBaseModel.Tag">
+              <MappingFragment StoreEntitySet="Tag">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TagName" ColumnName="TagName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="ProgramInArchive" TypeName="ArchiveBaseModel.ProgramInArchive" StoreEntitySet="ProgramInArchive">
+            <EndProperty Name="Archive">
+              <ScalarProperty Name="Id" ColumnName="ArchivesID" />
+            </EndProperty>
+            <EndProperty Name="Prog">
+              <ScalarProperty Name="Id" ColumnName="ProgramID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="ProgramTag" TypeName="ArchiveBaseModel.ProgramTag" StoreEntitySet="ProgramTag">
+            <EndProperty Name="Tag">
+              <ScalarProperty Name="Id" ColumnName="TagID" />
+            </EndProperty>
+            <EndProperty Name="Prog">
+              <ScalarProperty Name="Id" ColumnName="ProgramID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

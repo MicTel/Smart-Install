@@ -10,12 +10,12 @@ namespace Smart_install
     {
         public List<string> getTags()
         {
-            DatabaseArchiveEntities database = new DatabaseArchiveEntities();
+            ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
             List<Tag> tags = database.Tags.ToList();
             List<string> tagList = new List<string>(); 
             foreach (Tag tag in tags)
             {
-                tagList.Add(tag.Name.ToString());
+                tagList.Add(tag.TagName.ToString());
             }
 
             return tagList;

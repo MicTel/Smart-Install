@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ArchiveBaseModelStoreContainer" CdmEntityContainer="ArchiveBaseEntities2">
+    <EntitySetMapping Name="Archives">
+      <EntityTypeMapping TypeName="ArchiveBaseModel.Archive">
+        <MappingFragment StoreEntitySet="Archive">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Languages">
+      <EntityTypeMapping TypeName="ArchiveBaseModel.Language">
+        <MappingFragment StoreEntitySet="Language">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Language1" ColumnName="Language" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Progs">
+      <EntityTypeMapping TypeName="ArchiveBaseModel.Prog">
+        <MappingFragment StoreEntitySet="Prog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="HelpLink" ColumnName="HelpLink" />
+          <ScalarProperty Name="URLUpdate" ColumnName="URLUpdate" />
+          <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+          <ScalarProperty Name="SystemID" ColumnName="SystemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="systemTypes">
+      <EntityTypeMapping TypeName="ArchiveBaseModel.systemType">
+        <MappingFragment StoreEntitySet="systemType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="systemType1" ColumnName="systemType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tags">
+      <EntityTypeMapping TypeName="ArchiveBaseModel.Tag">
+        <MappingFragment StoreEntitySet="Tag">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TagName" ColumnName="TagName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ProgramInArchive" TypeName="ArchiveBaseModel.ProgramInArchive" StoreEntitySet="ProgramInArchive">
+      <EndProperty Name="Archive">
+        <ScalarProperty Name="Id" ColumnName="ArchivesID" />
+      </EndProperty>
+      <EndProperty Name="Prog">
+        <ScalarProperty Name="Id" ColumnName="ProgramID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ProgramTag" TypeName="ArchiveBaseModel.ProgramTag" StoreEntitySet="ProgramTag">
+      <EndProperty Name="Tag">
+        <ScalarProperty Name="Id" ColumnName="TagID" />
+      </EndProperty>
+      <EndProperty Name="Prog">
+        <ScalarProperty Name="Id" ColumnName="ProgramID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

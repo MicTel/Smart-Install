@@ -6,19 +6,26 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
-using System.Collections.Generic;
 
 namespace Smart_install
 {
+    using System;
+    using System.Collections.Generic;
     
     public partial class Archive
     {
+        public Archive()
+        {
+            this.Progs = new HashSet<Prog>();
+        }
+    
         public int Id { get; set; }
         public string Name { get; set; }
         public string Path { get; set; }
-        public Nullable<DateTime> CreateDate { get; set; }
-        public Nullable<DateTime> ModifiedDate { get; set; }
+        public Nullable<System.DateTime> CreateDate { get; set; }
+        public Nullable<System.DateTime> ModifiedDate { get; set; }
         public string Description { get; set; }
+    
+        public virtual ICollection<Prog> Progs { get; set; }
     }
 }

@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-    
 namespace Smart_install
 {
-    public partial class DatabaseArchiveEntities : DbContext
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
+    
+    public partial class ArchiveBaseEntities2 : DbContext
     {
-        public DatabaseArchiveEntities()
-            : base("name=DatabaseArchiveEntities")
+        public ArchiveBaseEntities2()
+            : base("name=ArchiveBaseEntities2")
         {
         }
     
@@ -27,8 +27,8 @@ namespace Smart_install
     
         public DbSet<Archive> Archives { get; set; }
         public DbSet<Language> Languages { get; set; }
-        public DbSet<SearchProgram> Programs { get; set; }
-        public DbSet<System> Systems { get; set; }
+        public DbSet<Prog> Progs { get; set; }
+        public DbSet<systemType> systemTypes { get; set; }
         public DbSet<Tag> Tags { get; set; }
     }
 }

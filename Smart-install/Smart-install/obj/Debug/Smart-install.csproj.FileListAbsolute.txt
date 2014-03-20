@@ -19,3 +19,9 @@ X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-insta
 X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.Properties.Resources.resources
 X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.userMenuInstall.resources
 X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.csproj.GenerateResource.Cache
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\bin\Debug\ArchiveBase.mdf
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\bin\Debug\ArchiveBase_log.ldf
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.exe
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.pdb
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\bin\Debug\EntityFramework.dll
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\bin\Debug\EntityFramework.xml

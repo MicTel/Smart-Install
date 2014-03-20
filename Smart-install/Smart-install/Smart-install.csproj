@@ -11,6 +11,21 @@
     <AssemblyName>Smart-install</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,27 +66,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Archive.cs">
-      <DependentUpon>ArchiveModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ArchiveModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ArchiveModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ArchiveModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ArchiveModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ArchiveModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ArchiveModel.edmx</DependentUpon>
+      <DependentUpon>ModelArchive.tt</DependentUpon>
     </Compile>
     <Compile Include="control.cs" />
     <Compile Include="Exec.cs" />
     <Compile Include="Language.cs">
-      <DependentUpon>ArchiveModel.tt</DependentUpon>
+      <DependentUpon>ModelArchive.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelArchive.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelArchive.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelArchive.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelArchive.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelArchive.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelArchive.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Prog.cs">
+      <DependentUpon>ModelArchive.tt</DependentUpon>
     </Compile>
     <Compile Include="SearchProgram.cs" />
     <Compile Include="NewArch.cs">
@@ -80,15 +98,12 @@
     <Compile Include="NewArch.Designer.cs">
       <DependentUpon>NewArch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs">
-      <DependentUpon>ArchiveModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="System.cs">
-      <DependentUpon>ArchiveModel.tt</DependentUpon>
+    <Compile Include="systemType.cs">
+      <DependentUpon>ModelArchive.tt</DependentUpon>
     </Compile>
     <Compile Include="Tag.cs">
-      <DependentUpon>ArchiveModel.tt</DependentUpon>
+      <DependentUpon>ModelArchive.tt</DependentUpon>
     </Compile>
     <Compile Include="userMenuInstall.cs">
       <SubType>Form</SubType>
@@ -111,22 +126,22 @@
     <EmbeddedResource Include="userMenuInstall.resx">
       <DependentUpon>userMenuInstall.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="ArchiveModel.edmx">
+    <EntityDeploy Include="ModelArchive.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ArchiveModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelArchive.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ArchiveModel.Context.tt">
+    <None Include="ModelArchive.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ArchiveModel.edmx</DependentUpon>
-      <LastGenOutput>ArchiveModel.Context.cs</LastGenOutput>
+      <DependentUpon>ModelArchive.edmx</DependentUpon>
+      <LastGenOutput>ModelArchive.Context.cs</LastGenOutput>
     </None>
-    <None Include="ArchiveModel.edmx.diagram">
-      <DependentUpon>ArchiveModel.edmx</DependentUpon>
+    <None Include="ModelArchive.edmx.diagram">
+      <DependentUpon>ModelArchive.edmx</DependentUpon>
     </None>
-    <None Include="ArchiveModel.tt">
+    <None Include="ModelArchive.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ArchiveModel.edmx</DependentUpon>
-      <LastGenOutput>ArchiveModel.cs</LastGenOutput>
+      <DependentUpon>ModelArchive.edmx</DependentUpon>
+      <LastGenOutput>ModelArchive.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -143,12 +158,33 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DatabaseArchive.sdf">
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArchiveBase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ArchiveBase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>ArchiveBase.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
