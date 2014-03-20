@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Win32;
 
-namespace ConsoleApplication2
+namespace Smart_install
 {
-    class Program
+    class SearchProgram
     {
 
         /*public static void Main()

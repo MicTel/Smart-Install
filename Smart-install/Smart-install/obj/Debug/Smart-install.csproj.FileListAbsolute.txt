@@ -11,3 +11,11 @@ C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-insta
 C:\Studia\SmartInstallC#\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.exe.config
 C:\Studia\SmartInstallC#\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.exe
 C:\Studia\SmartInstallC#\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.pdb
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.exe.config
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.exe
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.pdb
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.csprojResolveAssemblyReference.cache
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.NewArch.resources
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.Properties.Resources.resources
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.userMenuInstall.resources
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.csproj.GenerateResource.Cache

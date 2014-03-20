@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseArchiveModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DatabaseArchiveModelStoreContainer">
+    <EntitySet Name="Archives" EntityType="DatabaseArchiveModel.Store.Archives" store:Type="Tables" />
+    <EntitySet Name="Language" EntityType="DatabaseArchiveModel.Store.Language" store:Type="Tables" />
+    <EntitySet Name="Programs" EntityType="DatabaseArchiveModel.Store.Programs" store:Type="Tables" />
+    <EntitySet Name="System" EntityType="DatabaseArchiveModel.Store.System" store:Type="Tables" />
+    <EntitySet Name="Tag" EntityType="DatabaseArchiveModel.Store.Tag" store:Type="Tables" />
+  </EntityContainer>
+  <EntityType Name="Archives">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Path" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Programs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Descriptions" Type="nvarchar" MaxLength="100" />
+    <Property Name="URLUpdate" Type="nvarchar" MaxLength="100" />
+    <Property Name="Version" Type="nvarchar" MaxLength="100" />
+    <Property Name="HelpLink" Type="nvarchar" MaxLength="100" />
+    <Property Name="Language" Type="int" />
+    <Property Name="System" Type="int" />
+  </EntityType>
+  <EntityType Name="System">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+</Schema>

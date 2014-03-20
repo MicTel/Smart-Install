@@ -7,20 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+
 using System;
 using System.Collections.Generic;
 
 namespace Smart_install
-{    
-    public partial class Program
+{   
+    public partial class Language
     {
-        public int Id { get; set; }
+        public int id { get; set; }
         public string Name { get; set; }
-        public string Descriptions { get; set; }
-        public string URLUpdate { get; set; }
-        public string Version { get; set; }
-        public string HelpLink { get; set; }
-        public Nullable<int> Language { get; set; }
-        public Nullable<int> System { get; set; }
     }
 }

@@ -6,21 +6,19 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
 using System;
 using System.Collections.Generic;
 
 namespace Smart_install
-{    
-    public partial class Program
+{
+    
+    public partial class Archive
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Descriptions { get; set; }
-        public string URLUpdate { get; set; }
-        public string Version { get; set; }
-        public string HelpLink { get; set; }
-        public Nullable<int> Language { get; set; }
-        public Nullable<int> System { get; set; }
+        public string Path { get; set; }
+        public Nullable<DateTime> CreateDate { get; set; }
+        public Nullable<DateTime> ModifiedDate { get; set; }
+        public string Description { get; set; }
     }
 }

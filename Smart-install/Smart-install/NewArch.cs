@@ -16,6 +16,7 @@ namespace Smart_install
         public NewArch()
         {
             InitializeComponent();
+            
         }
 
         private void ustawieniaToolStripMenuItem_Click(object sender, EventArgs e)
