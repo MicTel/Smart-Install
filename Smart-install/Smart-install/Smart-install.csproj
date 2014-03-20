@@ -68,6 +68,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ArchiveModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="control.cs" />
     <Compile Include="Exec.cs" />
     <Compile Include="Language.cs">
       <DependentUpon>ArchiveModel.tt</DependentUpon>
