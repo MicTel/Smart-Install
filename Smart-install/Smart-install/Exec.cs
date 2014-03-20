@@ -15,6 +15,12 @@ namespace Smart_install
         [STAThread]
         static void Main()
         {
+            ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
+            Tag tag = new Tag();
+            tag.Id=1;
+            tag.TagName="Sterowniki";
+            database.Tags.Add(tag);
+            database.SaveChanges();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new userMenuInstall());

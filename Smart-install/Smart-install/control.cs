@@ -8,7 +8,7 @@ namespace Smart_install
 {
     public class control
     {
-        public List<string> getTags()
+        public static List<string> getTags()
         {
             ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
             List<Tag> tags = database.Tags.ToList();
