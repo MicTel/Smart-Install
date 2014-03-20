@@ -53,6 +53,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -117,6 +119,7 @@
     <Compile Include="userMenuInstall.Designer.cs">
       <DependentUpon>userMenuInstall.cs</DependentUpon>
     </Compile>
+    <Compile Include="zipCreator.cs" />
     <EmbeddedResource Include="NewArch.resx">
       <DependentUpon>NewArch.cs</DependentUpon>
     </EmbeddedResource>

@@ -39,3 +39,6 @@ D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\
 D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.Properties.Resources.resources
 D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.userMenuInstall.resources
 D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.csproj.GenerateResource.Cache
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.exe.config
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.exe
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.pdb
