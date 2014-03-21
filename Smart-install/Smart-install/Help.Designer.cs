@@ -29,33 +29,22 @@
         private void InitializeComponent()
         {
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.Autorzy = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(194, 12);
+            this.richTextBox1.Location = new System.Drawing.Point(15, 28);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(259, 304);
+            this.richTextBox1.Size = new System.Drawing.Size(439, 284);
             this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "Michał Telus\nMateusz Tweester\nPatryk Kosiorek\nNatalia Rybarczyk";
-            // 
-            // Autorzy
-            // 
-            this.Autorzy.FormattingEnabled = true;
-            this.Autorzy.Items.AddRange(new object[] {
-            "Autorzy"});
-            this.Autorzy.Location = new System.Drawing.Point(12, 12);
-            this.Autorzy.Name = "Autorzy";
-            this.Autorzy.Size = new System.Drawing.Size(160, 304);
-            this.Autorzy.TabIndex = 3;
+            this.richTextBox1.Text = "Autorzy: \n\tMichał Telus\n\tMateusz Tweester\n\tPatryk Kosiorek\n\tNatalia Rybarczyk\n\nWy" +
+    "magania programu:\n\tProgram wymaga framework .NET 4.0";
             // 
             // Help
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 336);
-            this.Controls.Add(this.Autorzy);
             this.Controls.Add(this.richTextBox1);
             this.Name = "Help";
             this.Text = "Help";
@@ -67,7 +56,6 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.CheckedListBox Autorzy;
 
 
     }

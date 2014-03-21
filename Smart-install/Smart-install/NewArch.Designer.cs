@@ -42,7 +42,6 @@
             this.kategorieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ustawieniaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.językToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ustawieniaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.skórkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.czcionkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -127,6 +126,7 @@
             this.ostatnioUżywaneToolStripMenuItem.Name = "ostatnioUżywaneToolStripMenuItem";
             this.ostatnioUżywaneToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.ostatnioUżywaneToolStripMenuItem.Text = "Ostatnio używane";
+            this.ostatnioUżywaneToolStripMenuItem.Click += new System.EventHandler(this.ostatnioUżywaneToolStripMenuItem_Click);
             // 
             // edycjaToolStripMenuItem
             // 
@@ -161,7 +161,6 @@
             // 
             this.ustawieniaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.językToolStripMenuItem,
-            this.ustawieniaToolStripMenuItem2,
             this.skórkiToolStripMenuItem,
             this.czcionkaToolStripMenuItem});
             this.ustawieniaToolStripMenuItem1.Name = "ustawieniaToolStripMenuItem1";
@@ -171,26 +170,20 @@
             // językToolStripMenuItem
             // 
             this.językToolStripMenuItem.Name = "językToolStripMenuItem";
-            this.językToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.językToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.językToolStripMenuItem.Text = "Język";
-            // 
-            // ustawieniaToolStripMenuItem2
-            // 
-            this.ustawieniaToolStripMenuItem2.Name = "ustawieniaToolStripMenuItem2";
-            this.ustawieniaToolStripMenuItem2.Size = new System.Drawing.Size(131, 22);
-            this.ustawieniaToolStripMenuItem2.Text = "Ustawienia";
             // 
             // skórkiToolStripMenuItem
             // 
             this.skórkiToolStripMenuItem.Name = "skórkiToolStripMenuItem";
-            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.skórkiToolStripMenuItem.Text = "Kolor tła";
             this.skórkiToolStripMenuItem.Click += new System.EventHandler(this.skórkiToolStripMenuItem_Click);
             // 
             // czcionkaToolStripMenuItem
             // 
             this.czcionkaToolStripMenuItem.Name = "czcionkaToolStripMenuItem";
-            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.czcionkaToolStripMenuItem.Text = "Czcionka";
             this.czcionkaToolStripMenuItem.Click += new System.EventHandler(this.czcionkaToolStripMenuItem_Click);
             // 
@@ -220,14 +213,6 @@
             // 
             this.ctr_Tag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ctr_Tag.FormattingEnabled = true;
-            //this.ctr_Tag.Items.AddRange(new object[] {
-            //"Edukacja",
-            //"Grafika",
-            //"Muzyka",
-            //"Narzędzia programistyczne",
-            //"Sterowniki",
-            //"System",
-            //"Zarządzanie dyskiem"});
             this.ctr_Tag.Location = new System.Drawing.Point(12, 52);
             this.ctr_Tag.Name = "ctr_Tag";
             this.ctr_Tag.Size = new System.Drawing.Size(189, 208);
@@ -254,6 +239,7 @@
             this.clickButton_addProgram.TabIndex = 3;
             this.clickButton_addProgram.Text = "Dodaj program";
             this.clickButton_addProgram.UseVisualStyleBackColor = true;
+            this.clickButton_addProgram.Click += new System.EventHandler(this.clickButton_addProgram_Click);
             // 
             // checkedListBox1
             // 
@@ -368,7 +354,6 @@
         private System.Windows.Forms.ToolStripMenuItem kategorieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem językToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem skórkiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem czcionkaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem;
