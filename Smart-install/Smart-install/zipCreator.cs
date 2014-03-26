@@ -16,7 +16,7 @@ namespace Smart_install
         /// <param name="name">Nazwa archiwum</param>
         /// <param name="destinyPath">Gdzie ma powstać</param>
         /// <param name="filePath">nazwa zip</param>
-        public static void createArchive(string name, string destinyPath, string filePath)
+        public static void createArchive(string destinyPath, string filePath)
         {
             ZipFile.CreateFromDirectory(filePath, destinyPath, CompressionLevel.NoCompression, false);
         }
