@@ -73,6 +73,12 @@
     <Compile Include="AddPrograms.Designer.cs">
       <DependentUpon>AddPrograms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add_NewTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_NewTag.Designer.cs">
+      <DependentUpon>Add_NewTag.cs</DependentUpon>
+    </Compile>
     <Compile Include="Archive.cs">
       <DependentUpon>ModelArchive.tt</DependentUpon>
     </Compile>

@@ -28,18 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.noweArchiwumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dodajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zPlikuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuńToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zamknijArchiwumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ostatnioUżywaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.edycjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.filtrujWgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ustawieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kategorieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ustawieniaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.językToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skórkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,6 +50,8 @@
             this.label4_choiceProgram = new System.Windows.Forms.Label();
             this.ctr_clickAll = new System.Windows.Forms.Button();
             this.ctr_refillAll = new System.Windows.Forms.Button();
+            this.dodajKatekorięToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,8 +59,6 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.plikToolStripMenuItem,
-            this.edycjaToolStripMenuItem,
-            this.ustawieniaToolStripMenuItem,
             this.ustawieniaToolStripMenuItem1,
             this.pomocToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -79,85 +70,10 @@
             // plikToolStripMenuItem
             // 
             this.plikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.noweArchiwumToolStripMenuItem,
-            this.dodajToolStripMenuItem,
-            this.usuńToolStripMenuItem,
-            this.zamknijArchiwumToolStripMenuItem,
-            this.ostatnioUżywaneToolStripMenuItem});
+            this.dodajKatekorięToolStripMenuItem});
             this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
             this.plikToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.plikToolStripMenuItem.Text = "Plik";
-            // 
-            // noweArchiwumToolStripMenuItem
-            // 
-            this.noweArchiwumToolStripMenuItem.Name = "noweArchiwumToolStripMenuItem";
-            this.noweArchiwumToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.noweArchiwumToolStripMenuItem.Text = "Nowe archiwum";
-            this.noweArchiwumToolStripMenuItem.Click += new System.EventHandler(this.noweArchiwumToolStripMenuItem_Click);
-            // 
-            // dodajToolStripMenuItem
-            // 
-            this.dodajToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.zPlikuToolStripMenuItem});
-            this.dodajToolStripMenuItem.Name = "dodajToolStripMenuItem";
-            this.dodajToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.dodajToolStripMenuItem.Text = "Dodaj";
-            // 
-            // zPlikuToolStripMenuItem
-            // 
-            this.zPlikuToolStripMenuItem.Name = "zPlikuToolStripMenuItem";
-            this.zPlikuToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.zPlikuToolStripMenuItem.Text = "z pliku...";
-            this.zPlikuToolStripMenuItem.Click += new System.EventHandler(this.zPlikuToolStripMenuItem_Click_1);
-            // 
-            // usuńToolStripMenuItem
-            // 
-            this.usuńToolStripMenuItem.Name = "usuńToolStripMenuItem";
-            this.usuńToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.usuńToolStripMenuItem.Text = "Usuń";
-            this.usuńToolStripMenuItem.Click += new System.EventHandler(this.usuńToolStripMenuItem_Click);
-            // 
-            // zamknijArchiwumToolStripMenuItem
-            // 
-            this.zamknijArchiwumToolStripMenuItem.Name = "zamknijArchiwumToolStripMenuItem";
-            this.zamknijArchiwumToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.zamknijArchiwumToolStripMenuItem.Text = "Zamknij archiwum";
-            // 
-            // ostatnioUżywaneToolStripMenuItem
-            // 
-            this.ostatnioUżywaneToolStripMenuItem.Name = "ostatnioUżywaneToolStripMenuItem";
-            this.ostatnioUżywaneToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.ostatnioUżywaneToolStripMenuItem.Text = "Ostatnio używane";
-            this.ostatnioUżywaneToolStripMenuItem.Click += new System.EventHandler(this.ostatnioUżywaneToolStripMenuItem_Click);
-            // 
-            // edycjaToolStripMenuItem
-            // 
-            this.edycjaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filtrujWgToolStripMenuItem});
-            this.edycjaToolStripMenuItem.Name = "edycjaToolStripMenuItem";
-            this.edycjaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.edycjaToolStripMenuItem.Text = "Edycja";
-            // 
-            // filtrujWgToolStripMenuItem
-            // 
-            this.filtrujWgToolStripMenuItem.Name = "filtrujWgToolStripMenuItem";
-            this.filtrujWgToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.filtrujWgToolStripMenuItem.Text = "filtruj wg...";
-            // 
-            // ustawieniaToolStripMenuItem
-            // 
-            this.ustawieniaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kategorieToolStripMenuItem});
-            this.ustawieniaToolStripMenuItem.Name = "ustawieniaToolStripMenuItem";
-            this.ustawieniaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ustawieniaToolStripMenuItem.Text = "Widok";
-            this.ustawieniaToolStripMenuItem.Click += new System.EventHandler(this.ustawieniaToolStripMenuItem_Click);
-            // 
-            // kategorieToolStripMenuItem
-            // 
-            this.kategorieToolStripMenuItem.Name = "kategorieToolStripMenuItem";
-            this.kategorieToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.kategorieToolStripMenuItem.Text = "Kategorie";
             // 
             // ustawieniaToolStripMenuItem1
             // 
@@ -231,7 +147,7 @@
             this.ctr_ProgramsList.Size = new System.Drawing.Size(208, 174);
             this.ctr_ProgramsList.Sorted = true;
             this.ctr_ProgramsList.TabIndex = 2;
-            this.ctr_ProgramsList.SelectedIndexChanged += new System.EventHandler(this.ctr_ProgramsList_SelectedIndexChanged);
+            this.ctr_ProgramsList.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.ctr_ProgramsList_SelectedIndexChanged);
             // 
             // ctr_addProgram
             // 
@@ -314,22 +230,35 @@
             // 
             // ctr_clickAll
             // 
-            this.ctr_clickAll.Location = new System.Drawing.Point(125, 234);
+            this.ctr_clickAll.Location = new System.Drawing.Point(12, 232);
             this.ctr_clickAll.Name = "ctr_clickAll";
             this.ctr_clickAll.Size = new System.Drawing.Size(104, 25);
             this.ctr_clickAll.TabIndex = 14;
             this.ctr_clickAll.Text = "Zaznacz wszystko";
             this.ctr_clickAll.UseVisualStyleBackColor = true;
+            this.ctr_clickAll.Click += new System.EventHandler(this.ctr_clickAll_Click);
             // 
             // ctr_refillAll
             // 
-            this.ctr_refillAll.Location = new System.Drawing.Point(12, 235);
+            this.ctr_refillAll.Location = new System.Drawing.Point(122, 233);
             this.ctr_refillAll.Name = "ctr_refillAll";
             this.ctr_refillAll.Size = new System.Drawing.Size(107, 24);
             this.ctr_refillAll.TabIndex = 15;
             this.ctr_refillAll.Text = "Odznacz wszytsko";
             this.ctr_refillAll.UseVisualStyleBackColor = true;
             this.ctr_refillAll.Click += new System.EventHandler(this.ctr_refillAll_Click);
+            // 
+            // dodajKatekorięToolStripMenuItem
+            // 
+            this.dodajKatekorięToolStripMenuItem.Name = "dodajKatekorięToolStripMenuItem";
+            this.dodajKatekorięToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.dodajKatekorięToolStripMenuItem.Text = "Dodaj kategorię";
+            this.dodajKatekorięToolStripMenuItem.Click += new System.EventHandler(this.dodajKatekorięToolStripMenuItem_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // NewArch
             // 
@@ -366,16 +295,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem plikToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem edycjaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem noweArchiwumToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dodajToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zPlikuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuńToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zamknijArchiwumToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ostatnioUżywaneToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem filtrujWgToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kategorieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem językToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem skórkiToolStripMenuItem;
@@ -395,6 +314,8 @@
         private System.Windows.Forms.Label label4_choiceProgram;
         private System.Windows.Forms.Button ctr_clickAll;
         private System.Windows.Forms.Button ctr_refillAll;
+        private System.Windows.Forms.ToolStripMenuItem dodajKatekorięToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 

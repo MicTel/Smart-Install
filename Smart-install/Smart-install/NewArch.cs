@@ -18,7 +18,8 @@ namespace Smart_install
         /// zmienna wybierania poszczegolnych kategorii 
         /// </summary>
         private List<string> _selectedTag;
- 
+
+        public List<programInformation> _AllNewPrograms;
 
         public NewArch()
         {
@@ -27,8 +28,7 @@ namespace Smart_install
             control.addTags("Muzyka");
             control.addTags("Grafika");
             add_to_lis_tag();
-
-
+            _AllNewPrograms = new List<programInformation>();
 
             //foreach (string tag in control.getTags())
             //{
@@ -62,6 +62,19 @@ namespace Smart_install
             List<string> returnListNameTag = new List<string>(); //control.getPrograms(listNameTag);
            ctr_ProgramsList.Items.AddRange(returnListNameTag.ToArray<object>());
         }
+
+        public void refresh()
+        {
+            ctr_ProgramsList.Items.Clear();
+            foreach (programInformation p in _AllNewPrograms)
+            {
+                ctr_ProgramsList.Items.Add(p.Name);
+
+            }
+            ctr_Tag.Items.Clear();
+            add_to_lis_tag();
+        }
+            
 
         private void add_to_list_program()
         { 
@@ -189,12 +202,14 @@ namespace Smart_install
         //    String mruToken = Windows.Storage.AccessCache.StorageApplicationPermissions.MostRecentlyUsedList.Add(pickedFile, pickedFile.Name);   
         }
 
+        //private async
+
         private void clickButton_addProgram_Click(object sender, EventArgs e)
         {
             Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.InitialDirectory = "c:\\";
-            openFileDialog1.Filter = "misc Files (*.misc)|*.misc|exe Files (*.exe)|*.exe|" + "All files (*.*)|*.*";;
+            openFileDialog1.Filter = "msi Files (*.msi)|*.msi|exe Files (*.exe)|*.exe|iso files (*.iso)|*.iso|" + "All files (*.*)|*.*";;
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
 
@@ -206,7 +221,8 @@ namespace Smart_install
                     {
                         using (myStream)
                         {
-                            AddPrograms addProgram2 = new AddPrograms();
+                            //new function
+                            AddPrograms addProgram2 = new AddPrograms(myStream.ToString(), this);
                             addProgram2.Show();
                         }
                     }
@@ -219,29 +235,43 @@ namespace Smart_install
 
         }
 
-        private void ctr_ProgramsList_SelectedIndexChanged(object sender, EventArgs e)
+        private void ctr_ProgramsList_SelectedIndexChanged(object sender, ItemCheckEventArgs e)
         {
             // Get the currently selected item in the ctr_ProgramsList. 
-            string curItem = ctr_ProgramsList.SelectedItem.ToString();
+            //string curItem = ctr_ProgramsList.SelectedItem.ToString();
             
             // Find the string in ctr_programsList. 
-            int index = ctr_ProgramsList.FindString(curItem);
-            
-            // If the item was not found in ctr_ProgramsList display a message box, 
-            //otherwise select it in ctr_ProgramList. 
-            //if(index == -1)
-            //    MessageBox.Show("Programu nie ma na liście programów");
-            //else
-            //    ctr_ProgramsList.SetSelected(index,true);
-            if (((CheckBox)ctr_ProgramsList.Items[index]).Checked)
-                ctr_checkedPrograms.Items.Add(curItem);
+            //int index = ctr_ProgramsList.FindString(curItem);
+
+
+            if (e.NewValue.ToString() == "Checked")
+                ctr_checkedPrograms.Items.Add(ctr_ProgramsList.Items[e.Index]);
             else
-                ctr_checkedPrograms.Items.Remove(curItem);
+                ctr_checkedPrograms.Items.Remove(ctr_ProgramsList.Items[e.Index]);
+
+            
+            //if (((CheckBox)ctr_ProgramsList.Items[index]).Checked)
+            //    ctr_checkedPrograms.Items.Add(curItem);
+            //else
+            //    ctr_checkedPrograms.Items.Remove(curItem);
         }
 
         private void ctr_refillAll_Click(object sender, EventArgs e)
         {
-            
+            for (int i = 0; i < ctr_Tag.Items.Count; i++)
+                ctr_Tag.SetItemChecked(i, false);
+        }
+
+        private void ctr_clickAll_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < ctr_Tag.Items.Count; i++)
+                ctr_Tag.SetItemChecked(i, true);
+        }
+
+        private void dodajKatekorięToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_NewTag _newTag =  new Add_NewTag(this);
+            _newTag.Show();
         }
 
     }
