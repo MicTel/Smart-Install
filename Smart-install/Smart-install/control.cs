@@ -6,9 +6,38 @@ using System.Threading.Tasks;
 
 namespace Smart_install
 {
+
+    /// <summary>
+    /// Klasa reprezentująca informację na temat archiwum uzyskiwane od urzytkownika
+    /// </summary>
+    public class archiveInformation
+    {
+        public string Name { get; set; }
+        public string Path { get; set; }
+        public string Description { get; set; }
+    }
+
+    /// <summary>
+    /// Klasa reprezentująca informację na temat programu uzyskiwane od urzytkownika
+    /// </summary>
+    public class programInformation
+    {
+        public string Name { get; set; }
+        public string Version { get; set; }
+        public string Description { get; set; }
+        public string HelpLink { get; set; }
+        public string URLUpdate { get; set; }
+        public string Publisher { get; set; }
+        public string Path { get; set; }
+        public string Icon { get; set; }
+
+        public string Language { get; set; }
+        public string systemType { get; set; }
+        public List<string> Tags { get; set; }
+    }
+
     public class control
     {
-
         /// <summary>
         /// Zwraca listę wszystkich tagów z bazy danych
         /// </summary>
@@ -55,9 +84,14 @@ namespace Smart_install
             var prog = from p in database.Progs
                               where _checkTag(p.Tags.ToList<Tag>(), selectedTags)
                               select p.Name;
+            
+            List<string> progString = new List<string>();
+            foreach (var p in prog)
+            {
+                progString.Add(p.ToString());
+            }
 
-            database.Archives.ToList();
-            return prog.ToList<string>();
+            return progString;
         }
 
         /// <summary>
@@ -99,28 +133,45 @@ namespace Smart_install
         /// </summary>
         /// <param name="toDatabase">Dane o programie</param>
         /// <param name="path">Ścieżka do programu</param>
-        public static void addProgram(Prog toDatabase, string path )
+        public static void addProgram(programInformation toDatabase)
         {
             ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
-            database.Progs.Add(toDatabase);
-            database.SaveChanges();
+            Prog p = database.Progs.OrderByDescending(c => c.Id).FirstOrDefault();
+            int newId = (null == p ? 0 : p.Id) + 1;
+            Prog program = new Prog()
+            {
+                Id = newId,
+                Description = toDatabase.Description,
+                HelpLink = toDatabase.HelpLink,
+                Name = toDatabase.Name,
+                Publisher = toDatabase.Publisher,
+                Icon = toDatabase.Icon,
+                URLUpdate = toDatabase.URLUpdate,
+                Version = toDatabase.Version
+            };
+            database.Progs.Add(program);
+            try
+            {
+                database.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-        public static void createArchive(List<Prog> programs, List<string> pathsPrograms, string name, string pathArchive)
+        public static void createArchive(List<programInformation> programs, string name, string pathArchive)
         {
-            zipCreator.createArchive(name, pathArchive, pathsPrograms[0]);
-            pathsPrograms.RemoveAt(0);
-            //zipCreator.addToArchive(
-
+            string fullArchiveName = pathArchive + name;
+            zipCreator.createArchive(pathArchive, programs[0].Path);
+            
             ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
             
-            foreach (Prog p in programs)
+            foreach (programInformation p in programs)
             {
-                database.Progs.Add(p);
-            
+                addProgram(p);
             }
             database.SaveChanges();
-        
         }
         
     }
