@@ -48,15 +48,17 @@
             this.stronaProgramuOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ctr_Tag = new System.Windows.Forms.CheckedListBox();
-            this.Programy = new System.Windows.Forms.CheckedListBox();
-            this.clickButton_addProgram = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.clickButton_createArch = new System.Windows.Forms.Button();
-            this.richText_descriptionPrograms = new System.Windows.Forms.RichTextBox();
+            this.ctr_ProgramsList = new System.Windows.Forms.CheckedListBox();
+            this.ctr_addProgram = new System.Windows.Forms.Button();
+            this.ctr_checkedPrograms = new System.Windows.Forms.CheckedListBox();
+            this.ctr_createArch = new System.Windows.Forms.Button();
+            this.ctr_textDescription = new System.Windows.Forms.RichTextBox();
             this.label_tag = new System.Windows.Forms.Label();
             this.label2_listprogram = new System.Windows.Forms.Label();
             this.label3_descriptionProgram = new System.Windows.Forms.Label();
             this.label4_choiceProgram = new System.Windows.Forms.Label();
+            this.ctr_clickAll = new System.Windows.Forms.Button();
+            this.ctr_refillAll = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +72,7 @@
             this.pomocToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(839, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(850, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -215,59 +217,60 @@
             this.ctr_Tag.FormattingEnabled = true;
             this.ctr_Tag.Location = new System.Drawing.Point(12, 52);
             this.ctr_Tag.Name = "ctr_Tag";
-            this.ctr_Tag.Size = new System.Drawing.Size(189, 208);
+            this.ctr_Tag.Size = new System.Drawing.Size(217, 174);
             this.ctr_Tag.Sorted = true;
             this.ctr_Tag.TabIndex = 1;
             this.ctr_Tag.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
-            // Programy
+            // ctr_ProgramsList
             // 
-            this.Programy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Programy.FormattingEnabled = true;
-            this.Programy.Location = new System.Drawing.Point(208, 52);
-            this.Programy.Name = "Programy";
-            this.Programy.Size = new System.Drawing.Size(188, 208);
-            this.Programy.Sorted = true;
-            this.Programy.TabIndex = 2;
+            this.ctr_ProgramsList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ctr_ProgramsList.FormattingEnabled = true;
+            this.ctr_ProgramsList.Location = new System.Drawing.Point(235, 51);
+            this.ctr_ProgramsList.Name = "ctr_ProgramsList";
+            this.ctr_ProgramsList.Size = new System.Drawing.Size(208, 174);
+            this.ctr_ProgramsList.Sorted = true;
+            this.ctr_ProgramsList.TabIndex = 2;
+            this.ctr_ProgramsList.SelectedIndexChanged += new System.EventHandler(this.ctr_ProgramsList_SelectedIndexChanged);
             // 
-            // clickButton_addProgram
+            // ctr_addProgram
             // 
-            this.clickButton_addProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.clickButton_addProgram.Location = new System.Drawing.Point(421, 380);
-            this.clickButton_addProgram.Name = "clickButton_addProgram";
-            this.clickButton_addProgram.Size = new System.Drawing.Size(188, 60);
-            this.clickButton_addProgram.TabIndex = 3;
-            this.clickButton_addProgram.Text = "Dodaj program";
-            this.clickButton_addProgram.UseVisualStyleBackColor = true;
-            this.clickButton_addProgram.Click += new System.EventHandler(this.clickButton_addProgram_Click);
+            this.ctr_addProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ctr_addProgram.Location = new System.Drawing.Point(655, 368);
+            this.ctr_addProgram.Name = "ctr_addProgram";
+            this.ctr_addProgram.Size = new System.Drawing.Size(169, 61);
+            this.ctr_addProgram.TabIndex = 3;
+            this.ctr_addProgram.Text = "Dodaj program";
+            this.ctr_addProgram.UseVisualStyleBackColor = true;
+            this.ctr_addProgram.Click += new System.EventHandler(this.clickButton_addProgram_Click);
             // 
-            // checkedListBox1
+            // ctr_checkedPrograms
             // 
-            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(12, 289);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(383, 140);
-            this.checkedListBox1.TabIndex = 4;
+            this.ctr_checkedPrograms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ctr_checkedPrograms.FormattingEnabled = true;
+            this.ctr_checkedPrograms.Location = new System.Drawing.Point(12, 289);
+            this.ctr_checkedPrograms.Name = "ctr_checkedPrograms";
+            this.ctr_checkedPrograms.Size = new System.Drawing.Size(431, 140);
+            this.ctr_checkedPrograms.TabIndex = 4;
             // 
-            // clickButton_createArch
+            // ctr_createArch
             // 
-            this.clickButton_createArch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.clickButton_createArch.Location = new System.Drawing.Point(628, 380);
-            this.clickButton_createArch.Name = "clickButton_createArch";
-            this.clickButton_createArch.Size = new System.Drawing.Size(188, 61);
-            this.clickButton_createArch.TabIndex = 5;
-            this.clickButton_createArch.Text = "Utwórz archiwum";
-            this.clickButton_createArch.UseVisualStyleBackColor = true;
+            this.ctr_createArch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ctr_createArch.Location = new System.Drawing.Point(462, 368);
+            this.ctr_createArch.Name = "ctr_createArch";
+            this.ctr_createArch.Size = new System.Drawing.Size(169, 61);
+            this.ctr_createArch.TabIndex = 5;
+            this.ctr_createArch.Text = "Utwórz archiwum";
+            this.ctr_createArch.UseVisualStyleBackColor = true;
             // 
-            // richText_descriptionPrograms
+            // ctr_textDescription
             // 
-            this.richText_descriptionPrograms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.richText_descriptionPrograms.Location = new System.Drawing.Point(421, 52);
-            this.richText_descriptionPrograms.Name = "richText_descriptionPrograms";
-            this.richText_descriptionPrograms.Size = new System.Drawing.Size(395, 300);
-            this.richText_descriptionPrograms.TabIndex = 6;
-            this.richText_descriptionPrograms.Text = "";
+            this.ctr_textDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ctr_textDescription.Location = new System.Drawing.Point(462, 52);
+            this.ctr_textDescription.Name = "ctr_textDescription";
+            this.ctr_textDescription.Size = new System.Drawing.Size(362, 300);
+            this.ctr_textDescription.TabIndex = 6;
+            this.ctr_textDescription.Text = "";
             // 
             // label_tag
             // 
@@ -283,7 +286,7 @@
             // 
             this.label2_listprogram.AutoSize = true;
             this.label2_listprogram.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2_listprogram.Location = new System.Drawing.Point(205, 33);
+            this.label2_listprogram.Location = new System.Drawing.Point(232, 33);
             this.label2_listprogram.Name = "label2_listprogram";
             this.label2_listprogram.Size = new System.Drawing.Size(99, 15);
             this.label2_listprogram.TabIndex = 11;
@@ -293,7 +296,7 @@
             // 
             this.label3_descriptionProgram.AutoSize = true;
             this.label3_descriptionProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3_descriptionProgram.Location = new System.Drawing.Point(418, 33);
+            this.label3_descriptionProgram.Location = new System.Drawing.Point(459, 33);
             this.label3_descriptionProgram.Name = "label3_descriptionProgram";
             this.label3_descriptionProgram.Size = new System.Drawing.Size(161, 15);
             this.label3_descriptionProgram.TabIndex = 12;
@@ -309,22 +312,43 @@
             this.label4_choiceProgram.TabIndex = 13;
             this.label4_choiceProgram.Text = "Wybrane programy do stworzenia archiwum";
             // 
+            // ctr_clickAll
+            // 
+            this.ctr_clickAll.Location = new System.Drawing.Point(125, 234);
+            this.ctr_clickAll.Name = "ctr_clickAll";
+            this.ctr_clickAll.Size = new System.Drawing.Size(104, 25);
+            this.ctr_clickAll.TabIndex = 14;
+            this.ctr_clickAll.Text = "Zaznacz wszystko";
+            this.ctr_clickAll.UseVisualStyleBackColor = true;
+            // 
+            // ctr_refillAll
+            // 
+            this.ctr_refillAll.Location = new System.Drawing.Point(12, 235);
+            this.ctr_refillAll.Name = "ctr_refillAll";
+            this.ctr_refillAll.Size = new System.Drawing.Size(107, 24);
+            this.ctr_refillAll.TabIndex = 15;
+            this.ctr_refillAll.Text = "Odznacz wszytsko";
+            this.ctr_refillAll.UseVisualStyleBackColor = true;
+            this.ctr_refillAll.Click += new System.EventHandler(this.ctr_refillAll_Click);
+            // 
             // NewArch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(839, 461);
+            this.ClientSize = new System.Drawing.Size(850, 443);
+            this.Controls.Add(this.ctr_refillAll);
+            this.Controls.Add(this.ctr_clickAll);
             this.Controls.Add(this.label4_choiceProgram);
             this.Controls.Add(this.label3_descriptionProgram);
             this.Controls.Add(this.label2_listprogram);
             this.Controls.Add(this.label_tag);
-            this.Controls.Add(this.richText_descriptionPrograms);
-            this.Controls.Add(this.clickButton_createArch);
-            this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.clickButton_addProgram);
-            this.Controls.Add(this.Programy);
+            this.Controls.Add(this.ctr_textDescription);
+            this.Controls.Add(this.ctr_createArch);
+            this.Controls.Add(this.ctr_checkedPrograms);
+            this.Controls.Add(this.ctr_addProgram);
+            this.Controls.Add(this.ctr_ProgramsList);
             this.Controls.Add(this.ctr_Tag);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -360,15 +384,17 @@
         private System.Windows.Forms.ToolStripMenuItem stronaProgramuOnlineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem1;
         private System.Windows.Forms.CheckedListBox ctr_Tag;
-        private System.Windows.Forms.CheckedListBox Programy;
-        private System.Windows.Forms.Button clickButton_addProgram;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Button clickButton_createArch;
-        private System.Windows.Forms.RichTextBox richText_descriptionPrograms;
+        private System.Windows.Forms.CheckedListBox ctr_ProgramsList;
+        private System.Windows.Forms.Button ctr_addProgram;
+        private System.Windows.Forms.CheckedListBox ctr_checkedPrograms;
+        private System.Windows.Forms.Button ctr_createArch;
+        private System.Windows.Forms.RichTextBox ctr_textDescription;
         private System.Windows.Forms.Label label_tag;
         private System.Windows.Forms.Label label2_listprogram;
         private System.Windows.Forms.Label label3_descriptionProgram;
         private System.Windows.Forms.Label label4_choiceProgram;
+        private System.Windows.Forms.Button ctr_clickAll;
+        private System.Windows.Forms.Button ctr_refillAll;
     }
 }
 

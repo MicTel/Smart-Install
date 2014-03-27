@@ -23,7 +23,13 @@ namespace Smart_install
         public NewArch()
         {
             InitializeComponent();
+            control.addTags("Edukacja");
+            control.addTags("Muzyka");
+            control.addTags("Grafika");
             add_to_lis_tag();
+
+
+
             //foreach (string tag in control.getTags())
             //{
             //    ctr_Tag.Items.Add((Object)tag); 
@@ -45,14 +51,24 @@ namespace Smart_install
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
              //_selectedTag
+            List<string> listNameTag = new List<string>();
+            CheckedListBox.CheckedItemCollection checkedTag = ctr_Tag.CheckedItems;
+            foreach (var tag in checkedTag)
+            {
+                listNameTag.Add(tag.ToString());
+                              
+            }
+
+            List<string> returnListNameTag = new List<string>(); //control.getPrograms(listNameTag);
+           ctr_ProgramsList.Items.AddRange(returnListNameTag.ToArray<object>());
         }
 
         private void add_to_list_program()
         { 
-            //foreach (string tag in control.getPrograms(_selectedTag))
-            //{
-            //    _selectedTag.Items.Add((Object)tag); 
-            //}
+            foreach (string tag in control.getPrograms(_selectedTag))
+            {
+                ctr_ProgramsList.Items.Add((Object)tag); 
+            }
         
         }
 
@@ -73,11 +89,9 @@ namespace Smart_install
 
         private void zPlikuToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            //Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-
             openFileDialog1.InitialDirectory = "c:\\";
-            openFileDialog1.Filter = "zip files (*.zip)|*.zip|All files (*.*)|*.*";
+            openFileDialog1.Filter = "tar Files (*.tar)|*.tar|zip Files (*.zip)|*.zip|" + "All files (*.*)|*.*"; ;
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
 
@@ -94,7 +108,7 @@ namespace Smart_install
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
             openFileDialog1.InitialDirectory = "c:\\";
-            openFileDialog1.Filter = "zip files (*.zip)|*.zip|" + "All files (*.*)|*.*";
+            openFileDialog1.Filter = "tar Files (*.tar)|*.tar|zip Files (*.zip)|*.zip|" + "All files (*.*)|*.*"; ;
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
 
@@ -122,7 +136,6 @@ namespace Smart_install
         {
             Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-
             openFileDialog1.InitialDirectory = "c:\\";
             //openFileDialog1.Filter = "zip files (*.zip)|*.zip|" + "All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 2;
@@ -180,9 +193,8 @@ namespace Smart_install
         {
             Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-
             openFileDialog1.InitialDirectory = "c:\\";
-            openFileDialog1.Filter = "zip files (*.zip)|*.zip|" + "All files (*.*)|*.*";
+            openFileDialog1.Filter = "misc Files (*.misc)|*.misc|exe Files (*.exe)|*.exe|" + "All files (*.*)|*.*";;
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
 
@@ -194,7 +206,8 @@ namespace Smart_install
                     {
                         using (myStream)
                         {
-                            // Insert code to read the stream here.
+                            AddPrograms addProgram2 = new AddPrograms();
+                            addProgram2.Show();
                         }
                     }
                 }
@@ -204,6 +217,31 @@ namespace Smart_install
                 }
             }
 
+        }
+
+        private void ctr_ProgramsList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Get the currently selected item in the ctr_ProgramsList. 
+            string curItem = ctr_ProgramsList.SelectedItem.ToString();
+            
+            // Find the string in ctr_programsList. 
+            int index = ctr_ProgramsList.FindString(curItem);
+            
+            // If the item was not found in ctr_ProgramsList display a message box, 
+            //otherwise select it in ctr_ProgramList. 
+            //if(index == -1)
+            //    MessageBox.Show("Programu nie ma na liście programów");
+            //else
+            //    ctr_ProgramsList.SetSelected(index,true);
+            if (((CheckBox)ctr_ProgramsList.Items[index]).Checked)
+                ctr_checkedPrograms.Items.Add(curItem);
+            else
+                ctr_checkedPrograms.Items.Remove(curItem);
+        }
+
+        private void ctr_refillAll_Click(object sender, EventArgs e)
+        {
+            
         }
 
     }

@@ -67,6 +67,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPrograms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPrograms.Designer.cs">
+      <DependentUpon>AddPrograms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Archive.cs">
       <DependentUpon>ModelArchive.tt</DependentUpon>
     </Compile>
