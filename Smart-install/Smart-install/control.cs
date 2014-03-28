@@ -12,6 +12,7 @@ namespace Smart_install
     /// </summary>
     public class archiveInformation
     {
+        public string fullPath { get; set; }
         public string Name { get; set; }
         public string Path { get; set; }
         public string Description { get; set; }
@@ -22,18 +23,55 @@ namespace Smart_install
     /// </summary>
     public class programInformation
     {
+        public int? Id;
+        public bool isChecked { get; set; }
         public string Name { get; set; }
         public string Version { get; set; }
         public string Description { get; set; }
         public string HelpLink { get; set; }
         public string URLUpdate { get; set; }
-        public string Publisher { get; set; }
-        public string Path { get; set; }
+        //public string Publisher { get; set; }
         public string Icon { get; set; }
 
+        private string _Path;
+
+        public string Path
+        {
+            get { return _Path; }
+            set 
+            {   
+                _Path = value;
+                Id = null;
+            }
+        }
+        
+        
         public string Language { get; set; }
         public string systemType { get; set; }
         public List<string> Tags { get; set; }
+
+        public programInformation()
+        {
+        }
+
+        public programInformation(Prog progr)
+        {
+            Name = progr.Name;
+            Version = progr.Version;
+            Description = progr.Description;
+            HelpLink = progr.HelpLink;
+            URLUpdate = progr.URLUpdate;
+            //Publisher = progr.Publisher;
+            Path = null;
+            Id = progr.Id;
+            Language = progr.Language.Language1;
+            systemType = progr.systemType.systemType1;
+            Tags = new List<string>();
+            foreach (Tag tag in progr.Tags)
+            {
+                Tags.Add(tag.TagName);
+            }
+        }
     }
 
     public class control
@@ -61,11 +99,11 @@ namespace Smart_install
         /// <param name="fromProg">Tagi jakie zawiera program</param>
         /// <param name="fromUser">Nazwy tagów szukanych</param>
         /// <returns></returns>
-        private static bool _checkTag(List<Tag> fromProg, List<string> fromUser)
+        private static bool _checkTag(List<Tag> fromProg, string fromUser)
         {
             foreach (Tag tag in fromProg)
             {
-                if (fromUser.Exists(x => x==tag.TagName))
+                if (fromUser==tag.TagName)
                 {
                     return true;
                 }
@@ -78,11 +116,11 @@ namespace Smart_install
         /// </summary>
         /// <param name="selectedTags">wybrane przez użytkownika komponenty</param>
         /// <returns></returns>
-        public static List<string> getPrograms(List<string> selectedTags)
+        public static List<string> getPrograms(string selectedTag)
         {
             ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
             var prog = from p in database.Progs
-                              where _checkTag(p.Tags.ToList<Tag>(), selectedTags)
+                              where _checkTag(p.Tags.ToList<Tag>(), selectedTag)
                               select p.Name;
             
             List<string> progString = new List<string>();
@@ -100,7 +138,6 @@ namespace Smart_install
         /// <param name="tagName">Nazwa tagu</param>
         public static void addTags(string tagName)
         {
-
             ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
             Tag p = database.Tags.OrderByDescending(c => c.Id).FirstOrDefault();
             int newId = (null == p ? 0 : p.Id) + 1;
@@ -129,11 +166,11 @@ namespace Smart_install
 
 
         /// <summary>
-        /// Dodawanie programu do bazy danych (bez wiązania z archiwum)
+        /// Dodawanie programu do bazy danych, a następnie dodaje go do archiwum
         /// </summary>
         /// <param name="toDatabase">Dane o programie</param>
-        /// <param name="path">Ścieżka do programu</param>
-        public static void addProgram(programInformation toDatabase)
+        /// <param name="arch">Nowe archiwum</param>
+        public static void addNewProgram(programInformation toDatabase, archiveInformation arch)
         {
             ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
             Prog p = database.Progs.OrderByDescending(c => c.Id).FirstOrDefault();
@@ -144,7 +181,7 @@ namespace Smart_install
                 Description = toDatabase.Description,
                 HelpLink = toDatabase.HelpLink,
                 Name = toDatabase.Name,
-                Publisher = toDatabase.Publisher,
+                //Publisher = toDatabase.Publisher,
                 Icon = toDatabase.Icon,
                 URLUpdate = toDatabase.URLUpdate,
                 Version = toDatabase.Version
@@ -153,26 +190,48 @@ namespace Smart_install
             try
             {
                 database.SaveChanges();
+                //zipCreator.addToArchive(toDatabase.Path, arch.fullPath, toDatabase.Name);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-
-        public static void createArchive(List<programInformation> programs, string name, string pathArchive)
+            
+        /// <summary>
+        /// NIE DZIAŁA
+        /// 
+        /// </summary>
+        /// <param name="programInf"></param>
+        /// <param name="arch"></param>
+        public static void addOldProgram(programInformation programInf, archiveInformation arch)
         {
-            string fullArchiveName = pathArchive + name;
-            zipCreator.createArchive(pathArchive, programs[0].Path);
-            
             ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
-            
+            Prog progr = (from p in database.Progs
+                            where p.Id == programInf.Id
+                            select p).First();
+            int i=0;
+            //while(!zipCreator.copyBetweenArchive(progr.Archives.,arch.fullPath))
+            {
+                i++;
+            }
+        }
+
+        public static void addXML(archiveInformation arch)
+        {
+
+        }
+
+        public static void createArchive(List<programInformation> programs, archiveInformation arch)
+        {
+            addXML(arch);  
             foreach (programInformation p in programs)
             {
-                addProgram(p);
+                if (p.Id==null)
+                    addNewProgram(p, arch);
+                else
+                    addOldProgram(p, arch);
             }
-            database.SaveChanges();
-        }
-        
+        }        
     }
 }
