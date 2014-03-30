@@ -41,9 +41,9 @@
             this.ustawieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kategorieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ustawieniaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.językToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skórkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.czcionkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.językToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stronaProgramuOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -160,24 +160,24 @@
             this.ustawieniaToolStripMenuItem1.Size = new System.Drawing.Size(76, 20);
             this.ustawieniaToolStripMenuItem1.Text = "Ustawienia";
             // 
-            // językToolStripMenuItem
-            // 
-            this.językToolStripMenuItem.Name = "językToolStripMenuItem";
-            this.językToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.językToolStripMenuItem.Text = "Język";
-            // 
             // skórkiToolStripMenuItem
             // 
             this.skórkiToolStripMenuItem.Name = "skórkiToolStripMenuItem";
-            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.skórkiToolStripMenuItem.Text = "Kolor tła";
             this.skórkiToolStripMenuItem.Click += new System.EventHandler(this.skórkiToolStripMenuItem_Click);
             // 
             // czcionkaToolStripMenuItem
             // 
             this.czcionkaToolStripMenuItem.Name = "czcionkaToolStripMenuItem";
-            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.czcionkaToolStripMenuItem.Text = "Czcionka";
+            // 
+            // językToolStripMenuItem
+            // 
+            this.językToolStripMenuItem.Name = "językToolStripMenuItem";
+            this.językToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.językToolStripMenuItem.Text = "Język";
             // 
             // pomocToolStripMenuItem
             // 
@@ -204,9 +204,9 @@
             // clikButton_install
             // 
             this.clikButton_install.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.clikButton_install.Location = new System.Drawing.Point(362, 339);
+            this.clikButton_install.Location = new System.Drawing.Point(352, 349);
             this.clikButton_install.Name = "clikButton_install";
-            this.clikButton_install.Size = new System.Drawing.Size(316, 64);
+            this.clikButton_install.Size = new System.Drawing.Size(347, 64);
             this.clikButton_install.TabIndex = 2;
             this.clikButton_install.Text = "Instaluj ";
             this.clikButton_install.UseVisualStyleBackColor = true;
@@ -217,16 +217,16 @@
             this.programs_for_install.FormattingEnabled = true;
             this.programs_for_install.Location = new System.Drawing.Point(28, 69);
             this.programs_for_install.Name = "programs_for_install";
-            this.programs_for_install.Size = new System.Drawing.Size(282, 327);
+            this.programs_for_install.Size = new System.Drawing.Size(282, 344);
             this.programs_for_install.Sorted = true;
             this.programs_for_install.TabIndex = 3;
             // 
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.richTextBox1.Location = new System.Drawing.Point(362, 69);
+            this.richTextBox1.Location = new System.Drawing.Point(352, 67);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(316, 242);
+            this.richTextBox1.Size = new System.Drawing.Size(347, 264);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
             // 
@@ -244,7 +244,7 @@
             // 
             this.label6_decriptionPrograms.AutoSize = true;
             this.label6_decriptionPrograms.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6_decriptionPrograms.Location = new System.Drawing.Point(359, 49);
+            this.label6_decriptionPrograms.Location = new System.Drawing.Point(349, 49);
             this.label6_decriptionPrograms.Name = "label6_decriptionPrograms";
             this.label6_decriptionPrograms.Size = new System.Drawing.Size(161, 15);
             this.label6_decriptionPrograms.TabIndex = 6;

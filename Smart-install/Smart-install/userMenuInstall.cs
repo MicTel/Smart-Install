@@ -87,17 +87,5 @@ namespace Smart_install
             Help aboutHelp = new Help();
             aboutHelp.Show();
         }
-
-        /*private void czcionkaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FontDialog okienkoCzcionki = new FontDialog();
-            if (okienkoCzcionki.ShowDialog() == DialogResult.OK)
-            {
-                button1.Font = okienkoCzcionki.Font;
-                button2.Font = okienkoCzcionki.Font;
-                button3.Font = okienkoCzcionki.Font;
-            }
-            
-        }*/
     }
 }

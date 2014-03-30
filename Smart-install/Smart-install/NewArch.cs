@@ -17,10 +17,8 @@ namespace Smart_install
         /// <summary>
         /// zmienna wybierania poszczegolnych kategorii 
         /// </summary>
-        private List<string> _selectedTag;
-
-        public List<programInformation> _AllNewPrograms;
-
+        public List<programInformation> _AllPrograms;
+        
         public NewArch()
         {
             InitializeComponent();
@@ -28,7 +26,7 @@ namespace Smart_install
             control.addTags("Muzyka");
             control.addTags("Grafika");
             add_to_lis_tag();
-            _AllNewPrograms = new List<programInformation>();
+            _AllPrograms = new List<programInformation>();
 
             //foreach (string tag in control.getTags())
             //{
@@ -48,7 +46,7 @@ namespace Smart_install
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        /*private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
              //_selectedTag
             List<string> listNameTag = new List<string>();
@@ -62,39 +60,45 @@ namespace Smart_install
             List<string> returnListNameTag = new List<string>(); //control.getPrograms(listNameTag);
            ctr_ProgramsList.Items.AddRange(returnListNameTag.ToArray<object>());
         }
-
+        */
         public void refresh()
         {
-            ctr_ProgramsList.Items.Clear();
-            foreach (programInformation p in _AllNewPrograms)
+            ctrLTree_tagProg.Nodes.Clear();
+            foreach (string tag in control.getTags())
             {
-                ctr_ProgramsList.Items.Add(p.Name);
-
+                TreeNode treeNode = new TreeNode(tag);
+                foreach (programInformation programs in _AllPrograms )
+                {
+                    if (programs.Tags!=null && programs.Tags.IndexOf(tag)>=0)
+                    {
+                        TreeNode treePrograms = new TreeNode(programs.Name);
+                        treePrograms.Checked = programs.isChecked;
+                        treeNode.Nodes.Add(treePrograms);
+                    }
+                }
+                ctrLTree_tagProg.Nodes.Add(treeNode);
             }
-            ctr_Tag.Items.Clear();
-            add_to_lis_tag();
         }
             
 
-        private void add_to_list_program()
-        { 
-            foreach (string tag in control.getPrograms(_selectedTag))
-            {
-                ctr_ProgramsList.Items.Add((Object)tag); 
-            }
-        
-        }
-
+        /// <summary>
+        /// OK
+        /// </summary>
         private void add_to_lis_tag()
         {
             foreach (string tag in control.getTags())
             {
-                ctr_Tag.Items.Add((Object)tag);
+                TreeNode treeNode  = new TreeNode(tag);
+                //foreach ( string programs in control.getPrograms(tag) )
+                //{
+                //    TreeNode treePrograms =  new TreeNode(programs);
+                //    treeNode.Nodes.Add(treePrograms);
+                //}
+                ctrLTree_tagProg.Nodes.Add(treeNode);
             }
 
         }
-
-
+        
         private void UserMenu_Load(object sender, EventArgs e)
         {
 
@@ -142,8 +146,7 @@ namespace Smart_install
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
-
-        }
+       }
 
         private void usuńToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -232,47 +235,44 @@ namespace Smart_install
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
-
         }
 
-        private void ctr_ProgramsList_SelectedIndexChanged(object sender, ItemCheckEventArgs e)
+
+        private void ctrLTree_tagProgIsChecked(object sender, System.Windows.Forms.TreeViewEventArgs e)
         {
-            // Get the currently selected item in the ctr_ProgramsList. 
-            //string curItem = ctr_ProgramsList.SelectedItem.ToString();
+            foreach (TreeNode node in e.Node.Nodes)
+            {
+                foreach (programInformation prog in _AllPrograms)
+                {
+                    if (prog.Name == node.Name)
+                    {
+                        prog.isChecked = node.Checked;
+                        break;
+                    }
+                }
+            }
+        }
+
+        //private void ctr_ProgramsList_SelectedIndexChanged(object sender, ItemCheckEventArgs e)
+        //{
+        //    // Get the currently selected item in the ctr_ProgramsList. 
+        //    //string curItem = ctr_ProgramsList.SelectedItem.ToString();
             
-            // Find the string in ctr_programsList. 
-            //int index = ctr_ProgramsList.FindString(curItem);
+        //    // Find the string in ctr_programsList. 
+        //    //int index = ctr_ProgramsList.FindString(curItem);
 
 
-            if (e.NewValue.ToString() == "Checked")
-                ctr_checkedPrograms.Items.Add(ctr_ProgramsList.Items[e.Index]);
-            else
-                ctr_checkedPrograms.Items.Remove(ctr_ProgramsList.Items[e.Index]);
+        //    if (e.NewValue.ToString() == "Checked")
+        //        ctr_checkedPrograms.Items.Add(ctr_ProgramsList.Items[e.Index]);
+        //    else
+        //        ctr_checkedPrograms.Items.Remove(ctr_ProgramsList.Items[e.Index]);
 
             
-            //if (((CheckBox)ctr_ProgramsList.Items[index]).Checked)
-            //    ctr_checkedPrograms.Items.Add(curItem);
-            //else
-            //    ctr_checkedPrograms.Items.Remove(curItem);
-        }
-
-        private void ctr_refillAll_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < ctr_Tag.Items.Count; i++)
-                ctr_Tag.SetItemChecked(i, false);
-        }
-
-        private void ctr_clickAll_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < ctr_Tag.Items.Count; i++)
-                ctr_Tag.SetItemChecked(i, true);
-        }
-
-        private void dodajKatekorięToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Add_NewTag _newTag =  new Add_NewTag(this);
-            _newTag.Show();
-        }
+        //    //if (((CheckBox)ctr_ProgramsList.Items[index]).Checked)
+        //    //    ctr_checkedPrograms.Items.Add(curItem);
+        //    //else
+        //    //    ctr_checkedPrograms.Items.Remove(curItem);
+        //}
 
     }
 }
