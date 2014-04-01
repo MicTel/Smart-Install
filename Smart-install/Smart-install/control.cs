@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Smart_install
 {
@@ -71,6 +72,26 @@ namespace Smart_install
             {
                 Tags.Add(tag.TagName);
             }
+        }
+
+        public XElement getXElement()
+        {
+            XElement[] tags = new XElement[Tags.Count()];
+            for (int i = 0; i < Tags.Count; i++)
+                tags[i] = new XElement("Tag",
+                    new XAttribute("id", i),
+                    Tags[i]);
+            XElement x = new XElement("Program",
+                new XElement("Id", Id),
+                new XAttribute("Name", Name),
+                new XElement("Description", Description),
+                new XElement("Version", Version),
+                new XElement("HelpLink", HelpLink),
+                new XElement("URLUpdate", URLUpdate),
+                new XElement("Language", Language),
+                new XElement("systemType", systemType),
+                tags);
+            return x;
         }
     }
 
@@ -217,14 +238,32 @@ namespace Smart_install
             }
         }
 
-        public static void addXML(archiveInformation arch)
-        {
 
+        /// <summary>
+        /// Inicjuje archiwum, poprzez stworzenie go oraz zamieszczenie w nim plik
+        /// informacyjnego, na temat jest zawartości.
+        /// </summary>
+        /// <param name="arch">Inicjonowane archiwum</param>
+        public static void startArchive(archiveInformation arch,List<programInformation> programs)
+        {
+            string fileName = arch.Name + ".xml";
+            XDocument xml = new XDocument(new XElement("Archiwum"));
+            XElement root = xml.Root;
+            foreach (programInformation p in programs)
+                root.Add(p.getXElement());
+            xml.Save(fileName);
+            zipCreator.createArchive(arch.fullPath, fileName);
+            zipCreator.deleteArchive(fileName);
         }
 
-        public static void createArchive(List<programInformation> programs, archiveInformation arch)
+        /// <summary>
+        /// Tworzenie archiwum i wrzucenie do niego programów.
+        /// </summary>
+        /// <param name="programs">Lista programów które mają znaleźć się w archiwum.</param>
+        /// <param name="arch">Archiwum które ma zostać stworzone.</param>
+        public static void createArchive(archiveInformation arch,List<programInformation> programs)
         {
-            addXML(arch);  
+            startArchive(arch,programs);  
             foreach (programInformation p in programs)
             {
                 if (p.Id==null)
