@@ -44,6 +44,8 @@
             this.label3_descriptionProgram = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ctrLTree_tagProg = new System.Windows.Forms.TreeView();
+            this.ctrTB_DescriptionArch = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,7 +139,7 @@
             this.ctr_textDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ctr_textDescription.Location = new System.Drawing.Point(306, 52);
             this.ctr_textDescription.Name = "ctr_textDescription";
-            this.ctr_textDescription.Size = new System.Drawing.Size(435, 309);
+            this.ctr_textDescription.Size = new System.Drawing.Size(435, 253);
             this.ctr_textDescription.TabIndex = 6;
             this.ctr_textDescription.Text = "";
             // 
@@ -175,6 +177,25 @@
             this.ctrLTree_tagProg.TabIndex = 17;
             this.ctrLTree_tagProg.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.ctrLTree_tagProgIsChecked);
             // 
+            // ctrTB_DescriptionArch
+            // 
+            this.ctrTB_DescriptionArch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ctrTB_DescriptionArch.Location = new System.Drawing.Point(306, 337);
+            this.ctrTB_DescriptionArch.Name = "ctrTB_DescriptionArch";
+            this.ctrTB_DescriptionArch.Size = new System.Drawing.Size(435, 25);
+            this.ctrTB_DescriptionArch.TabIndex = 18;
+            this.ctrTB_DescriptionArch.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(303, 319);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 15);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Opis tworzonego archiwum";
+            // 
             // NewArch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -182,6 +203,8 @@
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(771, 446);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ctrTB_DescriptionArch);
             this.Controls.Add(this.ctrLTree_tagProg);
             this.Controls.Add(this.label3_descriptionProgram);
             this.Controls.Add(this.label_tag);
@@ -218,6 +241,8 @@
         private System.Windows.Forms.Label label3_descriptionProgram;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TreeView ctrLTree_tagProg;
+        private System.Windows.Forms.RichTextBox ctrTB_DescriptionArch;
+        private System.Windows.Forms.Label label1;
     }
 }
 

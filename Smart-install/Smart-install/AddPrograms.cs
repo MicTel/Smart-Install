@@ -12,19 +12,19 @@ namespace Smart_install
 {
     public partial class AddPrograms : Form
     {
-
+        private string exe;
         private NewArch _parent;
         private bool _wasAdded;
+        
         public AddPrograms(string Path, NewArch parent)
         {
             InitializeComponent();
-
+            string[] tabExe = Path.Split(new char[] { '.' });
+            exe = tabExe[tabExe.Count()-1];
             foreach (string tag in control.getTags())
             {
                 ctr_tag.Items.Add(tag);
             }
-
-
             ctr_tag.Items.Add("Wpisz nową kategorię");
             _wasAdded = false;
             ctr_Path.Text = Path;
@@ -37,7 +37,7 @@ namespace Smart_install
             list_tag.Add(ctr_tag.Text);
             programInformation prog = new programInformation()
             {
-                Name = ctr_Name.Text.ToString(),
+                Name = ctr_Name.Text.ToString() + "." +exe,
                 Version = ctr_versionprog.Text.ToString(),
                 systemType = ctr_system.Text.ToString(),
                 Description = ctr_description.Text.ToString(),

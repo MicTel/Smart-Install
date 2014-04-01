@@ -211,7 +211,7 @@ namespace Smart_install
             try
             {
                 database.SaveChanges();
-                //zipCreator.addToArchive(toDatabase.Path, arch.fullPath, toDatabase.Name);
+                zipCreator.addToArchive(toDatabase.Path, arch.fullPath, toDatabase.Name);
             }
             catch (Exception ex)
             {

@@ -18,7 +18,11 @@ namespace Smart_install
         /// <param name="filePath">nazwa zip</param>
         public static void createArchive(string destinyPath, string filePath)
         {
-            ZipFile.CreateFromDirectory(filePath, destinyPath, CompressionLevel.NoCompression, false);
+            DirectoryInfo direct = Directory.CreateDirectory("Archiwum");
+            System.IO.File.Copy(filePath, direct.FullName + "\\" + filePath, true);
+
+            ZipFile.CreateFromDirectory(direct.FullName, destinyPath, CompressionLevel.NoCompression, false);
+            direct.Delete(true);
         }
 
         /// <summary>
@@ -27,14 +31,11 @@ namespace Smart_install
         /// <param name="toAdd">co dodajemy</param>
         /// <param name="whereAdd">gdzie dodajemy</param>
         /// <param name="name">nazwa pliku</param>
-        public static void addToArchive(List<string> toAdd, string whereAdd, List<string> name)
+        public static void addToArchive(string toAdd, string whereAdd, string name)
         {
-            foreach (string newFile in toAdd)
+            using (ZipArchive archive = ZipFile.Open(whereAdd, ZipArchiveMode.Update))
             {
-                using (ZipArchive archive = ZipFile.Open(whereAdd, ZipArchiveMode.Update))
-                {
-                    archive.CreateEntryFromFile(newFile, "name");
-                }
+                archive.CreateEntryFromFile(toAdd,name);
             }
         }
 

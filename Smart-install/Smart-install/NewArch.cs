@@ -258,7 +258,7 @@ namespace Smart_install
         {
             foreach (programInformation prog in _AllPrograms)
             {
-                if (prog.Name == e.Node.Name)
+                if (prog.Name == e.Node.Text)
                 {
                     prog.isChecked = e.Node.Checked;
                     break;
@@ -268,7 +268,30 @@ namespace Smart_install
 
         private void ctr_createArch_Click(object sender, EventArgs e)
         {
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.Filter = "Plik zip|*.zip";
+            if (saveFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                archiveInformation newArch = new archiveInformation();
+                newArch.fullPath = saveFile.FileName;
+                string[] tab = newArch.fullPath.Split(new char[] { '\\' } );
+                newArch.Name =  tab[tab.Count()-1];
 
+                List<programInformation> prog2 = new List<programInformation>(); 
+
+                foreach (programInformation prog in _AllPrograms)
+                {
+                    if (prog.isChecked)
+                    {
+                        prog2.Add(prog);
+                    }
+                }
+                //messageBox
+                if (prog2.Count == 0)
+                    MessageBox.Show("Musisz zaznaczyć program, żeby utworzyć archiwum");
+                else
+                    control.createArchive(newArch,prog2);
+            }
 
 
         }
