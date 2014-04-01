@@ -15,16 +15,16 @@ namespace Smart_install
         [STAThread]
         static void Main()
         {
-            //try
+            try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new userMenuInstall());
             }
-            //catch (Exception ex)
+            catch (Exception ex)
             {
                 
-             //  MessageBox.Show("Dana funkcja nie została jeszcze zaimplementowana");
+               MessageBox.Show("Dana funkcja nie została jeszcze zaimplementowana");
             }
    
         }

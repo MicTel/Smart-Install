@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewArch));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ustawieniaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.językToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,12 +52,14 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.GhostWhite;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ustawieniaToolStripMenuItem1,
             this.pomocToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(771, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(802, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -114,19 +117,34 @@
             // 
             // ctr_addProgram
             // 
-            this.ctr_addProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ctr_addProgram.Location = new System.Drawing.Point(541, 380);
+            this.ctr_addProgram.BackColor = System.Drawing.Color.White;
+            this.ctr_addProgram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ctr_addProgram.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ctr_addProgram.FlatAppearance.BorderSize = 0;
+            this.ctr_addProgram.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.ctr_addProgram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.ctr_addProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ctr_addProgram.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctr_addProgram.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ctr_addProgram.Image = ((System.Drawing.Image)(resources.GetObject("ctr_addProgram.Image")));
+            this.ctr_addProgram.Location = new System.Drawing.Point(571, 380);
             this.ctr_addProgram.Name = "ctr_addProgram";
             this.ctr_addProgram.Size = new System.Drawing.Size(200, 52);
             this.ctr_addProgram.TabIndex = 3;
             this.ctr_addProgram.Text = "Dodaj program";
-            this.ctr_addProgram.UseVisualStyleBackColor = true;
+            this.ctr_addProgram.UseVisualStyleBackColor = false;
             this.ctr_addProgram.Click += new System.EventHandler(this.clickButton_addProgram_Click);
             // 
             // ctr_createArch
             // 
-            this.ctr_createArch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ctr_createArch.Location = new System.Drawing.Point(306, 380);
+            this.ctr_createArch.BackColor = System.Drawing.Color.Lavender;
+            this.ctr_createArch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ctr_createArch.FlatAppearance.BorderSize = 0;
+            this.ctr_createArch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ctr_createArch.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ctr_createArch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ctr_createArch.Image = ((System.Drawing.Image)(resources.GetObject("ctr_createArch.Image")));
+            this.ctr_createArch.Location = new System.Drawing.Point(336, 380);
             this.ctr_createArch.Name = "ctr_createArch";
             this.ctr_createArch.Size = new System.Drawing.Size(202, 51);
             this.ctr_createArch.TabIndex = 5;
@@ -136,8 +154,8 @@
             // 
             // ctr_textDescription
             // 
-            this.ctr_textDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ctr_textDescription.Location = new System.Drawing.Point(306, 52);
+            this.ctr_textDescription.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ctr_textDescription.Location = new System.Drawing.Point(336, 54);
             this.ctr_textDescription.Name = "ctr_textDescription";
             this.ctr_textDescription.Size = new System.Drawing.Size(435, 253);
             this.ctr_textDescription.TabIndex = 6;
@@ -146,20 +164,20 @@
             // label_tag
             // 
             this.label_tag.AutoSize = true;
-            this.label_tag.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label_tag.Location = new System.Drawing.Point(12, 33);
+            this.label_tag.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_tag.Location = new System.Drawing.Point(24, 34);
             this.label_tag.Name = "label_tag";
-            this.label_tag.Size = new System.Drawing.Size(99, 15);
+            this.label_tag.Size = new System.Drawing.Size(96, 15);
             this.label_tag.TabIndex = 10;
             this.label_tag.Text = "Lista programów";
             // 
             // label3_descriptionProgram
             // 
             this.label3_descriptionProgram.AutoSize = true;
-            this.label3_descriptionProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3_descriptionProgram.Location = new System.Drawing.Point(303, 33);
+            this.label3_descriptionProgram.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3_descriptionProgram.Location = new System.Drawing.Point(332, 32);
             this.label3_descriptionProgram.Name = "label3_descriptionProgram";
-            this.label3_descriptionProgram.Size = new System.Drawing.Size(161, 15);
+            this.label3_descriptionProgram.Size = new System.Drawing.Size(155, 15);
             this.label3_descriptionProgram.TabIndex = 12;
             this.label3_descriptionProgram.Text = "Szczegółowy opis programu";
             // 
@@ -170,17 +188,21 @@
             // 
             // ctrLTree_tagProg
             // 
+            this.ctrLTree_tagProg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ctrLTree_tagProg.CheckBoxes = true;
-            this.ctrLTree_tagProg.Location = new System.Drawing.Point(15, 52);
+            this.ctrLTree_tagProg.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ctrLTree_tagProg.Location = new System.Drawing.Point(27, 54);
             this.ctrLTree_tagProg.Name = "ctrLTree_tagProg";
-            this.ctrLTree_tagProg.Size = new System.Drawing.Size(263, 379);
+            this.ctrLTree_tagProg.Size = new System.Drawing.Size(282, 378);
             this.ctrLTree_tagProg.TabIndex = 17;
             this.ctrLTree_tagProg.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.ctrLTree_tagProgIsChecked);
             // 
             // ctrTB_DescriptionArch
             // 
-            this.ctrTB_DescriptionArch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ctrTB_DescriptionArch.Location = new System.Drawing.Point(306, 337);
+            this.ctrTB_DescriptionArch.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ctrTB_DescriptionArch.Location = new System.Drawing.Point(336, 339);
             this.ctrTB_DescriptionArch.Name = "ctrTB_DescriptionArch";
             this.ctrTB_DescriptionArch.Size = new System.Drawing.Size(435, 25);
             this.ctrTB_DescriptionArch.TabIndex = 18;
@@ -189,10 +211,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(303, 319);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(333, 319);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 15);
+            this.label1.Size = new System.Drawing.Size(153, 15);
             this.label1.TabIndex = 19;
             this.label1.Text = "Opis tworzonego archiwum";
             // 
@@ -202,7 +224,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(771, 446);
+            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(802, 447);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ctrTB_DescriptionArch);
             this.Controls.Add(this.ctrLTree_tagProg);
@@ -212,6 +236,8 @@
             this.Controls.Add(this.ctr_createArch);
             this.Controls.Add(this.ctr_addProgram);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Candara", 10F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "NewArch";
             this.Text = "UserMenu";

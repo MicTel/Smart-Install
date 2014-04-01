@@ -277,7 +277,7 @@ namespace Smart_install
                 string[] tab = newArch.fullPath.Split(new char[] { '\\' } );
                 newArch.Name =  tab[tab.Count()-1];
 
-                List<programInformation> prog2 = new List<programInformation>(); 
+                List<programInformation> prog2 = new List<programInformation>();
 
                 foreach (programInformation prog in _AllPrograms)
                 {
@@ -286,11 +286,11 @@ namespace Smart_install
                         prog2.Add(prog);
                     }
                 }
-                //messageBox
+                    //messageBox
                 if (prog2.Count == 0)
-                    MessageBox.Show("Musisz zaznaczyć program, żeby utworzyć archiwum");
+                   MessageBox.Show("Musisz zaznaczyć program, żeby utworzyć archiwum");
                 else
-                    control.createArchive(newArch,prog2);
+                   control.createArchive(newArch, prog2);
             }
 
 
