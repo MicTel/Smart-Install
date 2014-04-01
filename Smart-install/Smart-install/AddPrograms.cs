@@ -14,6 +14,7 @@ namespace Smart_install
     {
 
         private NewArch _parent;
+        private bool _wasAdded;
         public AddPrograms(string Path, NewArch parent)
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Smart_install
 
 
             ctr_tag.Items.Add("Wpisz nową kategorię");
-
+            _wasAdded = false;
             ctr_Path.Text = Path;
             _parent = parent;
         }
@@ -49,9 +50,15 @@ namespace Smart_install
                 
                
             };
-            control.addTags(ctr_tag.Text);
-            _parent._AllPrograms.Add(prog);
-            _parent.refresh();
+
+            if (_wasAdded)
+            {
+                control.addTags(ctr_tag.Text);
+                _parent.addProgram(prog, ctr_tag.Text);
+            }
+            else
+                _parent.addProgram(prog);
+            
             this.Close();
         }
 
@@ -61,6 +68,8 @@ namespace Smart_install
             {
                 ctr_tag.Visible = false;
                 ctrTB_NewTag.Visible = true;
+                ctrTB_NewTag.Text = "Wpisz nową kategorię";
+                ctrTB_NewTag.Select();
             }
         }
 
@@ -75,10 +84,12 @@ namespace Smart_install
                     ctr_tag.Text = ctr_tag.Items[ctr_tag.Items.Count-2].ToString();
                     ctr_tag.Visible = true;
                     ctrTB_NewTag.Visible = false;
+                    _wasAdded = true;
                 break;
                 case Keys.Escape:
                     ctr_tag.Visible = true;
                     ctrTB_NewTag.Visible = false;
+                    _wasAdded = true;
                 break;
             }
         }

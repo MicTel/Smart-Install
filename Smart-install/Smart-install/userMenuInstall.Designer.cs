@@ -65,7 +65,7 @@
             this.pomocToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(732, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(753, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -109,18 +109,21 @@
             this.usuńToolStripMenuItem.Name = "usuńToolStripMenuItem";
             this.usuńToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.usuńToolStripMenuItem.Text = "Usuń";
+            this.usuńToolStripMenuItem.Click += new System.EventHandler(this.usuńToolStripMenuItem_Click);
             // 
             // zamknijArchiwumToolStripMenuItem
             // 
             this.zamknijArchiwumToolStripMenuItem.Name = "zamknijArchiwumToolStripMenuItem";
             this.zamknijArchiwumToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.zamknijArchiwumToolStripMenuItem.Text = "Zamknij archiwum";
+            this.zamknijArchiwumToolStripMenuItem.Click += new System.EventHandler(this.zamknijArchiwumToolStripMenuItem_Click);
             // 
             // ostatnioUżywaneToolStripMenuItem
             // 
             this.ostatnioUżywaneToolStripMenuItem.Name = "ostatnioUżywaneToolStripMenuItem";
             this.ostatnioUżywaneToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.ostatnioUżywaneToolStripMenuItem.Text = "Ostatnio używane";
+            this.ostatnioUżywaneToolStripMenuItem.Click += new System.EventHandler(this.ostatnioUżywaneToolStripMenuItem_Click);
             // 
             // edycjaToolStripMenuItem
             // 
@@ -133,8 +136,9 @@
             // filtrujWgToolStripMenuItem
             // 
             this.filtrujWgToolStripMenuItem.Name = "filtrujWgToolStripMenuItem";
-            this.filtrujWgToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.filtrujWgToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.filtrujWgToolStripMenuItem.Text = "filtruj wg...";
+            this.filtrujWgToolStripMenuItem.Click += new System.EventHandler(this.filtrujWgToolStripMenuItem_Click);
             // 
             // ustawieniaToolStripMenuItem
             // 
@@ -147,8 +151,9 @@
             // kategorieToolStripMenuItem
             // 
             this.kategorieToolStripMenuItem.Name = "kategorieToolStripMenuItem";
-            this.kategorieToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.kategorieToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.kategorieToolStripMenuItem.Text = "Kategorie";
+            this.kategorieToolStripMenuItem.Click += new System.EventHandler(this.kategorieToolStripMenuItem_Click);
             // 
             // ustawieniaToolStripMenuItem1
             // 
@@ -170,14 +175,16 @@
             // czcionkaToolStripMenuItem
             // 
             this.czcionkaToolStripMenuItem.Name = "czcionkaToolStripMenuItem";
-            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.czcionkaToolStripMenuItem.Text = "Czcionka";
+            this.czcionkaToolStripMenuItem.Click += new System.EventHandler(this.czcionkaToolStripMenuItem_Click);
             // 
             // językToolStripMenuItem
             // 
             this.językToolStripMenuItem.Name = "językToolStripMenuItem";
-            this.językToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.językToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.językToolStripMenuItem.Text = "Język";
+            this.językToolStripMenuItem.Click += new System.EventHandler(this.językToolStripMenuItem_Click);
             // 
             // pomocToolStripMenuItem
             // 
@@ -204,9 +211,9 @@
             // clikButton_install
             // 
             this.clikButton_install.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.clikButton_install.Location = new System.Drawing.Point(352, 349);
+            this.clikButton_install.Location = new System.Drawing.Point(336, 349);
             this.clikButton_install.Name = "clikButton_install";
-            this.clikButton_install.Size = new System.Drawing.Size(347, 64);
+            this.clikButton_install.Size = new System.Drawing.Size(390, 64);
             this.clikButton_install.TabIndex = 2;
             this.clikButton_install.Text = "Instaluj ";
             this.clikButton_install.UseVisualStyleBackColor = true;
@@ -224,9 +231,9 @@
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.richTextBox1.Location = new System.Drawing.Point(352, 67);
+            this.richTextBox1.Location = new System.Drawing.Point(336, 69);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(347, 264);
+            this.richTextBox1.Size = new System.Drawing.Size(390, 264);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
             // 
@@ -244,7 +251,7 @@
             // 
             this.label6_decriptionPrograms.AutoSize = true;
             this.label6_decriptionPrograms.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6_decriptionPrograms.Location = new System.Drawing.Point(349, 49);
+            this.label6_decriptionPrograms.Location = new System.Drawing.Point(333, 49);
             this.label6_decriptionPrograms.Name = "label6_decriptionPrograms";
             this.label6_decriptionPrograms.Size = new System.Drawing.Size(161, 15);
             this.label6_decriptionPrograms.TabIndex = 6;
@@ -256,7 +263,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(732, 437);
+            this.ClientSize = new System.Drawing.Size(753, 437);
             this.Controls.Add(this.label6_decriptionPrograms);
             this.Controls.Add(this.label5_listchoicePrograms);
             this.Controls.Add(this.richTextBox1);

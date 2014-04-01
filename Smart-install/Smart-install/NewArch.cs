@@ -17,7 +17,7 @@ namespace Smart_install
         /// <summary>
         /// zmienna wybierania poszczegolnych kategorii 
         /// </summary>
-        public List<programInformation> _AllPrograms;
+        private List<programInformation> _AllPrograms;
         
         public NewArch()
         {
@@ -79,7 +79,28 @@ namespace Smart_install
                 ctrLTree_tagProg.Nodes.Add(treeNode);
             }
         }
-            
+
+        public void addProgram(programInformation prog, string tag = null)
+        {
+            if (tag != null)
+            {
+                TreeNode node = new TreeNode(tag);
+                ctrLTree_tagProg.Nodes.Add(node);
+
+            }
+            _AllPrograms.Add(prog);
+            foreach (TreeNode t in ctrLTree_tagProg.Nodes)
+            {
+                foreach (string tagProgram in prog.Tags)
+                {
+                    if (tagProgram == t.Text)
+                    {
+                        TreeNode treePrograms = new TreeNode(prog.Name);
+                        t.Nodes.Add(treePrograms);
+                    }
+                }
+            }
+        }
 
         /// <summary>
         /// OK
@@ -209,7 +230,6 @@ namespace Smart_install
 
         private void clickButton_addProgram_Click(object sender, EventArgs e)
         {
-            Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.InitialDirectory = "c:\\";
             openFileDialog1.Filter = "msi Files (*.msi)|*.msi|exe Files (*.exe)|*.exe|iso files (*.iso)|*.iso|" + "All files (*.*)|*.*";;
@@ -220,14 +240,10 @@ namespace Smart_install
             {
                 try
                 {
-                    if ((myStream = openFileDialog1.OpenFile()) != null)
+                    if (openFileDialog1.OpenFile() != null)
                     {
-                        using (myStream)
-                        {
-                            //new function
-                            AddPrograms addProgram2 = new AddPrograms(myStream.ToString(), this);
+                            AddPrograms addProgram2 = new AddPrograms(openFileDialog1.FileName, this);
                             addProgram2.Show();
-                        }
                     }
                 }
                 catch (Exception ex)
@@ -240,17 +256,21 @@ namespace Smart_install
 
         private void ctrLTree_tagProgIsChecked(object sender, System.Windows.Forms.TreeViewEventArgs e)
         {
-            foreach (TreeNode node in e.Node.Nodes)
+            foreach (programInformation prog in _AllPrograms)
             {
-                foreach (programInformation prog in _AllPrograms)
+                if (prog.Name == e.Node.Name)
                 {
-                    if (prog.Name == node.Name)
-                    {
-                        prog.isChecked = node.Checked;
-                        break;
-                    }
+                    prog.isChecked = e.Node.Checked;
+                    break;
                 }
             }
+        }
+
+        private void ctr_createArch_Click(object sender, EventArgs e)
+        {
+
+
+
         }
 
         //private void ctr_ProgramsList_SelectedIndexChanged(object sender, ItemCheckEventArgs e)
@@ -260,14 +280,10 @@ namespace Smart_install
             
         //    // Find the string in ctr_programsList. 
         //    //int index = ctr_ProgramsList.FindString(curItem);
-
-
         //    if (e.NewValue.ToString() == "Checked")
         //        ctr_checkedPrograms.Items.Add(ctr_ProgramsList.Items[e.Index]);
         //    else
-        //        ctr_checkedPrograms.Items.Remove(ctr_ProgramsList.Items[e.Index]);
-
-            
+        //        ctr_checkedPrograms.Items.Remove(ctr_ProgramsList.Items[e.Index]);     
         //    //if (((CheckBox)ctr_ProgramsList.Items[index]).Checked)
         //    //    ctr_checkedPrograms.Items.Add(curItem);
         //    //else

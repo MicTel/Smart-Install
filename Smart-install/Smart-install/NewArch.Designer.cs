@@ -42,10 +42,8 @@
             this.ctr_textDescription = new System.Windows.Forms.RichTextBox();
             this.label_tag = new System.Windows.Forms.Label();
             this.label3_descriptionProgram = new System.Windows.Forms.Label();
-            this.label4_choiceProgram = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ctrLTree_tagProg = new System.Windows.Forms.TreeView();
-            this.ctrTB_checkPrograms = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +54,7 @@
             this.pomocToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(845, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(771, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -73,20 +71,20 @@
             // językToolStripMenuItem
             // 
             this.językToolStripMenuItem.Name = "językToolStripMenuItem";
-            this.językToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.językToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.językToolStripMenuItem.Text = "Język";
             // 
             // skórkiToolStripMenuItem
             // 
             this.skórkiToolStripMenuItem.Name = "skórkiToolStripMenuItem";
-            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.skórkiToolStripMenuItem.Text = "Kolor tła";
             this.skórkiToolStripMenuItem.Click += new System.EventHandler(this.skórkiToolStripMenuItem_Click);
             // 
             // czcionkaToolStripMenuItem
             // 
             this.czcionkaToolStripMenuItem.Name = "czcionkaToolStripMenuItem";
-            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.czcionkaToolStripMenuItem.Text = "Czcionka";
             this.czcionkaToolStripMenuItem.Click += new System.EventHandler(this.czcionkaToolStripMenuItem_Click);
             // 
@@ -115,9 +113,9 @@
             // ctr_addProgram
             // 
             this.ctr_addProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ctr_addProgram.Location = new System.Drawing.Point(471, 397);
+            this.ctr_addProgram.Location = new System.Drawing.Point(541, 380);
             this.ctr_addProgram.Name = "ctr_addProgram";
-            this.ctr_addProgram.Size = new System.Drawing.Size(169, 51);
+            this.ctr_addProgram.Size = new System.Drawing.Size(200, 52);
             this.ctr_addProgram.TabIndex = 3;
             this.ctr_addProgram.Text = "Dodaj program";
             this.ctr_addProgram.UseVisualStyleBackColor = true;
@@ -126,19 +124,20 @@
             // ctr_createArch
             // 
             this.ctr_createArch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ctr_createArch.Location = new System.Drawing.Point(655, 397);
+            this.ctr_createArch.Location = new System.Drawing.Point(306, 380);
             this.ctr_createArch.Name = "ctr_createArch";
-            this.ctr_createArch.Size = new System.Drawing.Size(169, 51);
+            this.ctr_createArch.Size = new System.Drawing.Size(202, 51);
             this.ctr_createArch.TabIndex = 5;
             this.ctr_createArch.Text = "Utwórz archiwum";
             this.ctr_createArch.UseVisualStyleBackColor = true;
+            this.ctr_createArch.Click += new System.EventHandler(this.ctr_createArch_Click);
             // 
             // ctr_textDescription
             // 
             this.ctr_textDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ctr_textDescription.Location = new System.Drawing.Point(471, 53);
+            this.ctr_textDescription.Location = new System.Drawing.Point(306, 52);
             this.ctr_textDescription.Name = "ctr_textDescription";
-            this.ctr_textDescription.Size = new System.Drawing.Size(353, 328);
+            this.ctr_textDescription.Size = new System.Drawing.Size(435, 309);
             this.ctr_textDescription.TabIndex = 6;
             this.ctr_textDescription.Text = "";
             // 
@@ -156,21 +155,11 @@
             // 
             this.label3_descriptionProgram.AutoSize = true;
             this.label3_descriptionProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3_descriptionProgram.Location = new System.Drawing.Point(468, 33);
+            this.label3_descriptionProgram.Location = new System.Drawing.Point(303, 33);
             this.label3_descriptionProgram.Name = "label3_descriptionProgram";
             this.label3_descriptionProgram.Size = new System.Drawing.Size(161, 15);
             this.label3_descriptionProgram.TabIndex = 12;
             this.label3_descriptionProgram.Text = "Szczegółowy opis programu";
-            // 
-            // label4_choiceProgram
-            // 
-            this.label4_choiceProgram.AutoSize = true;
-            this.label4_choiceProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4_choiceProgram.Location = new System.Drawing.Point(234, 33);
-            this.label4_choiceProgram.Name = "label4_choiceProgram";
-            this.label4_choiceProgram.Size = new System.Drawing.Size(113, 15);
-            this.label4_choiceProgram.TabIndex = 13;
-            this.label4_choiceProgram.Text = "Wybrane programy ";
             // 
             // contextMenuStrip1
             // 
@@ -182,18 +171,9 @@
             this.ctrLTree_tagProg.CheckBoxes = true;
             this.ctrLTree_tagProg.Location = new System.Drawing.Point(15, 52);
             this.ctrLTree_tagProg.Name = "ctrLTree_tagProg";
-            this.ctrLTree_tagProg.Size = new System.Drawing.Size(203, 390);
-            this.ctrLTree_tagProg.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.ctrLTree_tagProgIsChecked);
+            this.ctrLTree_tagProg.Size = new System.Drawing.Size(263, 379);
             this.ctrLTree_tagProg.TabIndex = 17;
-            // 
-            // ctrTB_checkPrograms
-            // 
-            this.ctrTB_checkPrograms.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ctrTB_checkPrograms.Location = new System.Drawing.Point(237, 53);
-            this.ctrTB_checkPrograms.Name = "ctrTB_checkPrograms";
-            this.ctrTB_checkPrograms.Size = new System.Drawing.Size(207, 389);
-            this.ctrTB_checkPrograms.TabIndex = 18;
-            this.ctrTB_checkPrograms.Text = "";
+            this.ctrLTree_tagProg.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.ctrLTree_tagProgIsChecked);
             // 
             // NewArch
             // 
@@ -201,10 +181,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(845, 463);
-            this.Controls.Add(this.ctrTB_checkPrograms);
+            this.ClientSize = new System.Drawing.Size(771, 446);
             this.Controls.Add(this.ctrLTree_tagProg);
-            this.Controls.Add(this.label4_choiceProgram);
             this.Controls.Add(this.label3_descriptionProgram);
             this.Controls.Add(this.label_tag);
             this.Controls.Add(this.ctr_textDescription);
@@ -238,10 +216,8 @@
         private System.Windows.Forms.RichTextBox ctr_textDescription;
         private System.Windows.Forms.Label label_tag;
         private System.Windows.Forms.Label label3_descriptionProgram;
-        private System.Windows.Forms.Label label4_choiceProgram;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TreeView ctrLTree_tagProg;
-        private System.Windows.Forms.RichTextBox ctrTB_checkPrograms;
     }
 }
 
