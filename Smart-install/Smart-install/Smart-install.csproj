@@ -50,6 +50,8 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
@@ -132,6 +134,9 @@
       <DependentUpon>userMenuInstall.cs</DependentUpon>
     </Compile>
     <Compile Include="zipCreator.cs" />
+    <EmbeddedResource Include="AddPrograms.resx">
+      <DependentUpon>AddPrograms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewArch.resx">
       <DependentUpon>NewArch.cs</DependentUpon>
     </EmbeddedResource>

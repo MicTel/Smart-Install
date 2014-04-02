@@ -42,3 +42,9 @@ D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\
 C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.exe.config
 C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.exe
 C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.pdb
+C:\Users\Natalia\Documents\Visual Studio 2012\Projects\Smart-install\Smart-install\bin\Debug\ArchiveBase.mdf
+C:\Users\Natalia\Documents\Visual Studio 2012\Projects\Smart-install\Smart-install\bin\Debug\ArchiveBase_log.ldf
+C:\Users\Natalia\Documents\Visual Studio 2012\Projects\Smart-install\Smart-install\bin\Debug\EntityFramework.dll
+C:\Users\Natalia\Documents\Visual Studio 2012\Projects\Smart-install\Smart-install\bin\Debug\EntityFramework.xml
+C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\obj\Debug\Smart_install.AddPrograms.resources
+D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.AddPrograms.resources
