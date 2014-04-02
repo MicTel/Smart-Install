@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewArch));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zamknijOknoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ustawieniaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.językToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skórkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,6 +57,7 @@
             this.menuStrip1.BackColor = System.Drawing.Color.GhostWhite;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.plikToolStripMenuItem,
             this.ustawieniaToolStripMenuItem1,
             this.pomocToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -62,6 +65,21 @@
             this.menuStrip1.Size = new System.Drawing.Size(802, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // plikToolStripMenuItem
+            // 
+            this.plikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zamknijOknoToolStripMenuItem});
+            this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
+            this.plikToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.plikToolStripMenuItem.Text = "Plik";
+            // 
+            // zamknijOknoToolStripMenuItem
+            // 
+            this.zamknijOknoToolStripMenuItem.Name = "zamknijOknoToolStripMenuItem";
+            this.zamknijOknoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.zamknijOknoToolStripMenuItem.Text = "Zamknij okno";
+            this.zamknijOknoToolStripMenuItem.Click += new System.EventHandler(this.zamknijOknoToolStripMenuItem_Click);
             // 
             // ustawieniaToolStripMenuItem1
             // 
@@ -78,6 +96,7 @@
             this.językToolStripMenuItem.Name = "językToolStripMenuItem";
             this.językToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.językToolStripMenuItem.Text = "Język";
+            this.językToolStripMenuItem.Click += new System.EventHandler(this.językToolStripMenuItem_Click);
             // 
             // skórkiToolStripMenuItem
             // 
@@ -154,7 +173,7 @@
             // 
             // ctr_textDescription
             // 
-            this.ctr_textDescription.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ctr_textDescription.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ctr_textDescription.Location = new System.Drawing.Point(336, 54);
             this.ctr_textDescription.Name = "ctr_textDescription";
             this.ctr_textDescription.Size = new System.Drawing.Size(435, 253);
@@ -198,6 +217,7 @@
             this.ctrLTree_tagProg.Size = new System.Drawing.Size(282, 378);
             this.ctrLTree_tagProg.TabIndex = 17;
             this.ctrLTree_tagProg.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.ctrLTree_tagProgIsChecked);
+            this.ctrLTree_tagProg.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.ctrLTree_Clicked);
             // 
             // ctrTB_DescriptionArch
             // 
@@ -238,6 +258,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Candara", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "NewArch";
             this.Text = "UserMenu";
@@ -248,6 +269,8 @@
             this.PerformLayout();
 
         }
+
+       
 
 
         #endregion
@@ -269,6 +292,8 @@
         private System.Windows.Forms.TreeView ctrLTree_tagProg;
         private System.Windows.Forms.RichTextBox ctrTB_DescriptionArch;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem plikToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zamknijOknoToolStripMenuItem;
     }
 }
 

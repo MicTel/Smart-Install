@@ -65,8 +65,8 @@ namespace Smart_install
             //Publisher = progr.Publisher;
             Path = null;
             Id = progr.Id;
-            Language = progr.Language.Language1;
-            systemType = progr.systemType.systemType1;
+            //Language = progr.Language.Language1;
+            //systemType = progr.systemType.systemType1;
             Tags = new List<string>();
             foreach (Tag tag in progr.Tags)
             {
@@ -97,6 +97,27 @@ namespace Smart_install
 
     public class control
     {
+
+        public static void addTagOnce()
+        {
+            ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
+            Tag p = database.Tags.OrderByDescending(c => c.Id).FirstOrDefault();
+            if (p == null)
+            {
+                addTags("System");
+                addTags("Sterowniki");
+                addTags("Narzędzia");
+                addTags("Bezpieczeństwo");
+                addTags("Internet");
+                addTags("Gry");
+                addTags("Biuro");
+                addTags("Grafika");
+                addTags("Multimedia");
+                addTags("Projektowanie");
+                addTags("Programowanie");
+            }
+        }
+
         /// <summary>
         /// Zwraca listę wszystkich tagów z bazy danych
         /// </summary>
@@ -137,20 +158,22 @@ namespace Smart_install
         /// </summary>
         /// <param name="selectedTags">wybrane przez użytkownika komponenty</param>
         /// <returns></returns>
-        public static List<string> getPrograms(string selectedTag)
+        public static List<programInformation> getPrograms()
         {
             ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
-            var prog = from p in database.Progs
-                              where _checkTag(p.Tags.ToList<Tag>(), selectedTag)
-                              select p.Name;
-            
-            List<string> progString = new List<string>();
-            foreach (var p in prog)
+            var prog = database.Progs;
+                              //where _checkTag(p.Tags.ToList<Tag>(), selectedTag)
+                              //select p;
+
+            List<programInformation> progInf = new List<programInformation>();
+            programInformation newP = null;
+            foreach (Prog p in prog)
             {
-                progString.Add(p.ToString());
+                newP = new programInformation(p);
+                progInf.Add(newP);
             }
 
-            return progString;
+            return progInf;
         }
 
         /// <summary>
@@ -196,6 +219,7 @@ namespace Smart_install
             ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
             Prog p = database.Progs.OrderByDescending(c => c.Id).FirstOrDefault();
             int newId = (null == p ? 0 : p.Id) + 1;
+        
             Prog program = new Prog()
             {
                 Id = newId,
@@ -207,6 +231,20 @@ namespace Smart_install
                 URLUpdate = toDatabase.URLUpdate,
                 Version = toDatabase.Version
             };
+
+            var tags = database.Tags;
+            foreach (string tag in toDatabase.Tags)
+            {
+                foreach (Tag tagInData in tags)
+                {
+                    if (tagInData.TagName == tag)
+                    {
+                        program.Tags.Add(tagInData);
+                        break;
+                    }
+                } 
+            }
+
             database.Progs.Add(program);
             try
             {
@@ -246,6 +284,28 @@ namespace Smart_install
         /// <param name="arch">Inicjonowane archiwum</param>
         public static void startArchive(archiveInformation arch,List<programInformation> programs)
         {
+            ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
+            Archive arc = database.Archives.OrderByDescending(c => c.Id).FirstOrDefault();
+            int newId = (null == arc ? 0 : arc.Id) + 1;
+            Archive archive = new Archive()
+            {
+                Id = newId,
+                Description = arch.Description,
+                Name = arch.Name,
+                //Publisher = toDatabase.Publisher,
+                CreateDate = DateTime.Now,
+                ModifiedDate = DateTime.Now,
+                Path = arch.fullPath
+            };
+            database.Archives.Add(archive);
+            try
+            {
+                database.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             string fileName = arch.Name + ".xml";
             XDocument xml = new XDocument(new XElement("Archiwum"));
             XElement root = xml.Root;

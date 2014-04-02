@@ -17,14 +17,14 @@ namespace Smart_install
         {
             try
             {
+                control.addTagOnce();
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new userMenuInstall());
             }
-            catch (Exception ex)
+            catch
             {
-                
-               MessageBox.Show("Dana funkcja nie została jeszcze zaimplementowana");
+               MessageBox.Show("Nieznany błąd :(");
             }
    
         }

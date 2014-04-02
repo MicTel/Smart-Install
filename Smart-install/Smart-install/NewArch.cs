@@ -22,16 +22,42 @@ namespace Smart_install
         public NewArch()
         {
             InitializeComponent();
-            control.addTags("Edukacja");
-            control.addTags("Muzyka");
-            control.addTags("Grafika");
             add_to_lis_tag();
             _AllPrograms = new List<programInformation>();
+            progFromDatabase();
 
-            //foreach (string tag in control.getTags())
-            //{
-            //    ctr_Tag.Items.Add((Object)tag); 
-            //}
+        }
+
+        private void progFromDatabase()
+        {
+            foreach (programInformation p in control.getPrograms())
+            {
+                addProgram(p);
+            }
+        }
+
+        private void ctrLTree_Clicked(object sender, System.Windows.Forms.TreeNodeMouseClickEventArgs e)
+        {
+            foreach (programInformation findProg in _AllPrograms)
+            {
+                if (e.Node.Text == findProg.Name)
+                {
+                    viewDescription(findProg);
+                    return;
+                }
+
+            }
+        }
+
+        private void viewDescription(programInformation p)
+        {
+            ctr_textDescription.Clear();
+            ctr_textDescription.AppendText("Nazwa: " + p.Name + "\n");
+            ctr_textDescription.AppendText("Opis: " + p.Description + "\n");
+            ctr_textDescription.AppendText("Język: " + p.Language + "\n");
+            ctr_textDescription.AppendText("Wersja programu: " + p.Version + "\n");
+            ctr_textDescription.AppendText("Typ systemu: " + p.systemType + "\n");
+            ctr_textDescription.AppendText("Link do pomocy: " + p.HelpLink + "\n");            
         }
 
         private void ustawieniaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -101,6 +127,8 @@ namespace Smart_install
                 }
             }
         }
+
+
 
         /// <summary>
         /// OK
@@ -208,7 +236,8 @@ namespace Smart_install
 
         private void czcionkaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FontDialog okienkoCzcionki = new FontDialog();
+           // FontDialog okienkoCzcionki = new FontDialog();
+            MessageBox.Show("Dana funkcja nie została jeszcze zaimplementowana");
             
         }
 
@@ -268,6 +297,17 @@ namespace Smart_install
 
         private void ctr_createArch_Click(object sender, EventArgs e)
         {
+            List<programInformation> prog2 = new List<programInformation>();
+            foreach (programInformation prog in _AllPrograms)
+            {
+               if (prog.isChecked) prog2.Add(prog);
+            }
+            if (prog2.Count == 0)
+            {
+                   MessageBox.Show("Musisz zaznaczyć program, żeby stworzyć archwium");
+                   return;
+            }
+
             SaveFileDialog saveFile = new SaveFileDialog();
             saveFile.Filter = "Plik zip|*.zip";
             if (saveFile.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -276,24 +316,20 @@ namespace Smart_install
                 newArch.fullPath = saveFile.FileName;
                 string[] tab = newArch.fullPath.Split(new char[] { '\\' } );
                 newArch.Name =  tab[tab.Count()-1];
-
-                List<programInformation> prog2 = new List<programInformation>();
-
-                foreach (programInformation prog in _AllPrograms)
-                {
-                    if (prog.isChecked)
-                    {
-                        prog2.Add(prog);
-                    }
-                }
-                    //messageBox
-                if (prog2.Count == 0)
-                   MessageBox.Show("Musisz zaznaczyć program, żeby utworzyć archiwum");
-                else
-                   control.createArchive(newArch, prog2);
+                newArch.Description = ctrTB_DescriptionArch.Text;
+                control.createArchive(newArch, prog2);
             }
+}
 
+        private void zamknijOknoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
 
+        }
+
+        private void językToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Dana funkcja nie została jeszcze zaimplementowana");
         }
 
         //private void ctr_ProgramsList_SelectedIndexChanged(object sender, ItemCheckEventArgs e)

@@ -37,6 +37,7 @@
             this.usuńToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zamknijArchiwumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ostatnioUżywaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zamknijProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.edycjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filtrujWgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ustawieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +68,7 @@
             this.pomocToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(753, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(754, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -78,7 +79,8 @@
             this.dodajToolStripMenuItem,
             this.usuńToolStripMenuItem,
             this.zamknijArchiwumToolStripMenuItem,
-            this.ostatnioUżywaneToolStripMenuItem});
+            this.ostatnioUżywaneToolStripMenuItem,
+            this.zamknijProgramToolStripMenuItem});
             this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
             this.plikToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.plikToolStripMenuItem.Text = "Plik";
@@ -126,6 +128,13 @@
             this.ostatnioUżywaneToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.ostatnioUżywaneToolStripMenuItem.Text = "Ostatnio używane";
             this.ostatnioUżywaneToolStripMenuItem.Click += new System.EventHandler(this.ostatnioUżywaneToolStripMenuItem_Click);
+            // 
+            // zamknijProgramToolStripMenuItem
+            // 
+            this.zamknijProgramToolStripMenuItem.Name = "zamknijProgramToolStripMenuItem";
+            this.zamknijProgramToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.zamknijProgramToolStripMenuItem.Text = "Zamknij program";
+            this.zamknijProgramToolStripMenuItem.Click += new System.EventHandler(this.zamknijProgramToolStripMenuItem_Click);
             // 
             // edycjaToolStripMenuItem
             // 
@@ -222,9 +231,9 @@
             this.clikButton_install.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clikButton_install.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clikButton_install.ForeColor = System.Drawing.SystemColors.Window;
-            this.clikButton_install.Location = new System.Drawing.Point(336, 349);
+            this.clikButton_install.Location = new System.Drawing.Point(336, 360);
             this.clikButton_install.Name = "clikButton_install";
-            this.clikButton_install.Size = new System.Drawing.Size(390, 64);
+            this.clikButton_install.Size = new System.Drawing.Size(390, 49);
             this.clikButton_install.TabIndex = 2;
             this.clikButton_install.Text = "Instaluj ";
             this.clikButton_install.UseVisualStyleBackColor = false;
@@ -246,7 +255,7 @@
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.richTextBox1.Location = new System.Drawing.Point(336, 69);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(390, 264);
+            this.richTextBox1.Size = new System.Drawing.Size(390, 270);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
             // 
@@ -276,7 +285,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(753, 437);
+            this.ClientSize = new System.Drawing.Size(754, 433);
             this.Controls.Add(this.label6_decriptionPrograms);
             this.Controls.Add(this.label5_listchoicePrograms);
             this.Controls.Add(this.richTextBox1);
@@ -285,9 +294,11 @@
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "userMenuInstall";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "userMenuInstall";
+            this.Load += new System.EventHandler(this.userMenuInstall_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -321,5 +332,6 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label5_listchoicePrograms;
         private System.Windows.Forms.Label label6_decriptionPrograms;
+        private System.Windows.Forms.ToolStripMenuItem zamknijProgramToolStripMenuItem;
     }
 }
