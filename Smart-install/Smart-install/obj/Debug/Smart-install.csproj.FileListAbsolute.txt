@@ -48,3 +48,6 @@ C:\Users\Natalia\Documents\Visual Studio 2012\Projects\Smart-install\Smart-insta
 C:\Users\Natalia\Documents\Visual Studio 2012\Projects\Smart-install\Smart-install\bin\Debug\EntityFramework.xml
 C:\Users\Natalia\documents\visual studio 2012\Projects\Smart-install\Smart-install\obj\Debug\Smart_install.AddPrograms.resources
 D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.AddPrograms.resources
+C:\Studia\SmartInstallC#\Smart-Install - Kopia\Smart-install\Smart-install\bin\Debug\Smart-install.exe.config
+C:\Studia\SmartInstallC#\Smart-Install - Kopia\Smart-install\Smart-install\obj\Debug\Smart-install.exe
+C:\Studia\SmartInstallC#\Smart-Install - Kopia\Smart-install\Smart-install\obj\Debug\Smart-install.pdb
