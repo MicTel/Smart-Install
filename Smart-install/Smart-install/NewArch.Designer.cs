@@ -261,7 +261,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "NewArch";
-            this.Text = "UserMenu";
+            this.Text = "Tworzenie nowego archiwum";
             this.Load += new System.EventHandler(this.UserMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

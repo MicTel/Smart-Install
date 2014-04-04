@@ -48,15 +48,25 @@ namespace Smart_install
         //}
 
         //wywoływanie informacji z .exe
-        public static void AboutProgram(string fileName)
+        public static programInformation AboutProgram(string fileName)
         {
             FileVersionInfo AboutThisFile = FileVersionInfo.GetVersionInfo(fileName);
             //wypisanie na ekran do testu;
             //odwołanie jest przez zmienna AboutThisFile + metoda, jeżeli potrzeba innych to piszcie
-            Console.WriteLine("InternalName: " + AboutThisFile.InternalName);
-            Console.WriteLine("FileVersion: " + AboutThisFile.FileVersion);
-            Console.WriteLine("FileDescription: " + AboutThisFile.FileDescription);
-            Console.WriteLine("Product: " + AboutThisFile.ProductName);
+            //Console.WriteLine("InternalName: " + AboutThisFile.InternalName);
+            //Console.WriteLine("FileVersion: " + AboutThisFile.FileVersion);
+            //Console.WriteLine("FileDescription: " + AboutThisFile.FileDescription);
+            //Console.WriteLine("Product: " + AboutThisFile.ProductName);
+
+            programInformation progr = new programInformation()
+            {
+                Version = AboutThisFile.FileVersion,
+                Description = AboutThisFile.FileDescription,
+                Path = fileName,
+                Language = AboutThisFile.Language,
+                Name = ((string[])(AboutThisFile.OriginalFilename.Split(new char[] {'.'})))[0]
+            };
+            return progr;
         }
 
         //wywoływanie infomracji z rejestru

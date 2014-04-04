@@ -22,9 +22,13 @@ namespace Smart_install
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new userMenuInstall());
             }
+            catch (ExecutionEngineException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             catch
             {
-               MessageBox.Show("Nieznany błąd :(");
+                MessageBox.Show("Nieznany błąd :(");
             }
    
         }

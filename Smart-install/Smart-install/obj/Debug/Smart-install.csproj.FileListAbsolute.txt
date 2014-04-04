@@ -51,3 +51,4 @@ D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\
 C:\Studia\SmartInstallC#\Smart-Install - Kopia\Smart-install\Smart-install\bin\Debug\Smart-install.exe.config
 C:\Studia\SmartInstallC#\Smart-Install - Kopia\Smart-install\Smart-install\obj\Debug\Smart-install.exe
 C:\Studia\SmartInstallC#\Smart-Install - Kopia\Smart-install\Smart-install\obj\Debug\Smart-install.pdb
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.AddPrograms.resources

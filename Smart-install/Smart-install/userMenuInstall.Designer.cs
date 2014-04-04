@@ -297,7 +297,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "userMenuInstall";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "userMenuInstall";
+            this.Text = "SmartInstall";
             this.Load += new System.EventHandler(this.userMenuInstall_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -28,7 +28,14 @@ namespace Smart_install
             ctr_tag.Items.Add("Wpisz nową kategorię");
             _wasAdded = false;
             ctr_Path.Text = Path;
+            ctr_Path.Enabled = false;
             _parent = parent;
+            programInformation progr = SearchProgram.AboutProgram(Path);
+            ctr_description.Text = progr.Description;
+            ctr_language.Text = progr.Language;
+            ctr_Name.Text = progr.Name;
+            ctr_versionprog.Text = progr.Version;
+
         }
 
         private void ctr_AddProgramToBase_Click(object sender, EventArgs e)

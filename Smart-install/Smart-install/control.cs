@@ -265,15 +265,17 @@ namespace Smart_install
         /// <param name="arch"></param>
         public static void addOldProgram(programInformation programInf, archiveInformation arch)
         {
-            ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
-            Prog progr = (from p in database.Progs
-                            where p.Id == programInf.Id
-                            select p).First();
-            int i=0;
-            //while(!zipCreator.copyBetweenArchive(progr.Archives.,arch.fullPath))
-            {
-                i++;
-            }
+            Exception ex = new Exception("Dodawanie archiw z bazy nie zostało jeszcze zaimplementowane");
+            throw ex;
+            //ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
+            //Prog progr = (from p in database.Progs
+            //                where p.Id == programInf.Id
+            //                select p).First();
+            //int i=0;
+            ////while(!zipCreator.copyBetweenArchive(progr.Archives.,arch.fullPath))
+            //{
+            //    i++;
+            //}
         }
 
 
