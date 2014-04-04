@@ -50,10 +50,10 @@
             this.stronaProgramuOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.clikButton_install = new System.Windows.Forms.Button();
-            this.programs_for_install = new System.Windows.Forms.CheckedListBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label5_listchoicePrograms = new System.Windows.Forms.Label();
             this.label6_decriptionPrograms = new System.Windows.Forms.Label();
+            this.ctrLT_arch = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -238,17 +238,6 @@
             this.clikButton_install.Text = "Instaluj ";
             this.clikButton_install.UseVisualStyleBackColor = false;
             // 
-            // programs_for_install
-            // 
-            this.programs_for_install.BackColor = System.Drawing.Color.White;
-            this.programs_for_install.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.programs_for_install.FormattingEnabled = true;
-            this.programs_for_install.Location = new System.Drawing.Point(28, 69);
-            this.programs_for_install.Name = "programs_for_install";
-            this.programs_for_install.Size = new System.Drawing.Size(282, 340);
-            this.programs_for_install.Sorted = true;
-            this.programs_for_install.TabIndex = 3;
-            // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.White;
@@ -265,9 +254,9 @@
             this.label5_listchoicePrograms.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5_listchoicePrograms.Location = new System.Drawing.Point(25, 49);
             this.label5_listchoicePrograms.Name = "label5_listchoicePrograms";
-            this.label5_listchoicePrograms.Size = new System.Drawing.Size(157, 15);
+            this.label5_listchoicePrograms.Size = new System.Drawing.Size(98, 15);
             this.label5_listchoicePrograms.TabIndex = 5;
-            this.label5_listchoicePrograms.Text = "Lista wybranych programów";
+            this.label5_listchoicePrograms.Text = "Wybrane archiwa";
             // 
             // label6_decriptionPrograms
             // 
@@ -279,6 +268,13 @@
             this.label6_decriptionPrograms.TabIndex = 6;
             this.label6_decriptionPrograms.Text = "Szczegółowy opis programu";
             // 
+            // ctrLT_arch
+            // 
+            this.ctrLT_arch.Location = new System.Drawing.Point(28, 69);
+            this.ctrLT_arch.Name = "ctrLT_arch";
+            this.ctrLT_arch.Size = new System.Drawing.Size(262, 340);
+            this.ctrLT_arch.TabIndex = 7;
+            // 
             // userMenuInstall
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -286,10 +282,10 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(754, 433);
+            this.Controls.Add(this.ctrLT_arch);
             this.Controls.Add(this.label6_decriptionPrograms);
             this.Controls.Add(this.label5_listchoicePrograms);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.programs_for_install);
             this.Controls.Add(this.clikButton_install);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -328,10 +324,10 @@
         private System.Windows.Forms.ToolStripMenuItem stronaProgramuOnlineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem1;
         private System.Windows.Forms.Button clikButton_install;
-        private System.Windows.Forms.CheckedListBox programs_for_install;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label5_listchoicePrograms;
         private System.Windows.Forms.Label label6_decriptionPrograms;
         private System.Windows.Forms.ToolStripMenuItem zamknijProgramToolStripMenuItem;
+        private System.Windows.Forms.TreeView ctrLT_arch;
     }
 }
