@@ -60,7 +60,7 @@ namespace Smart_install
 
             programInformation progr = new programInformation()
             {
-                Version = AboutThisFile.FileVersion,
+                Version = AboutThisFile.ProductVersion,
                 Description = AboutThisFile.FileDescription,
                 Path = fileName,
                 Language = AboutThisFile.Language,

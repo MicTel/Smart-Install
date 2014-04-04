@@ -53,6 +53,7 @@ namespace Smart_install
 
         public programInformation()
         {
+            isChecked = false;
         }
 
         public programInformation(Prog progr)

@@ -5,3 +5,8 @@ Thumbs.db
 *.obj
 obj/
 *.suo
+Smart-install/Smart-install/bin/
+Smart-install/Smart-install/obj/
+Smart-install/Smart-install/bin/
+Smart-install/Smart-install/bin/Debug/ArchiveBase.mdf
+Smart-install/Smart-install.v11.suo
