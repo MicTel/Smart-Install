@@ -75,22 +75,16 @@
     <Compile Include="AddPrograms.Designer.cs">
       <DependentUpon>AddPrograms.cs</DependentUpon>
     </Compile>
-    <Compile Include="Add_NewTag.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add_NewTag.Designer.cs">
-      <DependentUpon>Add_NewTag.cs</DependentUpon>
-    </Compile>
     <Compile Include="Archive.cs">
       <DependentUpon>ModelArchive.tt</DependentUpon>
     </Compile>
     <Compile Include="control.cs" />
     <Compile Include="Exec.cs" />
-    <Compile Include="Help.cs">
+    <Compile Include="Help2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Help.Designer.cs">
-      <DependentUpon>Help.cs</DependentUpon>
+    <Compile Include="Help2.Designer.cs">
+      <DependentUpon>Help2.cs</DependentUpon>
     </Compile>
     <Compile Include="Language.cs">
       <DependentUpon>ModelArchive.tt</DependentUpon>
@@ -136,6 +130,9 @@
     <Compile Include="zipCreator.cs" />
     <EmbeddedResource Include="AddPrograms.resx">
       <DependentUpon>AddPrograms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help2.resx">
+      <DependentUpon>Help2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewArch.resx">
       <DependentUpon>NewArch.cs</DependentUpon>

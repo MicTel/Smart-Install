@@ -76,7 +76,7 @@ namespace Smart_install
 
         private void pomocToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Help aboutHelp = new Help();
+            Help2 aboutHelp = new Help2();
             aboutHelp.Show();
         }
 

@@ -243,7 +243,7 @@ namespace Smart_install
 
         private void pomocToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Help aboutHelp = new Help();
+            Help2 aboutHelp = new Help2();
             aboutHelp.Show();
         }
 
@@ -319,7 +319,7 @@ namespace Smart_install
                 newArch.Description = ctrTB_DescriptionArch.Text;
                 control.createArchive(newArch, prog2);
             }
-            MessageBox.Show("Twoje archiwum zostało utworzone ");
+            MessageBox.Show("Archiwum zostało utworzone ");
 }
 
         private void zamknijOknoToolStripMenuItem_Click(object sender, EventArgs e)
