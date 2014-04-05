@@ -21,5 +21,17 @@ namespace Smart_install
         {
 
         }
+
+        private void ctrLT_descriptionHelp_clicked(object sender, System.Windows.Forms.TreeNodeMouseClickEventArgs e)
+        {
+            //string N_Autors = "Autorzy";
+            //if ( e.Node.Name == e.Node.Text(N_Autors))
+            
+            if (ctrLT_descriptionHelp.SelectedNode.Name == "Autorzy")
+            {
+                ctrRTB_description.Text = "Michał Telus, Mateusz Schalau, Patryk Kosiorek, Natalia Rybarczyk";
+            }
+            
+        }
     }
 }

@@ -217,6 +217,7 @@
             this.ctrLTree_tagProg.Size = new System.Drawing.Size(282, 378);
             this.ctrLTree_tagProg.TabIndex = 17;
             this.ctrLTree_tagProg.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.ctrLTree_tagProgIsChecked);
+            this.ctrLTree_tagProg.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.ctrLTree_tagProg_AfterSelect);
             this.ctrLTree_tagProg.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.ctrLTree_Clicked);
             // 
             // ctrTB_DescriptionArch

@@ -98,13 +98,13 @@
             this.zPlikuToolStripMenuItem});
             this.dodajToolStripMenuItem.Name = "dodajToolStripMenuItem";
             this.dodajToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.dodajToolStripMenuItem.Text = "Dodaj";
+            this.dodajToolStripMenuItem.Text = "Otwórz archiwum";
             this.dodajToolStripMenuItem.Click += new System.EventHandler(this.dodajToolStripMenuItem_Click);
             // 
             // zPlikuToolStripMenuItem
             // 
             this.zPlikuToolStripMenuItem.Name = "zPlikuToolStripMenuItem";
-            this.zPlikuToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.zPlikuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.zPlikuToolStripMenuItem.Text = "z pliku...";
             this.zPlikuToolStripMenuItem.Click += new System.EventHandler(this.zPlikuToolStripMenuItem_Click);
             // 

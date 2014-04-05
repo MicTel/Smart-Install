@@ -28,24 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Autorzy");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Wymagania");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Jak korzystać z programu");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Strona programu online");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Help));
+            this.ctrRTB_description = new System.Windows.Forms.RichTextBox();
+            this.ctrLT_descriptionHelp = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // ctrRTB_description
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(15, 28);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(439, 284);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "Autorzy: \n\tMichał Telus\n\tMateusz Tweester\n\tPatryk Kosiorek\n\tNatalia Rybarczyk\n\nWy" +
-    "magania programu:\n\tProgram wymaga framework .NET 4.0";
+            this.ctrRTB_description.Location = new System.Drawing.Point(283, 25);
+            this.ctrRTB_description.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.ctrRTB_description.Name = "ctrRTB_description";
+            this.ctrRTB_description.Size = new System.Drawing.Size(430, 339);
+            this.ctrRTB_description.TabIndex = 2;
+            this.ctrRTB_description.Text = "";
+            // 
+            // ctrLT_descriptionHelp
+            // 
+            this.ctrLT_descriptionHelp.Location = new System.Drawing.Point(22, 25);
+            this.ctrLT_descriptionHelp.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.ctrLT_descriptionHelp.Name = "ctrLT_descriptionHelp";
+            treeNode1.BackColor = System.Drawing.Color.White;
+            treeNode1.Name = "N_Autors";
+            treeNode1.NodeFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            treeNode1.Text = "Autorzy";
+            treeNode2.Name = "N_wym";
+            treeNode2.NodeFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            treeNode2.Text = "Wymagania";
+            treeNode3.Name = "N_HowToUseProg";
+            treeNode3.NodeFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            treeNode3.Text = "Jak korzystać z programu";
+            treeNode4.Name = "N_web";
+            treeNode4.NodeFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            treeNode4.Text = "Strona programu online";
+            this.ctrLT_descriptionHelp.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4});
+            this.ctrLT_descriptionHelp.Size = new System.Drawing.Size(231, 339);
+            this.ctrLT_descriptionHelp.TabIndex = 4;
+            this.ctrLT_descriptionHelp.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.ctrLT_descriptionHelp_clicked);
             // 
             // Help
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 336);
-            this.Controls.Add(this.richTextBox1);
+            this.ClientSize = new System.Drawing.Size(735, 385);
+            this.Controls.Add(this.ctrLT_descriptionHelp);
+            this.Controls.Add(this.ctrRTB_description);
+            this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "Help";
             this.Text = "Help";
             this.Load += new System.EventHandler(this.Help_Load);
@@ -55,7 +93,8 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox ctrRTB_description;
+        private System.Windows.Forms.TreeView ctrLT_descriptionHelp;
 
 
     }

@@ -319,17 +319,22 @@ namespace Smart_install
                 newArch.Description = ctrTB_DescriptionArch.Text;
                 control.createArchive(newArch, prog2);
             }
+            MessageBox.Show("Twoje archiwum zostało utworzone ");
 }
 
         private void zamknijOknoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void językToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Dana funkcja nie została jeszcze zaimplementowana");
+        }
+
+        private void ctrLTree_tagProg_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
         }
 
         //private void ctr_ProgramsList_SelectedIndexChanged(object sender, ItemCheckEventArgs e)
