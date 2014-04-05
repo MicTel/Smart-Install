@@ -53,3 +53,4 @@ C:\Studia\SmartInstallC#\Smart-Install - Kopia\Smart-install\Smart-install\obj\D
 C:\Studia\SmartInstallC#\Smart-Install - Kopia\Smart-install\Smart-install\obj\Debug\Smart-install.pdb
 X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.AddPrograms.resources
 D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.Help2.resources
+x:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.Help2.resources

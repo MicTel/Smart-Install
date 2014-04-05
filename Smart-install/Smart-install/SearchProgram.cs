@@ -58,13 +58,27 @@ namespace Smart_install
             //Console.WriteLine("FileDescription: " + AboutThisFile.FileDescription);
             //Console.WriteLine("Product: " + AboutThisFile.ProductName);
 
+            string name;
+            try
+            {
+                name = ((string[])
+                    (AboutThisFile.OriginalFilename.Split(new char[] { '.' })))[0];
+            }
+            catch
+            {
+                name = ((string[])
+                    (AboutThisFile.FileName.Split(new char[] {'\\'}))).Last();
+                name = ((string[])
+                    (name.Split(new char[] { '.' })))[0];
+            }
+
             programInformation progr = new programInformation()
             {
                 Version = AboutThisFile.ProductVersion,
                 Description = AboutThisFile.FileDescription,
                 Path = fileName,
                 Language = AboutThisFile.Language,
-                Name = ((string[])(AboutThisFile.OriginalFilename.Split(new char[] {'.'})))[0]
+                Name = name
             };
             return progr;
         }

@@ -40,6 +40,11 @@ namespace Smart_install
 
         private void ctr_AddProgramToBase_Click(object sender, EventArgs e)
         {
+            if (ctr_tag.Text == "")
+            {
+                MessageBox.Show("Musisz wybrać kategorię");
+                return;
+            }
             List<string> list_tag = new List<string>() ;
             list_tag.Add(ctr_tag.Text);
             programInformation prog = new programInformation()

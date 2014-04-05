@@ -45,7 +45,6 @@ namespace Smart_install
                     viewDescription(findProg);
                     return;
                 }
-
             }
         }
 
@@ -318,8 +317,9 @@ namespace Smart_install
                 newArch.Name =  tab[tab.Count()-1];
                 newArch.Description = ctrTB_DescriptionArch.Text;
                 control.createArchive(newArch, prog2);
+                MessageBox.Show("Archiwum zostało utworzone ");
             }
-            MessageBox.Show("Archiwum zostało utworzone ");
+            
 }
 
         private void zamknijOknoToolStripMenuItem_Click(object sender, EventArgs e)
