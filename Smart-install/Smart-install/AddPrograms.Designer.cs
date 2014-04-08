@@ -13,6 +13,7 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
+            _parent.Show();
             if (disposing && (components != null))
             {
                 components.Dispose();
@@ -44,14 +45,14 @@
             this.ctr_language = new System.Windows.Forms.TextBox();
             this.ctr_linkToHelp = new System.Windows.Forms.TextBox();
             this.ctr_linkToUpdate = new System.Windows.Forms.TextBox();
-            this.ctr_versionprog = new System.Windows.Forms.ComboBox();
             this.ctr_AddProgramToBase = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ctr_Icon = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.ctr_Path = new System.Windows.Forms.TextBox();
             this.ctr_tag = new System.Windows.Forms.ComboBox();
             this.ctrTB_NewTag = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ctr_versionprog = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ctr_Icon)).BeginInit();
             this.SuspendLayout();
             // 
             // ctr_Name
@@ -93,7 +94,7 @@
             // 
             // ctr_system
             // 
-            this.ctr_system.Location = new System.Drawing.Point(28, 232);
+            this.ctr_system.Location = new System.Drawing.Point(28, 228);
             this.ctr_system.Name = "ctr_system";
             this.ctr_system.Size = new System.Drawing.Size(306, 23);
             this.ctr_system.TabIndex = 15;
@@ -186,14 +187,6 @@
             this.ctr_linkToUpdate.Size = new System.Drawing.Size(306, 23);
             this.ctr_linkToUpdate.TabIndex = 28;
             // 
-            // ctr_versionprog
-            // 
-            this.ctr_versionprog.FormattingEnabled = true;
-            this.ctr_versionprog.Location = new System.Drawing.Point(28, 173);
-            this.ctr_versionprog.Name = "ctr_versionprog";
-            this.ctr_versionprog.Size = new System.Drawing.Size(306, 23);
-            this.ctr_versionprog.TabIndex = 31;
-            // 
             // ctr_AddProgramToBase
             // 
             this.ctr_AddProgramToBase.BackColor = System.Drawing.Color.Lavender;
@@ -209,15 +202,14 @@
             this.ctr_AddProgramToBase.TabIndex = 33;
             this.ctr_AddProgramToBase.Text = "Dodaj program";
             this.ctr_AddProgramToBase.UseVisualStyleBackColor = false;
-            this.ctr_AddProgramToBase.Click += new System.EventHandler(this.ctr_AddProgramToBase_Click);
             // 
-            // pictureBox1
+            // ctr_Icon
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(385, 54);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(99, 85);
-            this.pictureBox1.TabIndex = 34;
-            this.pictureBox1.TabStop = false;
+            this.ctr_Icon.Location = new System.Drawing.Point(385, 54);
+            this.ctr_Icon.Name = "ctr_Icon";
+            this.ctr_Icon.Size = new System.Drawing.Size(99, 85);
+            this.ctr_Icon.TabIndex = 34;
+            this.ctr_Icon.TabStop = false;
             // 
             // label9
             // 
@@ -254,19 +246,26 @@
             this.ctrTB_NewTag.Visible = false;
             this.ctrTB_NewTag.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ctrTB_NewTagKeyDown);
             // 
+            // ctr_versionprog
+            // 
+            this.ctr_versionprog.Location = new System.Drawing.Point(28, 168);
+            this.ctr_versionprog.Name = "ctr_versionprog";
+            this.ctr_versionprog.Size = new System.Drawing.Size(306, 23);
+            this.ctr_versionprog.TabIndex = 38;
+            // 
             // AddPrograms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(722, 403);
+            this.Controls.Add(this.ctr_versionprog);
             this.Controls.Add(this.ctrTB_NewTag);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.ctr_Path);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ctr_Icon);
             this.Controls.Add(this.ctr_AddProgramToBase);
             this.Controls.Add(this.ctr_tag);
-            this.Controls.Add(this.ctr_versionprog);
             this.Controls.Add(this.ctr_linkToUpdate);
             this.Controls.Add(this.ctr_linkToHelp);
             this.Controls.Add(this.ctr_language);
@@ -287,13 +286,11 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddPrograms";
             this.Text = "Dodaj program z dysku";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctr_Icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
-      
 
         #endregion
 
@@ -312,12 +309,12 @@
         private System.Windows.Forms.TextBox ctr_language;
         private System.Windows.Forms.TextBox ctr_linkToHelp;
         private System.Windows.Forms.TextBox ctr_linkToUpdate;
-        private System.Windows.Forms.ComboBox ctr_versionprog;
         private System.Windows.Forms.Button ctr_AddProgramToBase;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ctr_Icon;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox ctr_Path;
         private System.Windows.Forms.ComboBox ctr_tag;
         private System.Windows.Forms.TextBox ctrTB_NewTag;
+        private System.Windows.Forms.TextBox ctr_versionprog;
     }
 }

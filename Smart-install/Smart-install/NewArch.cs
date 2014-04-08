@@ -18,14 +18,22 @@ namespace Smart_install
         /// zmienna wybierania poszczegolnych kategorii 
         /// </summary>
         private List<programInformation> _AllPrograms;
+
+        public List<programInformation> allPrograms
+        {
+            get { return _AllPrograms; }
+        }
+
         
-        public NewArch()
+        private userMenuInstall _parent;
+
+        public NewArch(userMenuInstall parent)
         {
             InitializeComponent();
             add_to_lis_tag();
             _AllPrograms = new List<programInformation>();
             progFromDatabase();
-
+            _parent = parent;
         }
 
         private void progFromDatabase()
@@ -144,11 +152,6 @@ namespace Smart_install
                 //}
                 ctrLTree_tagProg.Nodes.Add(treeNode);
             }
-
-        }
-        
-        private void UserMenu_Load(object sender, EventArgs e)
-        {
 
         }
 
@@ -354,5 +357,19 @@ namespace Smart_install
         //    //    ctr_checkedPrograms.Items.Remove(curItem);
         //}
 
+
+        public void DeleteProgram(string p)
+        {
+            foreach (programInformation prog in _AllPrograms)
+            {
+                if (prog.Name == p)
+                {
+                    //if(prog.Id != null)
+                    _AllPrograms.Remove(prog);
+                    refresh();
+                    break;
+                }
+            }
+        }
     }
 }

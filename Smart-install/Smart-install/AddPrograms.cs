@@ -20,7 +20,7 @@ namespace Smart_install
         {
             InitializeComponent();
             string[] tabExe = Path.Split(new char[] { '.' });
-            exe = tabExe[tabExe.Count()-1];
+            exe = tabExe[tabExe.Count() - 1];
             foreach (string tag in control.getTags())
             {
                 ctr_tag.Items.Add(tag);
@@ -35,21 +35,50 @@ namespace Smart_install
             ctr_language.Text = progr.Language;
             ctr_Name.Text = progr.Name;
             ctr_versionprog.Text = progr.Version;
-
+            this.ctr_AddProgramToBase.Click += new System.EventHandler(this.ctr_AddProgramToBase_ClickAdd);
         }
 
-        private void ctr_AddProgramToBase_Click(object sender, EventArgs e)
+        public AddPrograms(programInformation firstProgram, NewArch parent)
+        {
+            InitializeComponent();
+            foreach (Control contr in this.Controls)
+            {
+                contr.Enabled = false;
+            }
+            
+            foreach (string tag in control.getTags())
+            {
+                ctr_tag.Items.Add(tag);
+            }
+            _parent = parent;
+
+            ctr_description.Text = firstProgram.Description;
+            ctr_language.Text = firstProgram.Language;
+            ctr_linkToHelp.Text = firstProgram.HelpLink;
+            ctr_linkToUpdate.Text = firstProgram.URLUpdate;
+            ctr_Name.Text = firstProgram.Name;
+            ctr_Path.Text = firstProgram.Path;
+            ctr_system.Text = firstProgram.systemType;
+            ctr_tag.Visible = false;
+            ctrTB_NewTag.Visible = true;
+            ctrTB_NewTag.Text = firstProgram.Tags[0];
+            ctr_AddProgramToBase.Text = "Usuń program";
+            ctr_AddProgramToBase.Enabled = true;
+            this.ctr_AddProgramToBase.Click += new System.EventHandler(this.ctr_AddProgramToBase_ClickDelete);
+        }
+
+        private void ctr_AddProgramToBase_ClickAdd(object sender, EventArgs e)
         {
             if (ctr_tag.Text == "")
             {
                 MessageBox.Show("Musisz wybrać kategorię");
                 return;
             }
-            List<string> list_tag = new List<string>() ;
+            List<string> list_tag = new List<string>();
             list_tag.Add(ctr_tag.Text);
             programInformation prog = new programInformation()
             {
-                Name = ctr_Name.Text.ToString() + "." +exe,
+                Name = ctr_Name.Text.ToString() + "." + exe,
                 Version = ctr_versionprog.Text.ToString(),
                 systemType = ctr_system.Text.ToString(),
                 Description = ctr_description.Text.ToString(),
@@ -57,11 +86,21 @@ namespace Smart_install
                 HelpLink = ctr_linkToHelp.Text.ToString(),
                 URLUpdate = ctr_linkToUpdate.Text.ToString(),
                 Tags = list_tag,
-               // Icon = ctr_Ikon,
+                // Icon = ctr_Ikon,
                 Path = ctr_Path.Text.ToString()
-                
-               
+
+
             };
+            foreach (programInformation p in _parent.allPrograms)
+            {
+                if (p.Name == prog.Name)
+                {
+                    MessageBox.Show("Program o podanej nazwie już istnieje");
+                    AddPrograms OldProgram = new AddPrograms(p,_parent);
+                    OldProgram.Show();
+                    return;
+                }
+            }
 
             if (_wasAdded)
             {
@@ -70,8 +109,19 @@ namespace Smart_install
             }
             else
                 _parent.addProgram(prog);
-            
+
             this.Close();
+        }
+
+        private void ctr_AddProgramToBase_ClickDelete(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Czy napewno chcesz usunąć program z bazy?","Usunięcie programu",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                _parent.DeleteProgram(ctr_Name.Text);
+                this.Close();
+            }
+            
         }
 
         private void ctr_tag_SelectedIndexChanged(object sender, EventArgs e)

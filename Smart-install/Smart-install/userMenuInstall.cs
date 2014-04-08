@@ -56,7 +56,7 @@ namespace Smart_install
         //Trzeba poprawić , otwieranie ponownie okna
         private void noweArchiwumToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            NewArch windowArch = new NewArch();
+            NewArch windowArch = new NewArch(this);
             windowArch.Show();
         }
 
