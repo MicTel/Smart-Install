@@ -17,6 +17,7 @@ namespace Smart_install
         public string Name { get; set; }
         public string Path { get; set; }
         public string Description { get; set; }
+        public List<programInformation> programList;
     }
 
     /// <summary>
@@ -334,6 +335,41 @@ namespace Smart_install
                 else
                     addOldProgram(p, arch);
             }
-        }        
+        }
+
+        public archiveInformation getArchiveInformaction(string path)
+        {   
+            XDocument xdoc = zipCreator.getXML(path);
+            XElement xelement = xdoc.Root;
+            IEnumerable<XElement> quests = xelement.Elements();
+            // Read the entire XML
+            List<programInformation> progs = new List<programInformation>();
+            foreach (var q in quests)
+            {
+                List<string> tags = new List<string>();
+                tags.Add(q.Element("Tag").Value);
+                programInformation prog = new programInformation()
+                {
+                    Description = q.Element("Description").Value,
+                    Name = q.Attribute("Name").Value,
+                    HelpLink = q.Element("HelpLink").Value,
+                    Version = q.Element("Version").Value,
+                    URLUpdate = q.Element("URLUpdate").Value,
+                    Language = q.Element("Language").Value,
+                    systemType = q.Element("systemType").Value,
+                    Tags = tags
+                };
+                progs.Add(prog);
+            }
+
+            archiveInformation arch = new archiveInformation()
+            {
+                Name = (path.Split(new char[] {'\\'}).Last()).Split(new char[] {'.'}).First(),
+                fullPath = path,
+                programList = progs
+            };
+
+            return arch;
+        }
     }
 }

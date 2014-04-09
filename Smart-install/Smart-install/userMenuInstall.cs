@@ -70,7 +70,8 @@ namespace Smart_install
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("wybrano plik: " + openFileDialog1.FileName);
+               TreeNode  list_arch = new TreeNode(openFileDialog1.FileName);
+               ctrLT_arch.Nodes.Add(list_arch);
             }
         }
 
@@ -86,11 +87,7 @@ namespace Smart_install
             MessageBox.Show("Dana funkcja nie została jeszcze zaimplementowana");
         }
 
-        private void zamknijArchiwumToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Dana funkcja nie została jeszcze zaimplementowana");
-        }
-
+      
         private void usuńToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Dana funkcja nie została jeszcze zaimplementowana");

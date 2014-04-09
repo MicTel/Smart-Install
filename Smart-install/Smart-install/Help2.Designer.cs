@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Autorzy");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Wymagania");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Strona programu online");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Help2));
             this.ctrLV_options = new System.Windows.Forms.TreeView();
             this.ctrRTB_description = new System.Windows.Forms.RichTextBox();
@@ -42,18 +44,28 @@
             treeNode1.Name = "autors";
             treeNode1.NodeFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             treeNode1.Text = "Autorzy";
+            treeNode2.Name = "Node0";
+            treeNode2.NodeFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            treeNode2.Text = "Wymagania";
+            treeNode3.Name = "Node1";
+            treeNode3.NodeFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            treeNode3.Text = "Strona programu online";
             this.ctrLV_options.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            treeNode1,
+            treeNode2,
+            treeNode3});
             this.ctrLV_options.Size = new System.Drawing.Size(209, 327);
             this.ctrLV_options.TabIndex = 0;
             this.ctrLV_options.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.ctrLV_options_clicked);
             // 
             // ctrRTB_description
             // 
+            this.ctrRTB_description.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ctrRTB_description.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ctrRTB_description.Location = new System.Drawing.Point(254, 34);
             this.ctrRTB_description.Name = "ctrRTB_description";
-            this.ctrRTB_description.Size = new System.Drawing.Size(372, 327);
+            this.ctrRTB_description.ReadOnly = true;
+            this.ctrRTB_description.Size = new System.Drawing.Size(364, 327);
             this.ctrRTB_description.TabIndex = 1;
             this.ctrRTB_description.Text = "";
             // 
@@ -61,7 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 387);
+            this.ClientSize = new System.Drawing.Size(643, 387);
             this.Controls.Add(this.ctrRTB_description);
             this.Controls.Add(this.ctrLV_options);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

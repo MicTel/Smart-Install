@@ -20,12 +20,23 @@ namespace Smart_install
 
         private void ctrLV_options_clicked(object sender, System.Windows.Forms.TreeNodeMouseClickEventArgs e)
         {
-            if (ctrLV_options.SelectedNode.Name == e.Node.Name)
+           //if (ctrLV_options.SelectedNode.Checked == e.Node.Checked)
+           //{
+           //}
+
+            switch (e.Node.Index)
             {
-                ctrRTB_description.Text = "     Michał Telus" + "\n" + "     Mateusz Schalau" + "\n"
-                    + "     Patryk Kosiorek" + "\n" + "     Natalia Rybarczyk" + "\n";
+                case 0:
+                    ctrRTB_description.Text = "     Michał Telus" + "\n" + "     Mateusz Schalau" + "\n"
+                + "     Patryk Kosiorek" + "\n" + "     Natalia Rybarczyk" + "\n";
+                    break;
+                case 1:
+                    ctrRTB_description.Text = " Program wymaga: \n      .NET framework 4.5 \n       SQL Serwer 2012";
+                    break;
+                case 2:
+                    ctrRTB_description.Text = " Strona programu online: \n ";
+                    break;
             }
-           // else ctrRTB_description.Text = "  ";
         }
 
     }

@@ -155,9 +155,6 @@ namespace Smart_install
                 break;
             }
         }
-
-
-
         
     }
 }

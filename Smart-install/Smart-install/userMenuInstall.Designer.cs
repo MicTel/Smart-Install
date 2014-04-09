@@ -35,7 +35,6 @@
             this.dodajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zPlikuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuńToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zamknijArchiwumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ostatnioUżywaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zamknijProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.edycjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +77,6 @@
             this.noweArchiwumToolStripMenuItem,
             this.dodajToolStripMenuItem,
             this.usuńToolStripMenuItem,
-            this.zamknijArchiwumToolStripMenuItem,
             this.ostatnioUżywaneToolStripMenuItem,
             this.zamknijProgramToolStripMenuItem});
             this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
@@ -88,7 +86,7 @@
             // noweArchiwumToolStripMenuItem
             // 
             this.noweArchiwumToolStripMenuItem.Name = "noweArchiwumToolStripMenuItem";
-            this.noweArchiwumToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.noweArchiwumToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.noweArchiwumToolStripMenuItem.Text = "Nowe archiwum";
             this.noweArchiwumToolStripMenuItem.Click += new System.EventHandler(this.noweArchiwumToolStripMenuItem_Click_1);
             // 
@@ -97,42 +95,35 @@
             this.dodajToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.zPlikuToolStripMenuItem});
             this.dodajToolStripMenuItem.Name = "dodajToolStripMenuItem";
-            this.dodajToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.dodajToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.dodajToolStripMenuItem.Text = "Otwórz archiwum";
             this.dodajToolStripMenuItem.Click += new System.EventHandler(this.dodajToolStripMenuItem_Click);
             // 
             // zPlikuToolStripMenuItem
             // 
             this.zPlikuToolStripMenuItem.Name = "zPlikuToolStripMenuItem";
-            this.zPlikuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.zPlikuToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.zPlikuToolStripMenuItem.Text = "z pliku...";
             this.zPlikuToolStripMenuItem.Click += new System.EventHandler(this.zPlikuToolStripMenuItem_Click);
             // 
             // usuńToolStripMenuItem
             // 
             this.usuńToolStripMenuItem.Name = "usuńToolStripMenuItem";
-            this.usuńToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.usuńToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.usuńToolStripMenuItem.Text = "Usuń";
             this.usuńToolStripMenuItem.Click += new System.EventHandler(this.usuńToolStripMenuItem_Click);
-            // 
-            // zamknijArchiwumToolStripMenuItem
-            // 
-            this.zamknijArchiwumToolStripMenuItem.Name = "zamknijArchiwumToolStripMenuItem";
-            this.zamknijArchiwumToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.zamknijArchiwumToolStripMenuItem.Text = "Zamknij archiwum";
-            this.zamknijArchiwumToolStripMenuItem.Click += new System.EventHandler(this.zamknijArchiwumToolStripMenuItem_Click);
             // 
             // ostatnioUżywaneToolStripMenuItem
             // 
             this.ostatnioUżywaneToolStripMenuItem.Name = "ostatnioUżywaneToolStripMenuItem";
-            this.ostatnioUżywaneToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.ostatnioUżywaneToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.ostatnioUżywaneToolStripMenuItem.Text = "Ostatnio używane";
             this.ostatnioUżywaneToolStripMenuItem.Click += new System.EventHandler(this.ostatnioUżywaneToolStripMenuItem_Click);
             // 
             // zamknijProgramToolStripMenuItem
             // 
             this.zamknijProgramToolStripMenuItem.Name = "zamknijProgramToolStripMenuItem";
-            this.zamknijProgramToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.zamknijProgramToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.zamknijProgramToolStripMenuItem.Text = "Zamknij program";
             this.zamknijProgramToolStripMenuItem.Click += new System.EventHandler(this.zamknijProgramToolStripMenuItem_Click);
             // 
@@ -310,7 +301,6 @@
         private System.Windows.Forms.ToolStripMenuItem dodajToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zPlikuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuńToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zamknijArchiwumToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ostatnioUżywaneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem edycjaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filtrujWgToolStripMenuItem;
