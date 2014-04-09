@@ -57,5 +57,10 @@ namespace Smart_install
         {
             ZipFile.ExtractToDirectory(filePath, extractPath);
         }
+
+        internal static System.Xml.Linq.XDocument getXML(string path)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
