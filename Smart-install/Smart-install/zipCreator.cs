@@ -43,7 +43,7 @@ namespace Smart_install
         /// 
         /// </summary>
         /// <param name="pathArchive">sciezka do archiwum</param>
-        public static void deleteArchive(string pathArchive)
+        public static void deleteFile(string pathArchive)
         {
             File.Delete(pathArchive);
         }
@@ -58,9 +58,51 @@ namespace Smart_install
             ZipFile.ExtractToDirectory(filePath, extractPath);
         }
 
-        internal static System.Xml.Linq.XDocument getXML(string path)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path">sciezka do archiwum</param>
+        /// <returns></returns>
+        internal static string getXML(string path)
         {
-            throw new NotImplementedException();
+            using (ZipArchive archive = ZipFile.Open(path, ZipArchiveMode.Read))
+            {
+                ZipArchiveEntry entry = archive.Entries.First(x => x.Name.Split(new char[] { '.' }).Last() == "xml");
+                return getFile(path, entry.Name);
+            } 
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path">sciezka do archiwum</param>
+        /// <param name="name">nazwa wyodrebnionego pliku</param>
+        /// <returns></returns>
+        public static string getFile(string path, string name)
+        {
+            using (ZipArchive archive = ZipFile.Open(path, ZipArchiveMode.Read))
+            {
+                ZipArchiveEntry zipEntry = archive.GetEntry(name);
+                zipEntry.ExtractToFile(Path.GetTempPath());
+                return Path.GetTempPath() + "." + name;
+            }   
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="destinyPath">sciezka archiwum, do którego kopiujemy</param>
+        /// <param name="sourcePath">źródło archwium do któego kopiujemy</param>
+        /// <param name="sourceFile">nazwa pliku archwium źródłowego</param>
+        public static void copyBetweenArchive(string destinyPath, string sourcePath, string sourceFile)
+        {
+            string sourceFileExtracted = getFile(sourcePath, sourceFile);
+            addToArchive(sourceFileExtracted, destinyPath, sourceFile);
+            deleteFile(sourceFileExtracted);
+        }
+
+
+    
+    
     }
 }
