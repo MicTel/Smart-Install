@@ -58,7 +58,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.GhostWhite;
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.plikToolStripMenuItem,
             this.edycjaToolStripMenuItem,
@@ -67,7 +67,7 @@
             this.pomocToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(754, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(738, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,7 +102,7 @@
             // zPlikuToolStripMenuItem
             // 
             this.zPlikuToolStripMenuItem.Name = "zPlikuToolStripMenuItem";
-            this.zPlikuToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.zPlikuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.zPlikuToolStripMenuItem.Text = "z pliku...";
             this.zPlikuToolStripMenuItem.Click += new System.EventHandler(this.zPlikuToolStripMenuItem_Click);
             // 
@@ -222,7 +222,7 @@
             this.clikButton_install.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clikButton_install.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clikButton_install.ForeColor = System.Drawing.SystemColors.Window;
-            this.clikButton_install.Location = new System.Drawing.Point(336, 360);
+            this.clikButton_install.Location = new System.Drawing.Point(320, 360);
             this.clikButton_install.Name = "clikButton_install";
             this.clikButton_install.Size = new System.Drawing.Size(390, 49);
             this.clikButton_install.TabIndex = 2;
@@ -231,9 +231,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
+            this.richTextBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.richTextBox1.Location = new System.Drawing.Point(336, 69);
+            this.richTextBox1.Location = new System.Drawing.Point(320, 69);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(390, 270);
             this.richTextBox1.TabIndex = 4;
@@ -242,6 +242,7 @@
             // label5_listchoicePrograms
             // 
             this.label5_listchoicePrograms.AutoSize = true;
+            this.label5_listchoicePrograms.BackColor = System.Drawing.Color.Transparent;
             this.label5_listchoicePrograms.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5_listchoicePrograms.Location = new System.Drawing.Point(25, 49);
             this.label5_listchoicePrograms.Name = "label5_listchoicePrograms";
@@ -252,8 +253,9 @@
             // label6_decriptionPrograms
             // 
             this.label6_decriptionPrograms.AutoSize = true;
+            this.label6_decriptionPrograms.BackColor = System.Drawing.Color.Transparent;
             this.label6_decriptionPrograms.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6_decriptionPrograms.Location = new System.Drawing.Point(333, 49);
+            this.label6_decriptionPrograms.Location = new System.Drawing.Point(317, 49);
             this.label6_decriptionPrograms.Name = "label6_decriptionPrograms";
             this.label6_decriptionPrograms.Size = new System.Drawing.Size(155, 15);
             this.label6_decriptionPrograms.TabIndex = 6;
@@ -261,6 +263,7 @@
             // 
             // ctrLT_arch
             // 
+            this.ctrLT_arch.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ctrLT_arch.Location = new System.Drawing.Point(28, 69);
             this.ctrLT_arch.Name = "ctrLT_arch";
             this.ctrLT_arch.Size = new System.Drawing.Size(262, 340);
@@ -270,9 +273,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(754, 433);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(738, 430);
             this.Controls.Add(this.ctrLT_arch);
             this.Controls.Add(this.label6_decriptionPrograms);
             this.Controls.Add(this.label5_listchoicePrograms);
@@ -282,8 +287,10 @@
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = new System.Drawing.Point(800, 500);
             this.Name = "userMenuInstall";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SmartInstall";
             this.Load += new System.EventHandler(this.userMenuInstall_Load);
             this.menuStrip1.ResumeLayout(false);

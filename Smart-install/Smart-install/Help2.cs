@@ -27,11 +27,11 @@ namespace Smart_install
             switch (e.Node.Index)
             {
                 case 0:
-                    ctrRTB_description.Text = "     Michał Telus" + "\n" + "     Mateusz Schalau" + "\n"
+                    ctrRTB_description.Text = "Twórcy programu: " + "\n" + "\n" + "     Michał Telus" + "\n" + "     Mateusz Schalau" + "\n"
                 + "     Patryk Kosiorek" + "\n" + "     Natalia Rybarczyk" + "\n";
                     break;
                 case 1:
-                    ctrRTB_description.Text = " Program wymaga: \n      .NET framework 4.5 \n       SQL Serwer 2012";
+                    ctrRTB_description.Text = " Program Smart Install wymaga zainstalowania: \n\n      Microsoft .NET Framework 4.5 \n       SQL Serwer 2012";
                     break;
                 case 2:
                     ctrRTB_description.Text = " Strona programu online: \n ";
