@@ -40,12 +40,12 @@ namespace Smart_install
         }
 
         /// <summary>
-        /// 
+        /// Usuwa wskazy plik z dysku
         /// </summary>
-        /// <param name="pathArchive">sciezka do archiwum</param>
-        public static void deleteFile(string pathArchive)
+        /// <param name="path">sciezka do usuwanego pliku</param>
+        public static void deleteFile(string path)
         {
-            File.Delete(pathArchive);
+            File.Delete(path);
         }
 
         /// <summary>

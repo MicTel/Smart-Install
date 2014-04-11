@@ -267,17 +267,10 @@ namespace Smart_install
         /// <param name="arch"></param>
         public static void addOldProgram(programInformation programInf, archiveInformation arch)
         {
-            Exception ex = new Exception("Dodawanie archiw z bazy nie zostało jeszcze zaimplementowane");
-            throw ex;
-            //ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
-            //Prog progr = (from p in database.Progs
-            //                where p.Id == programInf.Id
-            //                select p).First();
-            //int i=0;
-            ////while(!zipCreator.copyBetweenArchive(progr.Archives.,arch.fullPath))
-            //{
-            //    i++;
-            //}
+            ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
+            Prog progr = database.Progs.First(x => x.Id == programInf.Id);
+            zipCreator.copyBetweenArchive(arch.fullPath, progr.Archives.First().Path, programInf.Name);
+            //database.Entry(database.Progs).State = Enty
         }
 
 
@@ -286,7 +279,7 @@ namespace Smart_install
         /// informacyjnego, na temat jest zawartości.
         /// </summary>
         /// <param name="arch">Inicjonowane archiwum</param>
-        public static void startArchive(archiveInformation arch,List<programInformation> programs)
+        public static void startArchive(archiveInformation arch)
         {
             ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
             Archive arc = database.Archives.OrderByDescending(c => c.Id).FirstOrDefault();
@@ -313,11 +306,16 @@ namespace Smart_install
             string fileName = arch.Name + ".xml";
             XDocument xml = new XDocument(new XElement("Archiwum"));
             XElement root = xml.Root;
-            foreach (programInformation p in programs)
+            XElement xArch = new XElement("Archive",
+                new XElement("Name", archive.Name),
+                new XElement("Description", archive.Description),
+                new XElement("Id", archive.Id));
+            root.Add(xArch);
+            foreach (programInformation p in arch.programList)
                 root.Add(p.getXElement());
             xml.Save(fileName);
             zipCreator.createArchive(arch.fullPath, fileName);
-            zipCreator.deleteArchive(fileName);
+            zipCreator.deleteFile(fileName);
         }
 
         /// <summary>
@@ -327,8 +325,9 @@ namespace Smart_install
         /// <param name="arch">Archiwum które ma zostać stworzone.</param>
         public static void createArchive(archiveInformation arch,List<programInformation> programs)
         {
-            startArchive(arch,programs);  
-            foreach (programInformation p in programs)
+            arch.programList = programs;
+            startArchive(arch);  
+            foreach (programInformation p in arch.programList)
             {
                 if (p.Id==null)
                     addNewProgram(p, arch);
@@ -337,36 +336,45 @@ namespace Smart_install
             }
         }
 
+
+        /// <summary>
+        /// Otwiera archiwum i pobiera z niego informacje
+        /// </summary>
+        /// <param name="path">ścieżka do archiwum</param>
+        /// <returns>Informacje o archiwum</returns>
         public archiveInformation getArchiveInformaction(string path)
         {   
-            XDocument xdoc = zipCreator.getXML(path);
+            XDocument xdoc = new XDocument(zipCreator.getXML(path));
             XElement xelement = xdoc.Root;
-            IEnumerable<XElement> quests = xelement.Elements();
+            IEnumerable<XElement> programs = xelement.Elements("Program");
+            
             // Read the entire XML
             List<programInformation> progs = new List<programInformation>();
-            foreach (var q in quests)
+            foreach (var p in programs)
             {
                 List<string> tags = new List<string>();
-                tags.Add(q.Element("Tag").Value);
+                tags.Add(p.Element("Tag").Value);
                 programInformation prog = new programInformation()
                 {
-                    Description = q.Element("Description").Value,
-                    Name = q.Attribute("Name").Value,
-                    HelpLink = q.Element("HelpLink").Value,
-                    Version = q.Element("Version").Value,
-                    URLUpdate = q.Element("URLUpdate").Value,
-                    Language = q.Element("Language").Value,
-                    systemType = q.Element("systemType").Value,
+                    Description = p.Element("Description").Value,
+                    Name = p.Attribute("Name").Value,
+                    HelpLink = p.Element("HelpLink").Value,
+                    Version = p.Element("Version").Value,
+                    URLUpdate = p.Element("URLUpdate").Value,
+                    Language = p.Element("Language").Value,
+                    systemType = p.Element("systemType").Value,
                     Tags = tags
                 };
                 progs.Add(prog);
             }
-
+            XElement xArch = xelement.Element("Archive");
+             
             archiveInformation arch = new archiveInformation()
             {
-                Name = (path.Split(new char[] {'\\'}).Last()).Split(new char[] {'.'}).First(),
+                Name = xArch.Element("Name").Value,
                 fullPath = path,
-                programList = progs
+                programList = progs,
+                Description = xArch.Element("Description").Value
             };
 
             return arch;
