@@ -8,7 +8,7 @@ using System.IO.Compression;
 
 namespace Smart_install
 {
-    class zipCreator
+    static class zipCreator
     {
         /// <summary>
         /// 
@@ -80,11 +80,14 @@ namespace Smart_install
         /// <returns></returns>
         public static string getFile(string path, string name)
         {
+            string tempDirectory = Path.GetTempPath();
             using (ZipArchive archive = ZipFile.Open(path, ZipArchiveMode.Read))
             {
                 ZipArchiveEntry zipEntry = archive.GetEntry(name);
-                zipEntry.ExtractToFile(Path.GetTempPath());
-                return Path.GetTempPath() + "." + name;
+                string newPath = Path.Combine(tempDirectory,name);
+                zipEntry.ExtractToFile(newPath);
+
+                return newPath;
             }   
         }
 
@@ -94,6 +97,9 @@ namespace Smart_install
         /// <param name="destinyPath">sciezka archiwum, do którego kopiujemy</param>
         /// <param name="sourcePath">źródło archwium do któego kopiujemy</param>
         /// <param name="sourceFile">nazwa pliku archwium źródłowego</param>
+        /// 
+
+        
         public static void copyBetweenArchive(string destinyPath, string sourcePath, string sourceFile)
         {
             string sourceFileExtracted = getFile(sourcePath, sourceFile);

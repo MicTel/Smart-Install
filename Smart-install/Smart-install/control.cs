@@ -97,9 +97,11 @@ namespace Smart_install
         }
     }
 
-    public class control
+    public static class control
     {
-
+        /// <summary>
+        /// Dodaje jednorazowo tagi do bazy danych
+        /// </summary>
         public static void addTagOnce()
         {
             ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
@@ -260,11 +262,11 @@ namespace Smart_install
         }
             
         /// <summary>
-        /// NIE DZIAŁA
-        /// 
+        /// NIE DZIAŁA!!
+        /// Kopije program z jednego archiwum do drugiego (nie działa update bazy danych)
         /// </summary>
-        /// <param name="programInf"></param>
-        /// <param name="arch"></param>
+        /// <param name="programInf">Program do skopiowania</param>
+        /// <param name="arch">archiwum do którego kopiujemy</param>
         public static void addOldProgram(programInformation programInf, archiveInformation arch)
         {
             ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
@@ -342,9 +344,10 @@ namespace Smart_install
         /// </summary>
         /// <param name="path">ścieżka do archiwum</param>
         /// <returns>Informacje o archiwum</returns>
-        public archiveInformation getArchiveInformaction(string path)
-        {   
-            XDocument xdoc = new XDocument(zipCreator.getXML(path));
+        public static archiveInformation getArchiveInformaction(string path)
+        {
+            string newPath = zipCreator.getXML(path);
+            XDocument xdoc = XDocument.Load(newPath);
             XElement xelement = xdoc.Root;
             IEnumerable<XElement> programs = xelement.Elements("Program");
             
@@ -377,7 +380,34 @@ namespace Smart_install
                 Description = xArch.Element("Description").Value
             };
 
+            zipCreator.deleteFile(newPath);
             return arch;
+        }
+
+
+        /// <summary>
+        /// Zwraca listę archiw i ich zawartości z bazy danych
+        /// </summary>
+        /// <returns>Lista archiw</returns>
+        public static List<archiveInformation> getArchiveFromDatabase()
+        {
+            ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
+            var archives = database.Archives;
+
+            List<archiveInformation> result = new List<archiveInformation>();
+
+            foreach (Archive a in archives)
+            {
+                try
+                {
+                    result.Add(getArchiveInformaction(a.Path));
+                }
+                catch
+                {
+                }
+            }
+
+            return result;
         }
     }
 }
