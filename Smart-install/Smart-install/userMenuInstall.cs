@@ -216,9 +216,41 @@ namespace Smart_install
             {
                 Application.Exit();
             }
-
         }
 
+        private void ctrLT_arch_IsChecked(object sender, System.Windows.Forms.TreeViewEventArgs e)
+        {
+            if(e.Node.Nodes.Count != 0)
+                return;
+            foreach (archiveInformation arch in _allArchive)
+            {
+                if (arch.Name == e.Node.Parent.Text)
+                {
+                    foreach (programInformation p in arch.programList)
+                    {
+                        if (p.Name == e.Node.Text)
+                        {
+                            p.isChecked = e.Node.Checked;
+                        }
+                    }
+                }
+            }
+        }
 
+        private void ctr_install_Click(object sender, EventArgs e)
+        {
+            string message = "Programy do zainstalowania: \n";
+            foreach (archiveInformation arch in _allArchive)
+            {
+                    foreach (programInformation p in arch.programList)
+                    {
+                        if (p.isChecked)
+                        {
+                            message += p.Name + "\n";
+                        }
+                    }
+            }
+            MessageBox.Show(message);
+        }
     }
 }

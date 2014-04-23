@@ -223,7 +223,7 @@
             this.ctr_Icon.BackColor = System.Drawing.Color.Transparent;
             this.ctr_Icon.Location = new System.Drawing.Point(23, 31);
             this.ctr_Icon.Name = "ctr_Icon";
-            this.ctr_Icon.Size = new System.Drawing.Size(83, 77);
+            this.ctr_Icon.Size = new System.Drawing.Size(81, 70);
             this.ctr_Icon.TabIndex = 34;
             this.ctr_Icon.TabStop = false;
             // 

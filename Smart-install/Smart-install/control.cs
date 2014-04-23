@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace Smart_install
         public string HelpLink { get; set; }
         public string URLUpdate { get; set; }
         //public string Publisher { get; set; }
-        public string Icon { get; set; }
+        public Bitmap Icon { get; set; }
 
         private string _Path;
 
@@ -231,7 +232,7 @@ namespace Smart_install
                 HelpLink = toDatabase.HelpLink,
                 Name = toDatabase.Name,
                 //Publisher = toDatabase.Publisher,
-                Icon = toDatabase.Icon,
+                //Icon = toDatabase.Icon,
                 URLUpdate = toDatabase.URLUpdate,
                 Version = toDatabase.Version
             };

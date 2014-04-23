@@ -44,7 +44,6 @@
             this.ustawieniaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.skórkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.czcionkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.językToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stronaProgramuOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomocToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +74,7 @@
             this.pomocToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(983, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(956, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -110,7 +109,7 @@
             // zPlikuToolStripMenuItem
             // 
             this.zPlikuToolStripMenuItem.Name = "zPlikuToolStripMenuItem";
-            this.zPlikuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.zPlikuToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.zPlikuToolStripMenuItem.Text = "z pliku...";
             this.zPlikuToolStripMenuItem.Click += new System.EventHandler(this.zPlikuToolStripMenuItem_Click);
             // 
@@ -146,7 +145,7 @@
             // filtrujWgToolStripMenuItem
             // 
             this.filtrujWgToolStripMenuItem.Name = "filtrujWgToolStripMenuItem";
-            this.filtrujWgToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.filtrujWgToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.filtrujWgToolStripMenuItem.Text = "filtruj wg...";
             this.filtrujWgToolStripMenuItem.Click += new System.EventHandler(this.filtrujWgToolStripMenuItem_Click);
             // 
@@ -161,7 +160,7 @@
             // kategorieToolStripMenuItem
             // 
             this.kategorieToolStripMenuItem.Name = "kategorieToolStripMenuItem";
-            this.kategorieToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.kategorieToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.kategorieToolStripMenuItem.Text = "Kategorie";
             this.kategorieToolStripMenuItem.Click += new System.EventHandler(this.kategorieToolStripMenuItem_Click);
             // 
@@ -169,8 +168,7 @@
             // 
             this.ustawieniaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.skórkiToolStripMenuItem,
-            this.czcionkaToolStripMenuItem,
-            this.językToolStripMenuItem});
+            this.czcionkaToolStripMenuItem});
             this.ustawieniaToolStripMenuItem1.Name = "ustawieniaToolStripMenuItem1";
             this.ustawieniaToolStripMenuItem1.Size = new System.Drawing.Size(76, 20);
             this.ustawieniaToolStripMenuItem1.Text = "Ustawienia";
@@ -178,23 +176,16 @@
             // skórkiToolStripMenuItem
             // 
             this.skórkiToolStripMenuItem.Name = "skórkiToolStripMenuItem";
-            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.skórkiToolStripMenuItem.Text = "Kolor tła";
             this.skórkiToolStripMenuItem.Click += new System.EventHandler(this.skórkiToolStripMenuItem_Click);
             // 
             // czcionkaToolStripMenuItem
             // 
             this.czcionkaToolStripMenuItem.Name = "czcionkaToolStripMenuItem";
-            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.czcionkaToolStripMenuItem.Text = "Czcionka";
             this.czcionkaToolStripMenuItem.Click += new System.EventHandler(this.czcionkaToolStripMenuItem_Click);
-            // 
-            // językToolStripMenuItem
-            // 
-            this.językToolStripMenuItem.Name = "językToolStripMenuItem";
-            this.językToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.językToolStripMenuItem.Text = "Język";
-            this.językToolStripMenuItem.Click += new System.EventHandler(this.językToolStripMenuItem_Click);
             // 
             // pomocToolStripMenuItem
             // 
@@ -222,9 +213,9 @@
             // 
             this.ctr_RB_descriptionProgArch.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ctr_RB_descriptionProgArch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ctr_RB_descriptionProgArch.Location = new System.Drawing.Point(300, 69);
+            this.ctr_RB_descriptionProgArch.Location = new System.Drawing.Point(258, 69);
             this.ctr_RB_descriptionProgArch.Name = "ctr_RB_descriptionProgArch";
-            this.ctr_RB_descriptionProgArch.Size = new System.Drawing.Size(276, 370);
+            this.ctr_RB_descriptionProgArch.Size = new System.Drawing.Size(303, 285);
             this.ctr_RB_descriptionProgArch.TabIndex = 4;
             this.ctr_RB_descriptionProgArch.Text = "";
             // 
@@ -233,7 +224,7 @@
             this.label5_listchoicePrograms.AutoSize = true;
             this.label5_listchoicePrograms.BackColor = System.Drawing.Color.Transparent;
             this.label5_listchoicePrograms.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5_listchoicePrograms.Location = new System.Drawing.Point(9, 49);
+            this.label5_listchoicePrograms.Location = new System.Drawing.Point(12, 49);
             this.label5_listchoicePrograms.Name = "label5_listchoicePrograms";
             this.label5_listchoicePrograms.Size = new System.Drawing.Size(98, 15);
             this.label5_listchoicePrograms.TabIndex = 5;
@@ -244,7 +235,7 @@
             this.label6_decriptionPrograms.AutoSize = true;
             this.label6_decriptionPrograms.BackColor = System.Drawing.Color.Transparent;
             this.label6_decriptionPrograms.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6_decriptionPrograms.Location = new System.Drawing.Point(297, 50);
+            this.label6_decriptionPrograms.Location = new System.Drawing.Point(255, 49);
             this.label6_decriptionPrograms.Name = "label6_decriptionPrograms";
             this.label6_decriptionPrograms.Size = new System.Drawing.Size(213, 15);
             this.label6_decriptionPrograms.TabIndex = 6;
@@ -253,10 +244,12 @@
             // ctrLT_arch
             // 
             this.ctrLT_arch.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ctrLT_arch.CheckBoxes = true;
             this.ctrLT_arch.Location = new System.Drawing.Point(12, 69);
             this.ctrLT_arch.Name = "ctrLT_arch";
-            this.ctrLT_arch.Size = new System.Drawing.Size(262, 370);
+            this.ctrLT_arch.Size = new System.Drawing.Size(230, 424);
             this.ctrLT_arch.TabIndex = 7;
+            this.ctrLT_arch.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.ctrLT_arch_IsChecked);
             this.ctrLT_arch.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.ctrLT_arch_NodeClicked);
             // 
             // ctr_categoriesProgram
@@ -269,9 +262,9 @@
             this.Name_program,
             this.VersionProgram,
             this.DataCreatedProgram});
-            this.ctr_categoriesProgram.Location = new System.Drawing.Point(597, 69);
+            this.ctr_categoriesProgram.Location = new System.Drawing.Point(586, 67);
             this.ctr_categoriesProgram.Name = "ctr_categoriesProgram";
-            this.ctr_categoriesProgram.Size = new System.Drawing.Size(359, 370);
+            this.ctr_categoriesProgram.Size = new System.Drawing.Size(358, 358);
             this.ctr_categoriesProgram.TabIndex = 10;
             // 
             // Name_program
@@ -294,7 +287,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(594, 50);
+            this.label1.Location = new System.Drawing.Point(583, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(186, 15);
             this.label1.TabIndex = 11;
@@ -302,9 +295,9 @@
             // 
             // ctr_RB_searchProgramInList
             // 
-            this.ctr_RB_searchProgramInList.Location = new System.Drawing.Point(597, 469);
+            this.ctr_RB_searchProgramInList.Location = new System.Drawing.Point(586, 459);
             this.ctr_RB_searchProgramInList.Name = "ctr_RB_searchProgramInList";
-            this.ctr_RB_searchProgramInList.Size = new System.Drawing.Size(359, 30);
+            this.ctr_RB_searchProgramInList.Size = new System.Drawing.Size(358, 32);
             this.ctr_RB_searchProgramInList.TabIndex = 12;
             this.ctr_RB_searchProgramInList.Text = "";
             // 
@@ -313,7 +306,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(594, 450);
+            this.label2.Location = new System.Drawing.Point(583, 440);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 15);
             this.label2.TabIndex = 13;
@@ -328,12 +321,13 @@
             this.ctr_install.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ctr_install.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ctr_install.Image = ((System.Drawing.Image)(resources.GetObject("ctr_install.Image")));
-            this.ctr_install.Location = new System.Drawing.Point(12, 452);
+            this.ctr_install.Location = new System.Drawing.Point(258, 440);
             this.ctr_install.Name = "ctr_install";
-            this.ctr_install.Size = new System.Drawing.Size(262, 51);
+            this.ctr_install.Size = new System.Drawing.Size(303, 51);
             this.ctr_install.TabIndex = 14;
             this.ctr_install.Text = "Instaluj";
             this.ctr_install.UseVisualStyleBackColor = true;
+            this.ctr_install.Click += new System.EventHandler(this.ctr_install_Click);
             // 
             // userMenuInstall
             // 
@@ -343,7 +337,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(983, 512);
+            this.ClientSize = new System.Drawing.Size(956, 505);
             this.Controls.Add(this.ctr_install);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ctr_RB_searchProgramInList);
@@ -371,8 +365,6 @@
 
         }
 
-        
-
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -387,7 +379,6 @@
         private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kategorieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem językToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem skórkiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem czcionkaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem;

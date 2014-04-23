@@ -22,7 +22,7 @@ namespace Smart_install
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new userMenuInstall());
             }
-            catch (ExecutionEngineException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

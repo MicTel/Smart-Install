@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Win32;
 using System.Diagnostics;
+using System.Drawing;
 
 namespace Smart_install
 {
@@ -48,18 +49,17 @@ namespace Smart_install
         //}
 
         //pobieranie ikon
-        public static void GetIcon()
+        public static Bitmap GetIcon(string path)
         {
             int i = 0;
             //dir - zmienna przechowująca director z ktorego ma być wyciągana ikona (wyciąga wszystkie pliki!)
-            System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(@"c:\\Windows\\");
-            foreach (System.IO.FileInfo file in dir.GetFiles())
-            {
-                Icon ico = Icon.ExtractAssociatedIcon(file.FullName);
-                Bitmap bmp = ico.ToBitmap(); //transformacja do bitmapy (lepsza jakośc niz z ico)
-                bmp.Save("C:\\Ikony\\" + i + ".png"); // zapis bitmapy (i - nazwa pliku)
-                i++;
-            }
+            //System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(@"c:\\Windows\\");
+            Icon ico = Icon.ExtractAssociatedIcon(path);
+            Bitmap bmp = ico.ToBitmap(); //transformacja do bitmapy (lepsza jakośc niz z ico)
+            //bmp.Save("C:\\Ikony\\" + i + ".png"); // zapis bitmapy (i - nazwa pliku)
+            //i++;
+            return bmp;
+
         }
 
         //wywoływanie informacji z .exe
@@ -93,6 +93,7 @@ namespace Smart_install
                 Description = AboutThisFile.FileDescription,
                 Path = fileName,
                 Language = AboutThisFile.Language,
+                Icon = GetIcon(fileName),
                 Name = name
             };
             return progr;

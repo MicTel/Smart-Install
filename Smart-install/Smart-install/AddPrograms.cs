@@ -16,6 +16,9 @@ namespace Smart_install
         private NewArch _parent;
         private bool _wasAdded;
         
+       
+        
+        
         public AddPrograms(string Path, NewArch parent)
         {
             InitializeComponent();
@@ -35,6 +38,8 @@ namespace Smart_install
             ctr_language.Text = progr.Language;
             ctr_Name.Text = progr.Name;
             ctr_versionprog.Text = progr.Version;
+            ctr_Icon.Image = (Image)progr.Icon;
+            //ctr_Icon.ClientSize = new Size(450,150);
             this.ctr_AddProgramToBase.Click += new System.EventHandler(this.ctr_AddProgramToBase_ClickAdd);
         }
 
