@@ -79,7 +79,7 @@
             // 
             this.zamknijOknoToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.zamknijOknoToolStripMenuItem.Name = "zamknijOknoToolStripMenuItem";
-            this.zamknijOknoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.zamknijOknoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.zamknijOknoToolStripMenuItem.Text = "Zamknij okno";
             this.zamknijOknoToolStripMenuItem.Click += new System.EventHandler(this.zamknijOknoToolStripMenuItem_Click);
             // 
@@ -96,21 +96,21 @@
             // językToolStripMenuItem
             // 
             this.językToolStripMenuItem.Name = "językToolStripMenuItem";
-            this.językToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.językToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.językToolStripMenuItem.Text = "Język";
             this.językToolStripMenuItem.Click += new System.EventHandler(this.językToolStripMenuItem_Click);
             // 
             // skórkiToolStripMenuItem
             // 
             this.skórkiToolStripMenuItem.Name = "skórkiToolStripMenuItem";
-            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.skórkiToolStripMenuItem.Text = "Kolor tła";
             this.skórkiToolStripMenuItem.Click += new System.EventHandler(this.skórkiToolStripMenuItem_Click);
             // 
             // czcionkaToolStripMenuItem
             // 
             this.czcionkaToolStripMenuItem.Name = "czcionkaToolStripMenuItem";
-            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.czcionkaToolStripMenuItem.Text = "Czcionka";
             this.czcionkaToolStripMenuItem.Click += new System.EventHandler(this.czcionkaToolStripMenuItem_Click);
             // 
@@ -144,7 +144,7 @@
             this.ctr_addProgram.FlatAppearance.BorderSize = 0;
             this.ctr_addProgram.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.ctr_addProgram.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.ctr_addProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ctr_addProgram.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ctr_addProgram.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctr_addProgram.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ctr_addProgram.Image = ((System.Drawing.Image)(resources.GetObject("ctr_addProgram.Image")));
@@ -161,7 +161,7 @@
             this.ctr_createArch.BackColor = System.Drawing.Color.Lavender;
             this.ctr_createArch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ctr_createArch.FlatAppearance.BorderSize = 0;
-            this.ctr_createArch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ctr_createArch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ctr_createArch.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ctr_createArch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ctr_createArch.Image = ((System.Drawing.Image)(resources.GetObject("ctr_createArch.Image")));
