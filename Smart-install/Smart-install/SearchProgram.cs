@@ -47,6 +47,21 @@ namespace Smart_install
         //    Console.Read();
         //}
 
+        //pobieranie ikon
+        public static void GetIcon()
+        {
+            int i = 0;
+            //dir - zmienna przechowująca director z ktorego ma być wyciągana ikona (wyciąga wszystkie pliki!)
+            System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(@"c:\\Windows\\");
+            foreach (System.IO.FileInfo file in dir.GetFiles())
+            {
+                Icon ico = Icon.ExtractAssociatedIcon(file.FullName);
+                Bitmap bmp = ico.ToBitmap(); //transformacja do bitmapy (lepsza jakośc niz z ico)
+                bmp.Save("C:\\Ikony\\" + i + ".png"); // zapis bitmapy (i - nazwa pliku)
+                i++;
+            }
+        }
+
         //wywoływanie informacji z .exe
         public static programInformation AboutProgram(string fileName)
         {
