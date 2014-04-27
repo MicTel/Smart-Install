@@ -96,11 +96,12 @@ namespace Smart_install
 
 
             };
+
             foreach (programInformation p in _parent.allPrograms)
             {
-                if (p.Name == prog.Name)
+                if (p.GetHashCode() == prog.GetHashCode())
                 {
-                    MessageBox.Show("Program o podanej nazwie już istnieje");
+                    MessageBox.Show("Program już istnieje w bazie danych");
                     AddPrograms OldProgram = new AddPrograms(p,_parent);
                     OldProgram.Show();
                     return;

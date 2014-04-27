@@ -54,3 +54,19 @@ C:\Studia\SmartInstallC#\Smart-Install - Kopia\Smart-install\Smart-install\obj\D
 X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.AddPrograms.resources
 D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.Help2.resources
 x:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.Help2.resources
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\bin\Debug\Smart-install.exe.config
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smart-install.exe
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smart-install.pdb
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\bin\Debug\ArchiveBase.mdf
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\bin\Debug\ArchiveBase_log.ldf
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\bin\Debug\Smart-install.exe
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\bin\Debug\Smart-install.pdb
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\bin\Debug\EntityFramework.dll
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\bin\Debug\EntityFramework.xml
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smart-install.csprojResolveAssemblyReference.cache
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smart_install.AddPrograms.resources
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smart_install.Help2.resources
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smart_install.NewArch.resources
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smart_install.Properties.Resources.resources
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smart_install.userMenuInstall.resources
+x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smart-install.csproj.GenerateResource.Cache

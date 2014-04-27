@@ -48,7 +48,7 @@ namespace Smart_install
         {
             foreach (programInformation findProg in _AllPrograms)
             {
-                if (e.Node.Text == findProg.Name)
+                if (e.Node.Name == findProg.GetHashCode().ToString())
                 {
                     viewDescription(findProg);
                     return;
@@ -64,7 +64,8 @@ namespace Smart_install
             ctr_textDescription.AppendText("Język: " + p.Language + "\n");
             ctr_textDescription.AppendText("Wersja programu: " + p.Version + "\n");
             ctr_textDescription.AppendText("Typ systemu: " + p.systemType + "\n");
-            ctr_textDescription.AppendText("Link do pomocy: " + p.HelpLink + "\n");            
+            ctr_textDescription.AppendText("Link do pomocy: " + p.HelpLink + "\n");
+            //ctr_textDescription.AppendText("HashCode: " + p.GetHashCode() + "\n");            
         }
 
         private void ustawieniaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -129,14 +130,13 @@ namespace Smart_install
                     if (tagProgram == t.Text)
                     {
                         TreeNode treePrograms = new TreeNode(prog.Name);
+                        treePrograms.Name = prog.GetHashCode().ToString();
                         t.Nodes.Add(treePrograms);
                     }
                 }
             }
         }
-
-
-
+        
         /// <summary>
         /// OK
         /// </summary>

@@ -22,7 +22,7 @@ namespace Smart_install
     }
 
     /// <summary>
-    /// Klasa reprezentująca informację na temat programu uzyskiwane od urzytkownika
+    /// Klasa reprezentująca informację na temat programu uzyskiwane od użytkownika
     /// </summary>
     public class programInformation
     {
@@ -96,6 +96,11 @@ namespace Smart_install
                 tags);
             return x;
         }
+
+        public override int GetHashCode()
+        {
+            return Name.GetHashCode() ^ Version.GetHashCode() ^ Language.GetHashCode() ^ systemType.GetHashCode();
+        }
     }
 
     public static class control
@@ -103,23 +108,37 @@ namespace Smart_install
         /// <summary>
         /// Dodaje jednorazowo tagi do bazy danych
         /// </summary>
-        public static void addTagOnce()
+        public static void addTagOnce(int many=0)
         {
-            ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
-            Tag p = database.Tags.OrderByDescending(c => c.Id).FirstOrDefault();
-            if (p == null)
+            try
             {
-                addTags("System");
-                addTags("Sterowniki");
-                addTags("Narzędzia");
-                addTags("Bezpieczeństwo");
-                addTags("Internet");
-                addTags("Gry");
-                addTags("Biuro");
-                addTags("Grafika");
-                addTags("Multimedia");
-                addTags("Projektowanie");
-                addTags("Programowanie");
+                ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
+                Tag p = database.Tags.OrderByDescending(c => c.Id).FirstOrDefault();
+                if (p == null)
+                {
+                    addTags("System");
+                    addTags("Sterowniki");
+                    addTags("Narzędzia");
+                    addTags("Bezpieczeństwo");
+                    addTags("Internet");
+                    addTags("Gry");
+                    addTags("Biuro");
+                    addTags("Grafika");
+                    addTags("Multimedia");
+                    addTags("Projektowanie");
+                    addTags("Programowanie");
+                }
+            }
+            catch
+            {
+                many++;
+                if (many > 1000)
+                    throw new Exception("Problem z połączenia z bazą");
+                else
+                {
+                    System.Threading.Thread.Sleep(1000);
+                    addTagOnce(many);
+                }
             }
         }
 
@@ -205,15 +224,7 @@ namespace Smart_install
                 throw ex;
             }
         }
-
-
         
-        //public static Prog checkProgram(string path)
-        //{
-        //    return SearchProgram.findInformationAboutSetup(path);
-        //}
-
-
         /// <summary>
         /// Dodawanie programu do bazy danych, a następnie dodaje go do archiwum
         /// </summary>
