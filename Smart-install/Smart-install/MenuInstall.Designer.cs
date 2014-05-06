@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuInstall));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +57,7 @@
             this.pomocToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(463, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(490, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -128,27 +129,42 @@
             // 
             // ctr_ListInstalationProgram1
             // 
-            this.ctr_ListInstalationProgram1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.ctr_ListInstalationProgram1.AllowUserToAddRows = false;
+            this.ctr_ListInstalationProgram1.AllowUserToDeleteRows = false;
+            this.ctr_ListInstalationProgram1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.ctr_ListInstalationProgram1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.ctr_ListInstalationProgram1.BackgroundColor = System.Drawing.Color.White;
             this.ctr_ListInstalationProgram1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ctr_ListInstalationProgram1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.ctr_ListInstalationProgram1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ctr_ListInstalationProgram1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ctr_ListInstalationProgram1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ctr_ListInstalationProgram1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.VersionProgram});
-            this.ctr_ListInstalationProgram1.Location = new System.Drawing.Point(35, 52);
+            this.ctr_ListInstalationProgram1.Location = new System.Drawing.Point(25, 55);
             this.ctr_ListInstalationProgram1.Name = "ctr_ListInstalationProgram1";
-            this.ctr_ListInstalationProgram1.Size = new System.Drawing.Size(302, 454);
+            this.ctr_ListInstalationProgram1.Size = new System.Drawing.Size(267, 390);
             this.ctr_ListInstalationProgram1.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Nazwa programu";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 103;
             // 
             // VersionProgram
             // 
             this.VersionProgram.HeaderText = "Status";
             this.VersionProgram.Name = "VersionProgram";
+            this.VersionProgram.Width = 62;
             // 
             // MenuInstall
             // 
@@ -156,7 +172,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(463, 531);
+            this.ClientSize = new System.Drawing.Size(490, 519);
             this.Controls.Add(this.ctr_ListInstalationProgram1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "MenuInstall";

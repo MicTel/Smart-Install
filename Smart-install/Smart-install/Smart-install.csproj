@@ -140,6 +140,9 @@
     <EmbeddedResource Include="Help2.resx">
       <DependentUpon>Help2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MenuInstall.resx">
+      <DependentUpon>MenuInstall.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NewArch.resx">
       <DependentUpon>NewArch.cs</DependentUpon>
     </EmbeddedResource>
