@@ -89,6 +89,12 @@
     <Compile Include="Language.cs">
       <DependentUpon>ModelArchive.tt</DependentUpon>
     </Compile>
+    <Compile Include="MenuInstall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuInstall.Designer.cs">
+      <DependentUpon>MenuInstall.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModelArchive.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -239,18 +239,19 @@ namespace Smart_install
 
         private void ctr_install_Click(object sender, EventArgs e)
         {
-            string message = "Programy do zainstalowania: \n";
+            List<programInformation> _listProgram = new List<programInformation>();
             foreach (archiveInformation arch in _allArchive)
             {
-                    foreach (programInformation p in arch.programList)
+                foreach (programInformation p in arch.programList)
+                {
+                    if (p.isChecked)
                     {
-                        if (p.isChecked)
-                        {
-                            message += p.Name + "\n";
-                        }
+                        _listProgram.Add(p);
                     }
+                }
             }
-            MessageBox.Show(message);
+            MenuInstall menuInstall = new MenuInstall(_listProgram);
+            menuInstall.Show();
         }
     }
 }

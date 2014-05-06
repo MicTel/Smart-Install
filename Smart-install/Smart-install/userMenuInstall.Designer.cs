@@ -145,7 +145,7 @@
             // filtrujWgToolStripMenuItem
             // 
             this.filtrujWgToolStripMenuItem.Name = "filtrujWgToolStripMenuItem";
-            this.filtrujWgToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.filtrujWgToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.filtrujWgToolStripMenuItem.Text = "filtruj wg...";
             this.filtrujWgToolStripMenuItem.Click += new System.EventHandler(this.filtrujWgToolStripMenuItem_Click);
             // 
@@ -160,7 +160,7 @@
             // kategorieToolStripMenuItem
             // 
             this.kategorieToolStripMenuItem.Name = "kategorieToolStripMenuItem";
-            this.kategorieToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.kategorieToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.kategorieToolStripMenuItem.Text = "Kategorie";
             this.kategorieToolStripMenuItem.Click += new System.EventHandler(this.kategorieToolStripMenuItem_Click);
             // 
@@ -176,14 +176,14 @@
             // skórkiToolStripMenuItem
             // 
             this.skórkiToolStripMenuItem.Name = "skórkiToolStripMenuItem";
-            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.skórkiToolStripMenuItem.Text = "Kolor tła";
             this.skórkiToolStripMenuItem.Click += new System.EventHandler(this.skórkiToolStripMenuItem_Click);
             // 
             // czcionkaToolStripMenuItem
             // 
             this.czcionkaToolStripMenuItem.Name = "czcionkaToolStripMenuItem";
-            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.czcionkaToolStripMenuItem.Text = "Czcionka";
             this.czcionkaToolStripMenuItem.Click += new System.EventHandler(this.czcionkaToolStripMenuItem_Click);
             // 
