@@ -151,6 +151,7 @@
             this.VersionProgram});
             this.ctr_ListInstalationProgram1.Location = new System.Drawing.Point(25, 55);
             this.ctr_ListInstalationProgram1.Name = "ctr_ListInstalationProgram1";
+            this.ctr_ListInstalationProgram1.RowHeadersVisible = false;
             this.ctr_ListInstalationProgram1.Size = new System.Drawing.Size(267, 390);
             this.ctr_ListInstalationProgram1.TabIndex = 12;
             // 

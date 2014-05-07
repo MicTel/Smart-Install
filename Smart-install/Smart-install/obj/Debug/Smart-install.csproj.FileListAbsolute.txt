@@ -71,3 +71,4 @@ x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smar
 x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smart_install.userMenuInstall.resources
 x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smart-install.csproj.GenerateResource.Cache
 D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.MenuInstall.resources
+X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.MenuInstall.resources
