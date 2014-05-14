@@ -8,14 +8,17 @@ using System.IO.Compression;
 
 namespace Smart_install
 {
+    /// <summary>
+    /// Klasa służąca do obsługi archiw(tworzenie, rozszerzanie, usuwanie)
+    /// </summary>
     static class zipCreator
     {
         /// <summary>
-        /// 
+        /// Metoda tworząca archiwum.
         /// </summary>
         /// <param name="name">Nazwa archiwum</param>
-        /// <param name="destinyPath">Gdzie ma powstać</param>
-        /// <param name="filePath">nazwa zip</param>
+        /// <param name="destinyPath">Scieżka, gdzie zostanie utworzone archwium</param>
+        /// <param name="filePath">Nazwa utworzonego archiwum zip</param>
         public static void createArchive(string destinyPath, string filePath)
         {
             DirectoryInfo direct = Directory.CreateDirectory("Archiwum");
@@ -26,11 +29,11 @@ namespace Smart_install
         }
 
         /// <summary>
-        /// 
+        /// Metoda dodająca plik do archiwum.
         /// </summary>
-        /// <param name="toAdd">co dodajemy</param>
-        /// <param name="whereAdd">gdzie dodajemy</param>
-        /// <param name="name">nazwa pliku</param>
+        /// <param name="toAdd">Plik dodawany</param>
+        /// <param name="whereAdd">Scieżka do archwium, do którego zostanie dodany plik</param>
+        /// <param name="name">Nazwa pliku</param>
         public static void addToArchive(string toAdd, string whereAdd, string name)
         {
             using (ZipArchive archive = ZipFile.Open(whereAdd, ZipArchiveMode.Update))
@@ -40,18 +43,18 @@ namespace Smart_install
         }
 
         /// <summary>
-        /// Usuwa wskazy plik z dysku
+        /// Metoda usuwająca wskazany plik z dysku
         /// </summary>
-        /// <param name="path">sciezka do usuwanego pliku</param>
+        /// <param name="path">Scieżka do usuwanego pliku</param>
         public static void deleteFile(string path)
         {
             File.Delete(path);
         }
 
         /// <summary>
-        /// 
+        /// Metoda służąca do rozpakowania archiwum zip.
         /// </summary>
-        /// <param name="filePath">nazwa zip</param>
+        /// <param name="filePath">Nazwa utworzonego archiwum zip</param>
         /// <param name="extractPath">nazwa po rozpakowaniu</param>
         public static void unzipFileFromArchive(string filePath, string extractPath)
         {
@@ -59,9 +62,9 @@ namespace Smart_install
         }
 
         /// <summary>
-        /// 
+        /// Metoda służąca do rozpakowania i zwracania adresu rozpakowywanego pliku.
         /// </summary>
-        /// <param name="path">sciezka do archiwum</param>
+        /// <param name="path">Ścieżka do archiwum zip</param>
         /// <returns></returns>
         internal static string getXML(string path)
         {
@@ -73,10 +76,10 @@ namespace Smart_install
         }
 
         /// <summary>
-        /// 
+        /// Metoda służąca do rozpakowania pliku.
         /// </summary>
-        /// <param name="path">sciezka do archiwum</param>
-        /// <param name="name">nazwa wyodrebnionego pliku</param>
+        /// <param name="path">Scieżka do archiwum zip</param>
+        /// <param name="name">Nazwa wyodrębnionego pliku</param>
         /// <returns></returns>
         public static string getFile(string path, string name)
         {
@@ -92,11 +95,11 @@ namespace Smart_install
         }
 
         /// <summary>
-        /// 
+        /// Metoda służąca do kopiowania jednego z archiwum do drugiego.
         /// </summary>
-        /// <param name="destinyPath">sciezka archiwum, do którego kopiujemy</param>
-        /// <param name="sourcePath">źródło archwium do któego kopiujemy</param>
-        /// <param name="sourceFile">nazwa pliku archwium źródłowego</param>
+        /// <param name="destinyPath">Scieżka archiwum, do którego kopiujemy</param>
+        /// <param name="sourcePath">Źródło archwium do któego kopiujemy</param>
+        /// <param name="sourceFile">Nazwa pliku archwium źródłowego</param>
         /// 
 
         
