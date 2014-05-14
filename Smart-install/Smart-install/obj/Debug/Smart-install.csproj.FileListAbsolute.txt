@@ -86,3 +86,6 @@ C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug
 C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.Properties.Resources.resources
 C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.userMenuInstall.resources
 C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.csproj.GenerateResource.Cache
+C:\Studia\RC\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.exe.config
+C:\Studia\RC\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.exe
+C:\Studia\RC\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.pdb
