@@ -72,3 +72,17 @@ x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smar
 x:\Studia\VI semestr\Zespołowe\kopia\Smart-install\Smart-install\obj\Debug\Smart-install.csproj.GenerateResource.Cache
 D:\Git_case\Projekt-Smart-Install\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.MenuInstall.resources
 X:\Studia\VI semestr\Zespołowe\Pierwsze\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.MenuInstall.resources
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\bin\Debug\ArchiveBase.mdf
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\bin\Debug\ArchiveBase_log.ldf
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.exe
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\bin\Debug\Smart-install.pdb
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\bin\Debug\EntityFramework.dll
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\bin\Debug\EntityFramework.xml
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.csprojResolveAssemblyReference.cache
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.AddPrograms.resources
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.Help2.resources
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.MenuInstall.resources
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.NewArch.resources
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.Properties.Resources.resources
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart_install.userMenuInstall.resources
+C:\Users\Ksr\Documents\ProgZ\Smart-Install\Smart-install\Smart-install\obj\Debug\Smart-install.csproj.GenerateResource.Cache

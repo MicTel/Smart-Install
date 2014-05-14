@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['deletefile',['deleteFile',['../class_smart__install_1_1zip_creator.html#a4f4fa6e6b2fe6ab6ddd4333778413ae3',1,'Smart_install::zipCreator']]],
+  ['deleteprogram',['DeleteProgram',['../class_smart__install_1_1_new_arch.html#a5dc5c16b7ae357601c701f0d90819000',1,'Smart_install::NewArch']]],
+  ['description',['Description',['../class_smart__install_1_1_archive.html#ae39bf3c2778783c5c68ad0e8a5b0e966',1,'Smart_install.Archive.Description()'],['../class_smart__install_1_1archive_information.html#a19ec6b73a8b2b58edca7eefb28839d0f',1,'Smart_install.archiveInformation.Description()'],['../class_smart__install_1_1program_information.html#a40f33801171766ccc6474b51686b8e7d',1,'Smart_install.programInformation.Description()'],['../class_smart__install_1_1_prog.html#aca24c50cd14e1b94afe4e11ab6473374',1,'Smart_install.Prog.Description()']]],
+  ['displayname',['displayName',['../struct_smart__install_1_1_search_program_1_1_install_program.html#a07c41cefb50c426c1df814338c30a478',1,'Smart_install::SearchProgram::InstallProgram']]],
+  ['displayversion',['displayVersion',['../struct_smart__install_1_1_search_program_1_1_install_program.html#ae0e1bf0c9bae9086be9174f97da9884f',1,'Smart_install::SearchProgram::InstallProgram']]],
+  ['dispose',['Dispose',['../class_smart__install_1_1_add_programs.html#afd32b6bfead4212758a97864bf47e0d0',1,'Smart_install.AddPrograms.Dispose()'],['../class_smart__install_1_1_help2.html#a43eab4ead68724b6d3d63290d534cdb5',1,'Smart_install.Help2.Dispose()'],['../class_smart__install_1_1_menu_install.html#af0e1e2239a2c2c3aa39a2ec98e9d302c',1,'Smart_install.MenuInstall.Dispose()'],['../class_smart__install_1_1_new_arch.html#ae0b2866651d46def93594aa2665b876d',1,'Smart_install.NewArch.Dispose()'],['../class_smart__install_1_1user_menu_install.html#ab9c936c4dba89e7311daa746dfcece7f',1,'Smart_install.userMenuInstall.Dispose()']]]
+];

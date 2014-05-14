@@ -1,0 +1,247 @@
+\hypertarget{class_smart__install_1_1control}{\section{Dokumentacja klasy Smart\+\_\+install.\+control}
+\label{class_smart__install_1_1control}\index{Smart\+\_\+install.\+control@{Smart\+\_\+install.\+control}}
+}
+\subsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_smart__install_1_1control_aba6fdac0d5bfe111b9c996ca8f13ecc7}{add\+Tag\+Once} (int many=0)
+\begin{DoxyCompactList}\small\item\em Dodaje jednorazowo tagi do bazy danych \end{DoxyCompactList}\item 
+static List$<$ string $>$ \hyperlink{class_smart__install_1_1control_a1071182d792dc84a90ff4faf43063e72}{get\+Tags} ()
+\begin{DoxyCompactList}\small\item\em Zwraca listę wszystkich tagów z bazy danych \end{DoxyCompactList}\item 
+static List$<$ \hyperlink{class_smart__install_1_1program_information}{program\+Information} $>$ \hyperlink{class_smart__install_1_1control_a624190faac409378f145ff96ed45cd66}{get\+Programs} ()
+\begin{DoxyCompactList}\small\item\em Zwraca listę programów które należą do poszczególnych kategorii \end{DoxyCompactList}\item 
+static void \hyperlink{class_smart__install_1_1control_a466ee8b7a313e443a2e641a743b179d5}{add\+Tags} (string tag\+Name)
+\begin{DoxyCompactList}\small\item\em Funkcja dodająca tagi \end{DoxyCompactList}\item 
+static void \hyperlink{class_smart__install_1_1control_ad7268cac335d4bea0fde187371801e81}{add\+New\+Program} (\hyperlink{class_smart__install_1_1program_information}{program\+Information} to\+Database, \hyperlink{class_smart__install_1_1archive_information}{archive\+Information} arch)
+\begin{DoxyCompactList}\small\item\em Dodawanie programu do bazy danych, a następnie dodaje go do archiwum \end{DoxyCompactList}\item 
+static void \hyperlink{class_smart__install_1_1control_af2587a0acd7323de3d9f1c89688a0415}{add\+Old\+Program} (\hyperlink{class_smart__install_1_1program_information}{program\+Information} program\+Inf, \hyperlink{class_smart__install_1_1archive_information}{archive\+Information} arch)
+\begin{DoxyCompactList}\small\item\em N\+I\+E D\+Z\+I\+AŁ\+A!! Kopije program z jednego archiwum do drugiego (nie działa update bazy danych) \end{DoxyCompactList}\item 
+static void \hyperlink{class_smart__install_1_1control_a54719a159439fbd3b9da19e076e26f6c}{start\+Archive} (\hyperlink{class_smart__install_1_1archive_information}{archive\+Information} arch)
+\begin{DoxyCompactList}\small\item\em Inicjuje archiwum, poprzez stworzenie go oraz zamieszczenie w nim plik informacyjnego, na temat jest zawartości. \end{DoxyCompactList}\item 
+static void \hyperlink{class_smart__install_1_1control_a681ffeb9001086a6c7f4cc252e55008a}{create\+Archive} (\hyperlink{class_smart__install_1_1archive_information}{archive\+Information} arch, List$<$ \hyperlink{class_smart__install_1_1program_information}{program\+Information} $>$ programs)
+\begin{DoxyCompactList}\small\item\em Tworzenie archiwum i wrzucenie do niego programów. \end{DoxyCompactList}\item 
+static \hyperlink{class_smart__install_1_1archive_information}{archive\+Information} \hyperlink{class_smart__install_1_1control_a2a5adfbe7bc444a2cb04151e0118dcb7}{get\+Archive\+Informaction} (string path)
+\begin{DoxyCompactList}\small\item\em Otwiera archiwum i pobiera z niego informacje \end{DoxyCompactList}\item 
+static List$<$ \hyperlink{class_smart__install_1_1archive_information}{archive\+Information} $>$ \hyperlink{class_smart__install_1_1control_aa8fd1c1485954262cc028e14cb78d8e1}{get\+Archive\+From\+Database} ()
+\begin{DoxyCompactList}\small\item\em Zwraca listę archiw i ich zawartości z bazy danych \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+Definicja w linii 106 pliku control.\+cs.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_smart__install_1_1control_ad7268cac335d4bea0fde187371801e81}{\index{Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}!add\+New\+Program@{add\+New\+Program}}
+\index{add\+New\+Program@{add\+New\+Program}!Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}}
+\subsubsection[{add\+New\+Program}]{\setlength{\rightskip}{0pt plus 5cm}static void Smart\+\_\+install.\+control.\+add\+New\+Program (
+\begin{DoxyParamCaption}
+\item[{{\bf program\+Information}}]{to\+Database, }
+\item[{{\bf archive\+Information}}]{arch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_smart__install_1_1control_ad7268cac335d4bea0fde187371801e81}
+
+
+Dodawanie programu do bazy danych, a następnie dodaje go do archiwum 
+
+
+\begin{DoxyParams}{Parametry}
+{\em to\+Database} & Dane o programie\\
+\hline
+{\em arch} & Nowe archiwum\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 233 pliku control.\+cs.
+
+\hypertarget{class_smart__install_1_1control_af2587a0acd7323de3d9f1c89688a0415}{\index{Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}!add\+Old\+Program@{add\+Old\+Program}}
+\index{add\+Old\+Program@{add\+Old\+Program}!Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}}
+\subsubsection[{add\+Old\+Program}]{\setlength{\rightskip}{0pt plus 5cm}static void Smart\+\_\+install.\+control.\+add\+Old\+Program (
+\begin{DoxyParamCaption}
+\item[{{\bf program\+Information}}]{program\+Inf, }
+\item[{{\bf archive\+Information}}]{arch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_smart__install_1_1control_af2587a0acd7323de3d9f1c89688a0415}
+
+
+N\+I\+E D\+Z\+I\+AŁ\+A!! Kopije program z jednego archiwum do drugiego (nie działa update bazy danych) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em program\+Inf} & Program do skopiowania\\
+\hline
+{\em arch} & archiwum do którego kopiujemy\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 282 pliku control.\+cs.
+
+\hypertarget{class_smart__install_1_1control_aba6fdac0d5bfe111b9c996ca8f13ecc7}{\index{Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}!add\+Tag\+Once@{add\+Tag\+Once}}
+\index{add\+Tag\+Once@{add\+Tag\+Once}!Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}}
+\subsubsection[{add\+Tag\+Once}]{\setlength{\rightskip}{0pt plus 5cm}static void Smart\+\_\+install.\+control.\+add\+Tag\+Once (
+\begin{DoxyParamCaption}
+\item[{int}]{many = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_smart__install_1_1control_aba6fdac0d5bfe111b9c996ca8f13ecc7}
+
+
+Dodaje jednorazowo tagi do bazy danych 
+
+
+
+Definicja w linii 111 pliku control.\+cs.
+
+\hypertarget{class_smart__install_1_1control_a466ee8b7a313e443a2e641a743b179d5}{\index{Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}!add\+Tags@{add\+Tags}}
+\index{add\+Tags@{add\+Tags}!Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}}
+\subsubsection[{add\+Tags}]{\setlength{\rightskip}{0pt plus 5cm}static void Smart\+\_\+install.\+control.\+add\+Tags (
+\begin{DoxyParamCaption}
+\item[{string}]{tag\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_smart__install_1_1control_a466ee8b7a313e443a2e641a743b179d5}
+
+
+Funkcja dodająca tagi 
+
+
+\begin{DoxyParams}{Parametry}
+{\em tag\+Name} & Nazwa tagu\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 207 pliku control.\+cs.
+
+\hypertarget{class_smart__install_1_1control_a681ffeb9001086a6c7f4cc252e55008a}{\index{Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}!create\+Archive@{create\+Archive}}
+\index{create\+Archive@{create\+Archive}!Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}}
+\subsubsection[{create\+Archive}]{\setlength{\rightskip}{0pt plus 5cm}static void Smart\+\_\+install.\+control.\+create\+Archive (
+\begin{DoxyParamCaption}
+\item[{{\bf archive\+Information}}]{arch, }
+\item[{List$<$ {\bf program\+Information} $>$}]{programs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_smart__install_1_1control_a681ffeb9001086a6c7f4cc252e55008a}
+
+
+Tworzenie archiwum i wrzucenie do niego programów. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em programs} & Lista programów które mają znaleźć się w archiwum.\\
+\hline
+{\em arch} & Archiwum które ma zostać stworzone.\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 340 pliku control.\+cs.
+
+\hypertarget{class_smart__install_1_1control_aa8fd1c1485954262cc028e14cb78d8e1}{\index{Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}!get\+Archive\+From\+Database@{get\+Archive\+From\+Database}}
+\index{get\+Archive\+From\+Database@{get\+Archive\+From\+Database}!Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}}
+\subsubsection[{get\+Archive\+From\+Database}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf archive\+Information}$>$ Smart\+\_\+install.\+control.\+get\+Archive\+From\+Database (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_smart__install_1_1control_aa8fd1c1485954262cc028e14cb78d8e1}
+
+
+Zwraca listę archiw i ich zawartości z bazy danych 
+
+\begin{DoxyReturn}{Zwraca}
+Lista archiw
+\end{DoxyReturn}
+
+
+Definicja w linii 404 pliku control.\+cs.
+
+\hypertarget{class_smart__install_1_1control_a2a5adfbe7bc444a2cb04151e0118dcb7}{\index{Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}!get\+Archive\+Informaction@{get\+Archive\+Informaction}}
+\index{get\+Archive\+Informaction@{get\+Archive\+Informaction}!Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}}
+\subsubsection[{get\+Archive\+Informaction}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf archive\+Information} Smart\+\_\+install.\+control.\+get\+Archive\+Informaction (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_smart__install_1_1control_a2a5adfbe7bc444a2cb04151e0118dcb7}
+
+
+Otwiera archiwum i pobiera z niego informacje 
+
+
+\begin{DoxyParams}{Parametry}
+{\em path} & ścieżka do archiwum\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Informacje o archiwum
+\end{DoxyReturn}
+
+
+Definicja w linii 359 pliku control.\+cs.
+
+\hypertarget{class_smart__install_1_1control_a624190faac409378f145ff96ed45cd66}{\index{Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}!get\+Programs@{get\+Programs}}
+\index{get\+Programs@{get\+Programs}!Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}}
+\subsubsection[{get\+Programs}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf program\+Information}$>$ Smart\+\_\+install.\+control.\+get\+Programs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_smart__install_1_1control_a624190faac409378f145ff96ed45cd66}
+
+
+Zwraca listę programów które należą do poszczególnych kategorii 
+
+
+\begin{DoxyParams}{Parametry}
+{\em selected\+Tags} & wybrane przez użytkownika komponenty\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+
+\end{DoxyReturn}
+
+
+Definicja w linii 185 pliku control.\+cs.
+
+\hypertarget{class_smart__install_1_1control_a1071182d792dc84a90ff4faf43063e72}{\index{Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}!get\+Tags@{get\+Tags}}
+\index{get\+Tags@{get\+Tags}!Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}}
+\subsubsection[{get\+Tags}]{\setlength{\rightskip}{0pt plus 5cm}static List$<$string$>$ Smart\+\_\+install.\+control.\+get\+Tags (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_smart__install_1_1control_a1071182d792dc84a90ff4faf43063e72}
+
+
+Zwraca listę wszystkich tagów z bazy danych 
+
+\begin{DoxyReturn}{Zwraca}
+
+\end{DoxyReturn}
+
+
+Definicja w linii 149 pliku control.\+cs.
+
+\hypertarget{class_smart__install_1_1control_a54719a159439fbd3b9da19e076e26f6c}{\index{Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}!start\+Archive@{start\+Archive}}
+\index{start\+Archive@{start\+Archive}!Smart\+\_\+install\+::control@{Smart\+\_\+install\+::control}}
+\subsubsection[{start\+Archive}]{\setlength{\rightskip}{0pt plus 5cm}static void Smart\+\_\+install.\+control.\+start\+Archive (
+\begin{DoxyParamCaption}
+\item[{{\bf archive\+Information}}]{arch}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_smart__install_1_1control_a54719a159439fbd3b9da19e076e26f6c}
+
+
+Inicjuje archiwum, poprzez stworzenie go oraz zamieszczenie w nim plik informacyjnego, na temat jest zawartości. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em arch} & Inicjonowane archiwum\\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 296 pliku control.\+cs.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{control_8cs}{control.\+cs}\end{DoxyCompactItemize}
