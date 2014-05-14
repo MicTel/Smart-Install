@@ -421,5 +421,10 @@ namespace Smart_install
 
             return result;
         }
+
+        public static string getExtracrProgram(programInformation prog)
+        {
+
+        }
     }
 }
