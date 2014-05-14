@@ -86,6 +86,7 @@
     <Compile Include="Help2.Designer.cs">
       <DependentUpon>Help2.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstallProgram.cs" />
     <Compile Include="Language.cs">
       <DependentUpon>ModelArchive.tt</DependentUpon>
     </Compile>
