@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -422,9 +423,19 @@ namespace Smart_install
             return result;
         }
 
-        public static string getExtracrProgram(programInformation prog)
+        /// <summary>
+        /// Zwraca ścieżkę do programu opisanego za pomocą programInformation
+        /// </summary>
+        /// <param name="prog">Program do wypakowania</param>
+        /// <returns>ścieżka do programu</returns>
+        public static string getExtractProgram(programInformation prog)
         {
-
+            ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
+            Prog progr = database.Progs.First(x => x.Id == prog.Id);
+            int i=0;
+            while(!File.Exists(progr.Archives.ElementAt(i).Path))
+                i++;
+            return zipCreator.getFile(progr.Archives.ElementAt(i).Path, prog.Name);
         }
     }
 }
