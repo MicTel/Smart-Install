@@ -12,27 +12,23 @@ namespace MyProcessSample
     class InstallProgram
     {
 
-
-
-        void StartInstallPrograms()
+        void StartInstallPrograms(List<programInformation> programList)
         {
 
-            List<String> programList = new List<String>();
-
-            programList.Add("notepad");
-            programList.Add("mspaint");
-            programList.Add("calc");
-
-            foreach (String CurrentSetup in programList)
-            {
-                Process.Start(CurrentSetup);
-                while (Process.GetProcessesByName(CurrentSetup).Length != 0)
+            foreach (programInformation CurrentSetup in programList)
+            { 
+                Process.Start(control.getExtractProgram(CurrentSetup)); 
+                while (Process.GetProcessesByName(CurrentSetup.Name).Length != 0)
                 {
-                    Console.WriteLine("Uruchomiony " + CurrentSetup);
+                    //Console.WriteLine("Uruchomiony " + CurrentSetup.Name);
                     Thread.Sleep(1000);
                 }
 
+                //return po kazdym programie
+
             }
+
+            //return koncowy dla Natalii
         }
 
 
