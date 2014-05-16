@@ -19,6 +19,7 @@ namespace Smart_install
         public string Name { get; set; }
         public string Path { get; set; }
         public string Description { get; set; }
+        public bool isCreated = false;
         public List<programInformation> programList;
     }
 
@@ -379,6 +380,7 @@ namespace Smart_install
                     URLUpdate = p.Element("URLUpdate").Value,
                     Language = p.Element("Language").Value,
                     systemType = p.Element("systemType").Value,
+                    Path = path,
                     Tags = tags
                 };
                 progs.Add(prog);
@@ -394,6 +396,28 @@ namespace Smart_install
             };
 
             zipCreator.deleteFile(newPath);
+            ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
+            Archive arc = database.Archives.OrderByDescending(c => c.Id).FirstOrDefault();
+            int newId = (null == arc ? 0 : arc.Id) + 1;
+            Archive archive = new Archive()
+            {
+                Id = newId,
+                Description = arch.Description,
+                Name = arch.Name,
+                //Publisher = toDatabase.Publisher,
+                CreateDate = DateTime.Now,
+                ModifiedDate = DateTime.Now,
+                Path = arch.fullPath
+            };
+            database.Archives.Add(archive);
+            try
+            {
+                database.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             return arch;
         }
 
@@ -430,6 +454,10 @@ namespace Smart_install
         /// <returns>ścieżka do programu</returns>
         public static string getExtractProgram(programInformation prog)
         {
+            if (File.Exists(prog.Path))
+            {
+                return zipCreator.getFile(prog.Path, prog.Name);
+            }
             ArchiveBaseEntities2 database = new ArchiveBaseEntities2();
             Prog progr = database.Progs.First(x => x.Id == prog.Id);
             int i=0;

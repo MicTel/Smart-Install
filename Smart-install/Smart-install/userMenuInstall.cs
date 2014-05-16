@@ -44,7 +44,6 @@ namespace Smart_install
         }
 
 
-
         private void initialize_ctr_All_InstalledProgram()
         { 
             List<SearchProgram.InstallProgram> getProgramList =  SearchProgram.GetProgramList();
@@ -154,7 +153,7 @@ namespace Smart_install
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.InitialDirectory = "c:\\";
             openFileDialog1.Filter = "zip Files (*.zip)|*.zip|" + "All files (*.*)|*.*"; ;
-            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.FilterIndex = 0;
             openFileDialog1.RestoreDirectory = true;
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -252,6 +251,17 @@ namespace Smart_install
             }
             MenuInstall menuInstall = new MenuInstall(_listProgram);
             menuInstall.Show();
+        }
+
+        private void ctr_RB_searchProgramInList_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            foreach (DataGridViewRow item in ctr_categoriesProgram.Rows)
+            {
+                if (item.Cells[0].Value.ToString().ToLower().IndexOf(ctr_RB_searchProgramInList.Text.ToLower()) < 0)
+                    item.Visible = false;
+                else
+                    item.Visible = true;
+            }
         }
     }
 }

@@ -88,7 +88,7 @@ namespace Smart_install
             {
                 ZipArchiveEntry zipEntry = archive.GetEntry(name);
                 string newPath = Path.Combine(tempDirectory,name);
-                zipEntry.ExtractToFile(newPath);
+                zipEntry.ExtractToFile(newPath,true);
 
                 return newPath;
             }   

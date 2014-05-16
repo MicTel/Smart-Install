@@ -29,178 +29,95 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuInstall));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zamknijOknoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ustawieniaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.językToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.skórkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.czcionkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stronaProgramuOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pomocToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ctr_ListInstalationProgram1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VersionProgram = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1.SuspendLayout();
+            this.ProgramName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProgramStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ctr_ListInstalationProgram1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.plikToolStripMenuItem,
-            this.ustawieniaToolStripMenuItem1,
-            this.pomocToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(490, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // plikToolStripMenuItem
-            // 
-            this.plikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.zamknijOknoToolStripMenuItem});
-            this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
-            this.plikToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.plikToolStripMenuItem.Text = "Plik";
-            // 
-            // zamknijOknoToolStripMenuItem
-            // 
-            this.zamknijOknoToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            this.zamknijOknoToolStripMenuItem.Name = "zamknijOknoToolStripMenuItem";
-            this.zamknijOknoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.zamknijOknoToolStripMenuItem.Text = "Zamknij okno";
-            this.zamknijOknoToolStripMenuItem.Click += new System.EventHandler(this.zamknijOknoToolStripMenuItem_Click);
-            // 
-            // ustawieniaToolStripMenuItem1
-            // 
-            this.ustawieniaToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.językToolStripMenuItem,
-            this.skórkiToolStripMenuItem,
-            this.czcionkaToolStripMenuItem});
-            this.ustawieniaToolStripMenuItem1.Name = "ustawieniaToolStripMenuItem1";
-            this.ustawieniaToolStripMenuItem1.Size = new System.Drawing.Size(76, 20);
-            this.ustawieniaToolStripMenuItem1.Text = "Ustawienia";
-            // 
-            // językToolStripMenuItem
-            // 
-            this.językToolStripMenuItem.Name = "językToolStripMenuItem";
-            this.językToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.językToolStripMenuItem.Text = "Język";
-            // 
-            // skórkiToolStripMenuItem
-            // 
-            this.skórkiToolStripMenuItem.Name = "skórkiToolStripMenuItem";
-            this.skórkiToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.skórkiToolStripMenuItem.Text = "Kolor tła";
-            // 
-            // czcionkaToolStripMenuItem
-            // 
-            this.czcionkaToolStripMenuItem.Name = "czcionkaToolStripMenuItem";
-            this.czcionkaToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.czcionkaToolStripMenuItem.Text = "Czcionka";
-            // 
-            // pomocToolStripMenuItem
-            // 
-            this.pomocToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stronaProgramuOnlineToolStripMenuItem,
-            this.pomocToolStripMenuItem1});
-            this.pomocToolStripMenuItem.Name = "pomocToolStripMenuItem";
-            this.pomocToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.pomocToolStripMenuItem.Text = "Pomoc";
-            // 
-            // stronaProgramuOnlineToolStripMenuItem
-            // 
-            this.stronaProgramuOnlineToolStripMenuItem.Name = "stronaProgramuOnlineToolStripMenuItem";
-            this.stronaProgramuOnlineToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.stronaProgramuOnlineToolStripMenuItem.Text = "Strona programu online";
-            // 
-            // pomocToolStripMenuItem1
-            // 
-            this.pomocToolStripMenuItem1.Name = "pomocToolStripMenuItem1";
-            this.pomocToolStripMenuItem1.Size = new System.Drawing.Size(200, 22);
-            this.pomocToolStripMenuItem1.Text = "Pomoc";
-            this.pomocToolStripMenuItem1.Click += new System.EventHandler(this.pomocToolStripMenuItem1_Click);
             // 
             // ctr_ListInstalationProgram1
             // 
             this.ctr_ListInstalationProgram1.AllowUserToAddRows = false;
-            this.ctr_ListInstalationProgram1.AllowUserToDeleteRows = false;
-            this.ctr_ListInstalationProgram1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.ctr_ListInstalationProgram1.AllowUserToOrderColumns = true;
+            this.ctr_ListInstalationProgram1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ctr_ListInstalationProgram1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.ctr_ListInstalationProgram1.BackgroundColor = System.Drawing.Color.White;
-            this.ctr_ListInstalationProgram1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ctr_ListInstalationProgram1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            this.ctr_ListInstalationProgram1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.ctr_ListInstalationProgram1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.ctr_ListInstalationProgram1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ctr_ListInstalationProgram1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.ctr_ListInstalationProgram1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.ctr_ListInstalationProgram1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.ctr_ListInstalationProgram1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ctr_ListInstalationProgram1.ColumnHeadersHeight = 33;
+            this.ctr_ListInstalationProgram1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.ctr_ListInstalationProgram1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.VersionProgram});
-            this.ctr_ListInstalationProgram1.Location = new System.Drawing.Point(25, 55);
+            this.ProgramName,
+            this.ProgramStatus});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ctr_ListInstalationProgram1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ctr_ListInstalationProgram1.Location = new System.Drawing.Point(2, 1);
             this.ctr_ListInstalationProgram1.Name = "ctr_ListInstalationProgram1";
+            this.ctr_ListInstalationProgram1.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ctr_ListInstalationProgram1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.ctr_ListInstalationProgram1.RowHeadersVisible = false;
-            this.ctr_ListInstalationProgram1.Size = new System.Drawing.Size(267, 390);
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ctr_ListInstalationProgram1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.ctr_ListInstalationProgram1.Size = new System.Drawing.Size(569, 381);
             this.ctr_ListInstalationProgram1.TabIndex = 12;
             // 
-            // dataGridViewTextBoxColumn1
+            // ProgramName
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nazwa programu";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 103;
+            this.ProgramName.HeaderText = "Nazwa programu";
+            this.ProgramName.Name = "ProgramName";
+            this.ProgramName.ReadOnly = true;
             // 
-            // VersionProgram
+            // ProgramStatus
             // 
-            this.VersionProgram.HeaderText = "Status";
-            this.VersionProgram.Name = "VersionProgram";
-            this.VersionProgram.Width = 62;
+            this.ProgramStatus.HeaderText = "Status";
+            this.ProgramStatus.Name = "ProgramStatus";
+            this.ProgramStatus.ReadOnly = true;
             // 
             // MenuInstall
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(490, 519);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(570, 389);
             this.Controls.Add(this.ctr_ListInstalationProgram1);
-            this.Controls.Add(this.menuStrip1);
             this.Name = "MenuInstall";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuInstall";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ctr_ListInstalationProgram1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem plikToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zamknijOknoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ustawieniaToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem językToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem skórkiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem czcionkaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stronaProgramuOnlineToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem1;
         private System.Windows.Forms.DataGridView ctr_ListInstalationProgram1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VersionProgram;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProgramName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProgramStatus;
     }
 }
